@@ -7,6 +7,27 @@ export const foods = [
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
   },
   {
+    id: 'elderroostro',
+    name: 'Elder Roostro',
+    type: 'meat',
+    slime: null,
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+  },
+  {
+    id: 'hen',
+    name: 'Hen Hen',
+    type: 'meat',
+    slime: null,
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+  },
+  {
+    id: 'elderhen',
+    name: 'Elder Hen',
+    type: 'meat',
+    slime: null,
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+  },
+  {
     id: 'stonyhen',
     name: 'Stony Hen',
     type: 'meat',
@@ -26,6 +47,13 @@ export const foods = [
     type: 'meat',
     slime: 'tangle',
     locations: ['desert'],
+  },
+  {
+    id: 'pogo',
+    name: 'Pogo Fruit',
+    type: 'fruit',
+    slime: null,
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
   },
   {
     id: 'beet',
@@ -84,4 +112,3 @@ export const foods = [
     locations: ['desert'],
   },
 ];
-

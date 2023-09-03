@@ -73,7 +73,7 @@ export const Food = objectType({
       type: DietEnum,
       description: 'The type of food it is',
     });
-    t.nonNull.field('favouredBy', {
+    t.field('favouredBy', {
       type: Slime,
       description: 'The slime whose favourite food it is',
       resolve(food) {
