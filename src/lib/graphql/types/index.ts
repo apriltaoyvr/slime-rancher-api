@@ -9,12 +9,18 @@ export const Slime = objectType({
     t.nonNull.string('name');
     t.string('image');
     t.nonNull.field('diet', { type: DietEnum });
-    t.string('favouriteToy');
+    t.field('favouriteToy', {
+      type: Toys,
+      description: "The slime's favourite toy",
+      resolve(slime) {
+        return toys.find((toy) => toy.id === slime.favouriteToy);
+      },
+    });
     t.field('favouriteFood', {
       type: Food,
-      description: 'Favourite food for the slime',
-      resolve(parent) {
-        return foods.find((food) => food.id === parent.favouriteFood);
+      description: "The slime's favourite food for the slime",
+      resolve(slime) {
+        return foods.find((food) => food.id === slime.favouriteFood);
       },
     });
     t.nonNull.field('type', {
@@ -43,15 +49,15 @@ export const Location = objectType({
     t.nonNull.list.field('slimes', {
       type: Slime,
       description: 'Slimes that can be found at this location',
-      resolve(parent) {
-        return slimes.filter((slime) => slime.locations.includes(parent.id));
+      resolve(source) {
+        return slimes.filter((slime) => slime.locations.includes(source.id));
       },
     });
     t.nonNull.list.field('foods', {
       type: Food,
       description: 'Foods that can be found at this location',
-      resolve(parent) {
-        return foods.filter((food) => food.locations.includes(parent.id));
+      resolve(source) {
+        return foods.filter((food) => food.locations.includes(source.id));
       },
     });
   },
@@ -70,17 +76,15 @@ export const Food = objectType({
     t.nonNull.field('favouredBy', {
       type: Slime,
       description: 'The slime whose favourite food it is',
-      resolve(parent) {
-        return slimes.find((slime) => slime.favouriteFood === parent.id);
+      resolve(food) {
+        return slimes.find((slime) => slime.favouriteFood === food.id);
       },
     });
     t.nonNull.list.field('locations', {
       type: Location,
       description: 'Locations where this food can be found',
-      resolve(parent) {
-        return locations.filter((location) =>
-          location.foods.includes(parent.id)
-        );
+      resolve(food) {
+        return locations.filter((location) => location.foods.includes(food.id));
       },
     });
   },
@@ -92,11 +96,11 @@ export const Toys = objectType({
   definition(t) {
     t.nonNull.id('id');
     t.nonNull.string('name');
-    t.nonNull.field('favouredBy', {
+    t.field('favouredBy', {
       type: Slime,
       description: 'The slime whose favourite toy it is',
-      resolve(parent) {
-        return slimes.find((slime) => slime.favouriteToy === parent.id);
+      resolve(toy) {
+        return slimes.find((slime) => slime.favouriteToy === toy.id);
       },
     });
     t.nonNull.string('description');
@@ -105,7 +109,7 @@ export const Toys = objectType({
 });
 export const DietEnum = enumType({
   name: 'Diet',
-  members: ['veggie', 'fruit', 'meat', 'water', 'all'],
+  members: ['veggie', 'fruit', 'meat', 'water', 'ash', 'all'],
   description: 'The type of diet for a slime',
 });
 
