@@ -2,38 +2,37 @@ export const locations = [
   {
     id: 'reef',
     name: 'The Dry Reef',
-    slimes: ['tabby'],
+    slimes: ['pink', 'phosphor', 'tabby', 'puddle'],
     foods: ['stonyhen'],
   },
   {
     id: 'blanket',
     name: 'The Moss Blanket',
-    slimes: ['tabby'],
+    slimes: ['pink', 'phosphor', 'tabby', 'puddle', 'honey'],
     foods: ['stonyhen'],
   },
   {
     id: 'quarry',
     name: 'The Indigo Quarry',
-    slimes: ['rock'],
+    slimes: ['pink', 'phosphor', 'rock', 'puddle'],
     foods: ['stonyhen'],
   },
   {
     id: 'ruins',
     name: 'The Ancient Ruins',
-    slimes: ['tabby'],
+    slimes: ['pink', 'phosphor', 'tabby', 'puddle'],
     foods: ['stonyhen'],
   },
   {
     id: 'desert',
     name: 'The Glass Desert',
-    slimes: ['tabby'],
+    slimes: ['pink', 'phosphor', 'tabby', 'puddle'],
     foods: ['stonyhen'],
   },
   {
     id: 'wilds',
     name: 'The Wilds',
-    slimes: [],
-    foods: ['stonyhen']
-  }
+    slimes: ['pink', 'phosphor', 'tabby'],
+    foods: ['stonyhen'],
+  },
 ];
-

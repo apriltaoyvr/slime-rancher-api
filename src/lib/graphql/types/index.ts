@@ -9,8 +9,18 @@ export const Slime = objectType({
     t.nonNull.string('name');
     t.string('image');
     t.nonNull.field('diet', { type: DietEnum });
-    t.nonNull.string('favouriteToy');
-    t.nonNull.field('favouriteFood', { type: Food });
+    t.string('favouriteToy');
+    t.field('favouriteFood', {
+      type: Food,
+      description: 'Favourite food for the slime',
+      resolve(parent) {
+        return foods.find((food) => food.id === parent.favouriteFood);
+      },
+    });
+    t.nonNull.field('type', {
+      type: SlimeDisposition,
+      description: "The slime's disposition",
+    });
     t.nonNull.field('slimepedia', { type: Slimepedia });
     t.nonNull.list.field('locations', {
       type: Location,
@@ -20,6 +30,7 @@ export const Slime = objectType({
         );
       },
     });
+    t.list.string('properties');
   },
 });
 
@@ -40,9 +51,7 @@ export const Location = objectType({
       type: Food,
       description: 'Foods that can be found at this location',
       resolve(parent) {
-        return foods.filter((food) =>
-          food.locations.includes(parent.id)
-        );
+        return foods.filter((food) => food.locations.includes(parent.id));
       },
     });
   },
@@ -62,7 +71,7 @@ export const Food = objectType({
       type: Slime,
       description: 'The slime whose favourite food it is',
       resolve(parent) {
-        return slimes.filter((slime) => slime.favouriteFood === parent.id)[0];
+        return slimes.find((slime) => slime.favouriteFood === parent.id);
       },
     });
     t.nonNull.list.field('locations', {
@@ -87,7 +96,7 @@ export const Toys = objectType({
       type: Slime,
       description: 'The slime whose favourite toy it is',
       resolve(parent) {
-        return slimes.filter((slime) => slime.favouriteToy === parent.id)[0];
+        return slimes.find((slime) => slime.favouriteToy === parent.id);
       },
     });
     t.nonNull.string('description');
@@ -96,8 +105,14 @@ export const Toys = objectType({
 });
 export const DietEnum = enumType({
   name: 'Diet',
-  members: ['veggie', 'fruit', 'meat', 'all'],
+  members: ['veggie', 'fruit', 'meat', 'water', 'all'],
   description: 'The type of diet for a slime',
+});
+
+export const SlimeDisposition = enumType({
+  name: 'SlimeDisposition',
+  description: "A slime's disposition type",
+  members: ['docile', 'harmful', 'special', 'hostile'],
 });
 
 export const Slimepedia = objectType({
