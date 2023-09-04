@@ -102,9 +102,9 @@ export default function Home() {
           </section>
         </Flex>
       </Section>
-      <footer className='place-self-end'>
-        <Separator my='3' size='4' />
-        <Flex direction='row' align='center' justify='center' gap='2'>
+      <Separator my='3' size='4' />
+      <Box px='4' mb='1' className='place-self-end'>
+        <Flex direction='row' align='center' justify='center' wrap='wrap' gap='2'>
           <Text size='2'>
             Info sourced from the{' '}
             <Link href='https://slimerancher.fandom.com/wiki/Slime_Rancher_Wiki'>
@@ -120,7 +120,7 @@ export default function Home() {
             <Link href='https://github.com/apriltaoyvr'>April Tao</Link>.
           </Text>
         </Flex>
-      </footer>
+      </Box>
     </Container>
   );
 }
