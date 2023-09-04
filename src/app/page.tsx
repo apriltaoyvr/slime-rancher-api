@@ -27,10 +27,19 @@ export default function Home() {
             Slime Rancher GraphQL
           </Heading>
           <CalloutComponent />
-          <Text as='p' m='4'>
-            The endpoint is available at{' '}
-            <Link href='/api/graphql'>/api/graphql</Link>
-          </Text>
+          <Box m='4'>
+            <Text as='p' align='center'>
+              The endpoint is available at{' '}
+              <Link href='/api/graphql'>/api/graphql</Link>
+            </Text>
+            <Text as='p' align='center'>
+              If you notice any errors or wish the contribute, please submit a
+              pull request at{' '}
+              <Link href='https://github.com/apriltaoyvr/slime-rancher-graphql'>
+                the repo
+              </Link>!
+            </Text>
+          </Box>
         </Flex>
       </Box>
       <Section>
@@ -71,7 +80,10 @@ export default function Home() {
             >
               <QueryDetails name='id' type='ID!' />
               <QueryDetails name='name' type='String!' />
+              <QueryDetails name='image' type='String!' />
               <QueryDetails name='slimepedia' type='String!' />
+              <QueryDetails name='slimes' type='[Slime]!' />
+              <QueryDetails name='foods' type='[Food]!' />
             </QueryCard>
 
             <QueryCard
