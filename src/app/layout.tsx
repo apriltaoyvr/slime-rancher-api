@@ -21,13 +21,6 @@ export const metadata: Metadata = {
     title: 'Slime Rancher GraphQL',
     description: 'A GraphQL endpoint for Slime Rancer',
     url: 'https://slime-rancher-graphql.vercel.app/',
-    images: [
-      {
-        url: 'https://slime-rancher-graphql.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslimes.bf78d2a6.webp&w=640&q=75',
-        width: 512,
-        height: 300,
-      }
-    ],
     locale: 'en_CA',
     type: 'website',
   },
