@@ -5,7 +5,7 @@ import { Food } from "./food";
 
 export const Location = objectType({
   name: 'Location',
-  description: 'A location on Rainbow Island',
+  description: 'A location on The Far, Far Range',
   definition(t) {
     t.nonNull.id('id');
     t.nonNull.string('name');

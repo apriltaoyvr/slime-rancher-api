@@ -22,6 +22,7 @@ export const Query = queryType({
         return results;
       },
     });
+
     t.list.field('locations', {
       type: 'Location',
       description: 'A list of locations',
@@ -41,6 +42,7 @@ export const Query = queryType({
         return results;
       },
     });
+
     t.list.field('foods', {
       type: 'Food',
       description: 'A list of slime foods',
@@ -49,7 +51,7 @@ export const Query = queryType({
         slimeId: stringArg(),
         locationId: stringArg(),
       },
-      resolve(parent, { foodId, slimeId, locationId }) {
+      resolve(_, { foodId, slimeId, locationId }) {
         let results = foods;
 
         if (foodId) results = results.filter((food) => food.id === foodId);
@@ -62,6 +64,7 @@ export const Query = queryType({
         return results;
       },
     });
+
     t.list.field('toys', {
       type: 'Toy',
       description: 'A list of slime toys',
@@ -69,7 +72,7 @@ export const Query = queryType({
         toyId: stringArg(),
         slimeId: stringArg(),
       },
-      resolve(parent, { toyId, slimeId }) {
+      resolve(_, { toyId, slimeId }) {
         let results = toys;
 
         if (toyId) results = results.filter((toy) => toy.id === toyId);
