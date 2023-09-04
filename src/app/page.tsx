@@ -71,6 +71,7 @@ export default function Home() {
             >
               <QueryDetails name='id' type='ID!' />
               <QueryDetails name='name' type='String!' />
+              <QueryDetails name='slimepedia' type='String!' />
             </QueryCard>
 
             <QueryCard

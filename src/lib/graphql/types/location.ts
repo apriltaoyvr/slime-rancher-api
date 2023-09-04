@@ -9,6 +9,7 @@ export const Location = objectType({
   definition(t) {
     t.nonNull.id('id');
     t.nonNull.string('name');
+    t.nonNull.string('slimepedia');
     t.list.field('slimes', {
       type: Slime,
       description: 'Slimes that can be found at this location',
