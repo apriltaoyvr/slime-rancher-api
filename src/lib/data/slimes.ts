@@ -7,7 +7,7 @@ export interface Slime {
   diet: Diet;
   favouriteToy: string | null;
   favouriteFood: string | null;
-  type: SlimeDisposition;
+  type: SlimeType;
   slimepedia: {
     slimeology: string;
     risks: string;
@@ -15,11 +15,33 @@ export interface Slime {
   };
   locations: string[];
   properties?: string[] | null;
+  games: number[]
 }
 
-type SlimeDisposition = 'docile' | 'harmful' | 'special' | 'hostile';
+type SlimeType = 'docile' | 'harmful' | 'special' | 'hostile';
 
 export const slimes: Slime[] = [
+  {
+    id: 'tarr',
+    name: 'The Tarr',
+    image:
+      'https://static.wikia.nocookie.net/slimerancher/images/7/75/SlimeTarrSR2.png/revision/latest/scale-to-width-down/1000?cb=20220922201758',
+    diet: 'other',
+    favouriteFood: null,
+    favouriteToy: null,
+    type: 'hostile',
+    slimepedia: {
+      slimeology:
+        'The tarr are formed when a largo eats a plort unlike the ones it produces. A terrible transformation occurs that turns the slime into a sludge filled with a swirling, prismatic array of colors and a relentless appetite. The tarr seek only to consume and replicate. Because of this, it can spread rapidly throughout the ranch.\nThe only way to stop a tarr outside of incinerating it or throwing it into the slime sea is with fresh water. One splash will stop a Tarr from spawning new Tarr, and repeated splashes will destroy it entirely.\nAlternatively many ranchers recommend running away with their arms waving, and screaming.',
+      risks:
+        'The tarr are the single biggest threat to ranchers. The tarr will seek out slimes to consume and replicate themselves, but will also devour chickens, rot crops in their proximity, and even devour ranchers!\nRemember: ranching largos may be highly profitable, but one stray plort and you could wind up with a devastating tarr outbreak.',
+      plortonomics:
+        'The Tarr produce no plorts, only more tarr. And then more tarr still',
+    },
+    locations: [],
+    properties: ['They attack the Rancher, and eat slimes'],
+    games: [1],
+  },
   {
     id: 'pink',
     name: 'Pink Slime',
@@ -38,6 +60,7 @@ export const slimes: Slime[] = [
         'Pink Plorts are an excellent "multipurpose generic substance" used to manufacture everything from food products to household cleaners. All over earth, people are eating burgers, sweetening their coffees or scrubbing their floors with pink plort products. That\'s some serious versatility!',
     },
     locations: ['reef', 'blanket', 'ruins', 'quarry', 'desert', 'wilds'],
+    games: [1],
   },
   {
     id: 'tabby',
@@ -64,6 +87,7 @@ export const slimes: Slime[] = [
       'Occasionally attempts to pounce at the player, indicated by wiggling before making a jump in her direction.',
     ],
     locations: ['reef', 'blanket', 'ruins', 'desert'],
+    games: [1],
   },
   {
     id: 'rock',
@@ -88,6 +112,7 @@ export const slimes: Slime[] = [
       'Rolls more often when agitated',
     ],
     locations: ['reef', 'quarry', 'ruins', 'desert', 'wilds'],
+    games: [1],
   },
   {
     id: 'phosphor',
@@ -111,6 +136,7 @@ export const slimes: Slime[] = [
       'Disappears in prolonged exposure to sunlight.',
     ],
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    games: [1],
   },
   {
     id: 'honey',
@@ -133,6 +159,7 @@ export const slimes: Slime[] = [
       'Its plorts attract Slimes from further distances than other plorts',
     ],
     locations: ['blanket'],
+    games: [1],
   },
   {
     id: 'puddle',
@@ -152,6 +179,7 @@ export const slimes: Slime[] = [
         'Puddle plorts are made almost entirely from an incredible hydro compound known by chemists across the galaxy as H2Ohhhhh. This compound is used to create an absurdly expensive brand of bottled drinking water that is sought after by the elite back on Earth. While some people argue that there is little difference in taste between it and tap water, those people seriously are not getting it.',
     },
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+    games: [1],
   },
   {
     id: 'boom',
@@ -175,6 +203,7 @@ export const slimes: Slime[] = [
       'Explodes occasionally, telegraphed by the intensity of its core and veins, sending everything in its blast radius flying and stunning itself in the process. Explosions can be temporarily nullified with Water or Ancient Water.',
       'Explodes more often when agitated.',
     ],
+    games: [1],
   },
   {
     id: 'hunter',
@@ -201,6 +230,7 @@ export const slimes: Slime[] = [
       'Hunter Largos will go feral again if they are sufficiently agitated, either from hunger or other sources.',
       'Feral Hunter Largos can be calmed with Food or with the Taming Bell',
     ],
+    games: [1],
   },
   {
     id: 'rad',
@@ -220,6 +250,7 @@ export const slimes: Slime[] = [
         "Given that raddies are basically mobile batteries, it's no surprise that corporations value rad plorts for their incredible energy-producing capabilities. Most rad plorts get turned into 'plortonium' and everything from the latest holophone to a radwave microcook system runs on the stuff.",
     },
     locations: ['quarry', 'wilds'],
+    games: [1],
   },
   {
     id: 'crystal',
@@ -245,6 +276,7 @@ export const slimes: Slime[] = [
       'Produces crystals more frequently when agitated.',
       'Crystals can be destroyed and production of more can be temporarily nullified with Water or Ancient Water.',
     ],
+    games: [1],
   },
   {
     id: 'quantum',
@@ -264,6 +296,7 @@ export const slimes: Slime[] = [
         "Quantum plorts are believed by many to hold the secret to infinite resources. Given the quantum slime's ability to change reality, it's theorized that unlocking the potential of quantum plorts would allow for a technology that converges the realities of other entities into our reality and- well basically we're talking about cloning stuff. Infinite energy, chickens, whatever. Probably no harmful side effects to this at all",
     },
     locations: ['ruins', 'desert'],
+    games: [1],
   },
   {
     id: 'dervish',
@@ -287,6 +320,7 @@ export const slimes: Slime[] = [
       'When agitated they can create large cyclones independant of the Slime, which reduces visibility and can sweep up Food, Slimes, and Plorts. Other Dervish Slimes, including Largos, are immune to these tornadoes.',
     ],
     locations: ['desert'],
+    games: [1],
   },
   {
     id: 'tangle',
@@ -310,6 +344,7 @@ export const slimes: Slime[] = [
       'If agitated, they will release pollen that makes surrounding slimes sneeze, increasing their Agitation',
     ],
     locations: ['desert'],
+    games: [1],
   },
   {
     id: 'fire',
@@ -334,6 +369,7 @@ export const slimes: Slime[] = [
       'Food and Chickadoos that touch a burning fire slime are destroyed. Slimes that touch a burning fire slime get agitated and knocked back.',
     ],
     locations: ['desert'],
+    games: [1],
   },
   {
     id: 'mosaic',
@@ -360,6 +396,7 @@ export const slimes: Slime[] = [
       'Glints are produced more frequently the more agitated the mosaic is.',
     ],
     locations: ['desert'],
+    games: [1],
   },
   {
     id: 'saber',
@@ -385,6 +422,7 @@ export const slimes: Slime[] = [
       'Are found feral in The Wilds.',
     ],
     locations: ['wilds'],
+    games: [1],
   },
   {
     id: 'golden',
@@ -409,6 +447,7 @@ export const slimes: Slime[] = [
       'Exclusively eats Gilded Ginger',
     ],
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+    games: [1],
   },
   {
     id: 'lucky',
@@ -423,12 +462,13 @@ export const slimes: Slime[] = [
       slimeology:
         "Lucky slimes are a strange variant of tabby slimes that seem to have a fascination with shiny objects, particularly newbuck coins. A lucky slime gobbles up any coin it can find, giving it a distinct jingling sound as it moves about.\nHowever, coins don't make for a balanced diet and a lucky slime will still greedily devour meat of any kind. In doing so, its body bursts with a shower of newbucks, leaving little room left in its slimy tummy. This burst often sends the lucky slime flying into the air.\nUpon detecting a rancher, the lucky slime will soon make a hasty retreat. No known rancher has been skilled enough, or perhaps lucky enough, to capture one of these slippery slimes.",
       risks:
-        'Lucky slimes pose the same risk to ranchers as other rare slimes: mainly, accidents in pursuit which can lead to demise. The promise of a small fortune when encountering a lucky slime has led to more than a few ranchers head-first into the slime sea.\nThis occurrence has led some of the more superstitious ranchers to see the lucky slime as a bad omen, or the universe testing their greed. These ranchers will ignore lucky slimes altogether, even purposefully shooing them away. Well, until you hear those newbucks jingling, and then, maybe just one shot wouldn\'t hurt...',
+        "Lucky slimes pose the same risk to ranchers as other rare slimes: mainly, accidents in pursuit which can lead to demise. The promise of a small fortune when encountering a lucky slime has led to more than a few ranchers head-first into the slime sea.\nThis occurrence has led some of the more superstitious ranchers to see the lucky slime as a bad omen, or the universe testing their greed. These ranchers will ignore lucky slimes altogether, even purposefully shooing them away. Well, until you hear those newbucks jingling, and then, maybe just one shot wouldn't hurt...",
       plortonomics:
-        'A lucky slime isn\'t known to produce plorts of any kind. Leading slime scientists believe this to be the result of the lucky slime not being a true slime variant. Rather, lucky slimes are believed to be just an abnormal tabby slime: one whose color has faded as a result of ingesting so many coins. It is perhaps this very change that also led to ceasing plort production.',
+        "A lucky slime isn't known to produce plorts of any kind. Leading slime scientists believe this to be the result of the lucky slime not being a true slime variant. Rather, lucky slimes are believed to be just an abnormal tabby slime: one whose color has faded as a result of ingesting so many coins. It is perhaps this very change that also led to ceasing plort production.",
     },
     properties: null,
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+    games: [1],
   },
   {
     id: 'quicksilver',
@@ -457,6 +497,7 @@ export const slimes: Slime[] = [
       'Cannot be stored in the vacpack.',
     ],
     locations: ['valley'],
+    games: [1],
   },
   {
     id: 'glitch',
@@ -477,5 +518,27 @@ export const slimes: Slime[] = [
     },
     properties: null,
     locations: ['slimeulation'],
+    games: [1],
+  },
+  {
+    id: 'twinkle',
+    name: 'Twinkle Slime',
+    image:
+      'https://static.wikia.nocookie.net/slimerancher/images/b/b4/Twinkle_Slime_SP.png/revision/latest?cb=20190924192504',
+    diet: 'other',
+    favouriteToy: null,
+    favouriteFood: null,
+    type: 'special',
+    slimepedia: {
+      slimeology:
+        "Few ranchers have ever even glimpsed a twinkle slime, with most believing it to be a legend. But those that have know it's real, and that the twinkle slime seems to be related to the passing of time, or a change in seasons. However, this is only a theory as data on twinkle slime behaviors is quite limited.\nWhen they are found, twinkle slimes give away their location with the beautiful songs they sing. On approach, their song will reach a crescendo and all at once, vanish from sight and fill the immediate area with strange motes of energy called chimes.\nTwinkle slimes also create a mysterious portal after they vanish that always wisks those who enter it back home. It's not clear what purpose this serves, but some believe that the twinkle slime is reminding those who witness it that time passes whether you notice it or not, and when you do, it's sometimes nice to return home and remind yourself of the person you once were, and the people that made you who you are today.",
+      risks:
+        'Twinkle slimes pose no known risks to ranchers. They appear to be almost ethereal in nature.',
+      plortonomics:
+        'Twinkle slimes do not seem to eat, and do not produce plorts.',
+    },
+    properties: null,
+    locations: [],
+    games: [1],
   },
 ];
