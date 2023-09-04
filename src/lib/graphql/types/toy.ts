@@ -2,7 +2,7 @@ import { objectType } from "nexus";
 import { Slime } from ".";
 import { slimes } from "@/lib/data";
 
-export const Toys = objectType({
+export const Toy = objectType({
   name: 'Toy',
   description: 'Slime toy',
   definition(t) {

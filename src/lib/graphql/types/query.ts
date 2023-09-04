@@ -1,11 +1,11 @@
-import { nonNull, queryType, stringArg } from 'nexus';
+import { queryType, stringArg } from 'nexus';
 import { foods, locations, slimes, toys } from '@/lib/data';
 
 export const Query = queryType({
   definition(t) {
     t.list.field('slimes', {
       type: 'Slime',
-      description: 'A list of slimes',
+      description: 'A list of all slimes',
       args: {
         slimeId: stringArg(),
         locationId: stringArg(),
@@ -25,7 +25,7 @@ export const Query = queryType({
 
     t.list.field('locations', {
       type: 'Location',
-      description: 'A list of locations',
+      description: 'A list of all locations in the Far, Far Range',
       args: {
         locationId: stringArg(),
         slimeId: stringArg(),
@@ -36,16 +36,15 @@ export const Query = queryType({
           results = results.filter((location) => location.id === locationId);
         if (slimeId)
           results = results.filter((location) =>
-            location.slimes.includes(slimeId)
+            slimes.filter((slime) => slime.locations.includes(location.id))
           );
-
         return results;
       },
     });
 
     t.list.field('foods', {
       type: 'Food',
-      description: 'A list of slime foods',
+      description: 'A list of all foods',
       args: {
         foodId: stringArg(),
         slimeId: stringArg(),
@@ -67,7 +66,7 @@ export const Query = queryType({
 
     t.list.field('toys', {
       type: 'Toy',
-      description: 'A list of slime toys',
+      description: 'A list of all slime toys',
       args: {
         toyId: stringArg(),
         slimeId: stringArg(),
