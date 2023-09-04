@@ -52,7 +52,7 @@ export const slimes: Slime[] = [
     image:
       'https://static.wikia.nocookie.net/slimerancher/images/9/90/Rock_Slime_SP.png/revision/latest/scale-to-width-down/1000?cb=20170401125705',
     diet: 'veggie',
-    favouriteToy: 'rock',
+    favouriteToy: 'bigrock',
     favouriteFood: 'beet',
     type: 'harmful',
     slimepedia: {
@@ -321,7 +321,7 @@ export const slimes: Slime[] = [
     name: 'Mosaic Slime',
     image:
       'https://static.wikia.nocookie.net/slimerancher/images/6/69/Mosaic_Slime_SP.png/revision/latest?cb=20170612214624',
-    diet: 'veggies',
+    diet: 'veggie',
     favouriteToy: 'disco',
     favouriteFood: 'parsnip',
     type: 'harmful',
