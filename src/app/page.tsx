@@ -8,15 +8,15 @@ import {
   Link,
   Separator,
 } from '@radix-ui/themes';
-import CalloutComponent from './components/CalloutComponent';
-import QueryCard from './components/QueryCard';
+import CalloutComponent from '../components/CalloutComponent';
+import QueryCard from '../components/QueryCard';
 
 // Static Image Imports
 import slimes from '@/app/images/slimes.webp';
 import food from '@/app/images/food.webp';
 import location from '@/app/images/location.webp';
 import toys from '@/app/images/toys.webp';
-import QueryDetails from './components/QueryDetails';
+import QueryDetails from '../components/QueryDetails';
 
 export default function Home() {
   return (
