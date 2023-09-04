@@ -1,6 +1,6 @@
 import { toys, foods, locations } from "@/lib/data";
 import { objectType } from "nexus";
-import { DietEnum, Toy, Food, SlimeType, Slimepedia, Location } from ".";
+import { FoodType, Toy, Food, SlimeType, Slimepedia, Location } from ".";
 
 export const Slime = objectType({
   name: 'Slime',
@@ -9,7 +9,7 @@ export const Slime = objectType({
     t.nonNull.id('id');
     t.nonNull.string('name');
     t.nonNull.string('image');
-    t.nonNull.field('diet', { type: DietEnum, description: 'What a slime can eat' });
+    t.nonNull.field('diet', { type: FoodType, description: 'What a slime can eat' });
     t.field('favouriteToy', {
       type: Toy,
       description: "The slime's favourite toy",

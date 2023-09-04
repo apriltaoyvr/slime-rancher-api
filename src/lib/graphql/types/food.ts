@@ -1,5 +1,5 @@
 import { objectType } from "nexus";
-import { DietEnum, Slime, Location, Slimepedia } from ".";
+import { FoodType, Slime, Location, Slimepedia } from ".";
 import { locations, slimes } from "@/lib/data";
 
 export const Food = objectType({
@@ -10,7 +10,7 @@ export const Food = objectType({
     t.nonNull.string('name');
     t.nonNull.string('image');
     t.nonNull.field('type', {
-      type: DietEnum,
+      type: FoodType,
       description: 'The type of food it is',
     });
     t.field('favouredBy', {

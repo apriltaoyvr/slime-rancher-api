@@ -2,6 +2,7 @@ import { objectType } from "nexus";
 import { foods, slimes } from "@/lib/data";
 import { Slime } from "./slime";
 import { Food } from "./food";
+import { Slimepedia } from "./slimepedia";
 
 export const Location = objectType({
   name: 'Location',
@@ -9,7 +10,10 @@ export const Location = objectType({
   definition(t) {
     t.nonNull.id('id');
     t.nonNull.string('name');
-    t.nonNull.string('slimepedia');
+    t.nonNull.field('slimepedia', {
+      type: Slimepedia,
+      description: 'A location\'s slimepedia entry'
+    });
     t.list.field('slimes', {
       type: Slime,
       description: 'Slimes that can be found at this location',
