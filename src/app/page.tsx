@@ -37,7 +37,8 @@ export default function Home() {
               pull request at{' '}
               <Link href='https://github.com/apriltaoyvr/slime-rancher-graphql'>
                 the repo
-              </Link>!
+              </Link>
+              !
             </Text>
           </Box>
         </Flex>
@@ -69,9 +70,11 @@ export default function Home() {
             >
               <QueryDetails name='id' type='ID!' />
               <QueryDetails name='name' type='String!' />
+              <QueryDetails name='image' type='String!' />
               <QueryDetails name='type' type='Diet!' />
               <QueryDetails name='favouredBy' type='Slime!' />
               <QueryDetails name='locations' type='[Location]!' />
+              <QueryDetails name='slimepedia' type='Slimepedia!' />
             </QueryCard>
             <QueryCard
               name='Locations'

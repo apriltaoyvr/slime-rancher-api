@@ -1,5 +1,5 @@
 import { objectType } from "nexus";
-import { DietEnum, Slime, Location } from ".";
+import { DietEnum, Slime, Location, Slimepedia } from ".";
 import { locations, slimes } from "@/lib/data";
 
 export const Food = objectType({
@@ -8,6 +8,7 @@ export const Food = objectType({
   definition(t) {
     t.nonNull.id('id');
     t.nonNull.string('name');
+    t.nonNull.string('image');
     t.nonNull.field('type', {
       type: DietEnum,
       description: 'The type of food it is',
@@ -26,5 +27,9 @@ export const Food = objectType({
         return locations.filter((location) => food.locations.includes(location.id));
       },
     });
+    t.nonNull.field('slimepedia', {
+      type: Slimepedia,
+      description: 'A food\'s Slimepedia entry',
+    })
   },
 });
