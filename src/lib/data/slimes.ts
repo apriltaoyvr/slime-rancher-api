@@ -15,7 +15,7 @@ export interface Slime {
   };
   locations: string[];
   properties?: string[] | null;
-  games: number[]
+  games: number[];
 }
 
 type SlimeType = 'docile' | 'harmful' | 'special' | 'hostile';

@@ -15,7 +15,7 @@ export const Toy = objectType({
         return slimes.find((slime) => slime.favouriteToy === toy.id);
       },
     });
-    t.nonNull.string('description');
-    t.nonNull.int('price');
+    t.nonNull.string('description', {description: 'A description of a toy'});
+    t.nonNull.int('price', {description: 'The cost of a toy'});
   },
 });
