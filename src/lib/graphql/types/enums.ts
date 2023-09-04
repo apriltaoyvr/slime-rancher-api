@@ -6,7 +6,7 @@ export const DietEnum = enumType({
   description: 'The type of diet for a slime',
 });
 
-export const SlimeDisposition = enumType({
+export const SlimeType = enumType({
   name: 'SlimeDisposition',
   description: "A slime's disposition type",
   members: ['docile', 'harmful', 'special', 'hostile'],
