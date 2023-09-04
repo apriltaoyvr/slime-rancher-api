@@ -8,7 +8,7 @@ export const Slime = objectType({
   definition(t) {
     t.nonNull.id('id');
     t.nonNull.string('name');
-    t.string('image');
+    t.nonNull.string('image');
     t.nonNull.field('diet', { type: DietEnum, description: 'What a slime can eat' });
     t.field('favouriteToy', {
       type: Toy,
