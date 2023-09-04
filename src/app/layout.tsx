@@ -13,6 +13,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Slime Rancher GraphQL',
   description: 'A GraphQL endpoint for Slime Rancer',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#191719' },
+  ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Slime Rancher GraphQL',
+    description: 'A GraphQL endpoint for Slime Rancer',
+  },
 };
 
 export default function RootLayout({
