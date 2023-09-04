@@ -1,4 +1,12 @@
-export const foods = [
+export interface Food {
+  id: string;
+  name: string;
+  type: string;
+  slime: string | null;
+  locations: string[];
+}
+
+export const foods: Food[] = [
   {
     id: 'roostro',
     name: 'Roostro',
@@ -52,6 +60,13 @@ export const foods = [
     id: 'pogo',
     name: 'Pogo Fruit',
     type: 'fruit',
+    slime: null,
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+  },
+  {
+    id: 'carrot',
+    name: 'Carrot',
+    type: 'veggie',
     slime: null,
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
   },

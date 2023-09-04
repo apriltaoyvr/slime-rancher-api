@@ -1,4 +1,19 @@
-import type { Slime } from '../graphql/sources';
+export interface Slime {
+  id: string;
+  name: string;
+  image: string;
+  diet: string;
+  favouriteToy: string | null;
+  favouriteFood: string | null;
+  type: string;
+  slimepedia: {
+    slimeology: string;
+    risks: string;
+    plortonomics: string;
+  };
+  locations: string[];
+  properties?: string[] | null;
+}
 
 export const slimes: Slime[] = [
   {

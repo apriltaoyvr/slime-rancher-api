@@ -1,4 +1,12 @@
-export const toys = [
+export interface Toy {
+  id: string;
+  name: string;
+  slime: string | null;
+  description: string;
+  price: number;
+}
+
+export const toys: Toy[] = [
   {
     id: 'beachball',
     name: 'Beach Ball',
@@ -19,8 +27,9 @@ export const toys = [
     id: 'bigrock',
     name: 'Big Rock',
     slime: 'rock',
-    description: 'Reduces agitation of nearby slimes, especially Rock Slimes who obviously don\'t understand toys',
-    price: 400
+    description:
+      "Reduces agitation of nearby slimes, especially Rock Slimes who obviously don't understand toys",
+    price: 400,
   },
   {
     id: 'nightlight',

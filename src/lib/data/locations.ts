@@ -1,4 +1,10 @@
-export const locations = [
+export interface Location {
+  id: string;
+  name: string;
+  slimes: string[];
+  foods: string[];
+}
+export const locations: Location[] = [
   {
     id: 'reef',
     name: 'The Dry Reef',
@@ -26,8 +32,28 @@ export const locations = [
   {
     id: 'desert',
     name: 'The Glass Desert',
-    slimes: ['pink', 'phosphor', 'rock', 'tabby', 'puddle', 'hunter', 'quantum', 'dervish', 'fire', 'tangle', 'mosaic'],
-    foods: ['stonyhen', 'roostro', 'cuberry', 'beet', 'pear', 'paintedhen', 'parsnip'],
+    slimes: [
+      'pink',
+      'phosphor',
+      'rock',
+      'tabby',
+      'puddle',
+      'hunter',
+      'quantum',
+      'dervish',
+      'fire',
+      'tangle',
+      'mosaic',
+    ],
+    foods: [
+      'stonyhen',
+      'roostro',
+      'cuberry',
+      'beet',
+      'pear',
+      'paintedhen',
+      'parsnip',
+    ],
   },
   {
     id: 'wilds',
