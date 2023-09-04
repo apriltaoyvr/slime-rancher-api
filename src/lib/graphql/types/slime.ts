@@ -31,9 +31,9 @@ export const Slime = objectType({
     t.nonNull.field('slimepedia', { type: Slimepedia });
     t.nonNull.list.field('locations', {
       type: Location,
-      resolve(parent, args, ctx) {
+      resolve(slime) {
         return locations.filter((location) =>
-          location.slimes.includes(parent.id)
+          slime.locations.includes(location.id)
         );
       },
     });

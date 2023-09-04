@@ -15,9 +15,10 @@ export default function Home() {
       </Heading>
       <Text as='p'>
         The endpoint is available at{' '}
-        <Text>
-          <Link href='/api/graphql'>Insert Link Here</Link>
-        </Text>.
+        <Link href='/api/graphql'>Insert Link Here</Link>.
+      </Text>
+      <Text as='p'>
+        Currently only contains Slime Rancher 1 information.
       </Text>
     </Flex>
   );

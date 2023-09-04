@@ -1,11 +1,13 @@
+import type { Diet } from './enums';
+
 export interface Slime {
   id: string;
   name: string;
   image: string;
-  diet: string;
+  diet: Diet;
   favouriteToy: string | null;
   favouriteFood: string | null;
-  type: string;
+  type: SlimeDisposition;
   slimepedia: {
     slimeology: string;
     risks: string;
@@ -14,6 +16,8 @@ export interface Slime {
   locations: string[];
   properties?: string[] | null;
 }
+
+type SlimeDisposition = 'docile' | 'harmful' | 'special' | 'hostile';
 
 export const slimes: Slime[] = [
   {
@@ -381,5 +385,97 @@ export const slimes: Slime[] = [
       'Are found feral in The Wilds.',
     ],
     locations: ['wilds'],
+  },
+  {
+    id: 'golden',
+    name: 'Golden Slime',
+    image:
+      'https://static.wikia.nocookie.net/slimerancher/images/6/67/Gold_Slime_SP.png/revision/latest/scale-to-width-down/1000?cb=20170401125802',
+    diet: 'other',
+    favouriteToy: null,
+    favouriteFood: null,
+    type: 'special',
+    slimepedia: {
+      slimeology:
+        'The most exclusive and sought after of all slime species is easily the gold slime. Very little is known about these slippery creatures as they have proven impossible to capture. Gold slimes are quick as a flash and will immediately begin to flee ranchers on sight. If a rancher is to profit from an encounter with a gold slime, they need to think quick',
+      risks:
+        'Gold slimes produce no direct risks to a rancher but their appearance often induces panic and leads to (sometimes fatal) mistakes. Further, the only way to obtain gold plorts is to strike a gold slime with any spare resources in your vac. Doing so can produce a gold plort, though it also leaves a trail of additional resources in the area, leading to unintended largos, or worse.',
+      plortonomics:
+        'Gold plorts have little practical use and are the most valuable of all plorts simply because they are shiny and rare. Back on Earth, the elite love to adorn themselves in jewelry made of gold plorts, far exceeding the value of any terrestrial precious metal. For this reason a rancher should never pass up the chance to get a gold plort or two from a rare chance encounter with a gold slime',
+    },
+    properties: [
+      'Flees from the player if it spots them, and disappears shortly after.',
+      'Will produce one plort if hit with any resource',
+      'Exclusively eats Gilded Ginger',
+    ],
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+  },
+  {
+    id: 'lucky',
+    name: 'Lucky Slime',
+    image:
+      'https://static.wikia.nocookie.net/slimerancher/images/6/6a/Lucky_Slime_SP.png/revision/latest/scale-to-width-down/1000?cb=20170401125804',
+    diet: 'meat',
+    favouriteToy: null,
+    favouriteFood: null,
+    type: 'special',
+    slimepedia: {
+      slimeology:
+        "Lucky slimes are a strange variant of tabby slimes that seem to have a fascination with shiny objects, particularly newbuck coins. A lucky slime gobbles up any coin it can find, giving it a distinct jingling sound as it moves about.\nHowever, coins don't make for a balanced diet and a lucky slime will still greedily devour meat of any kind. In doing so, its body bursts with a shower of newbucks, leaving little room left in its slimy tummy. This burst often sends the lucky slime flying into the air.\nUpon detecting a rancher, the lucky slime will soon make a hasty retreat. No known rancher has been skilled enough, or perhaps lucky enough, to capture one of these slippery slimes.",
+      risks:
+        'Lucky slimes pose the same risk to ranchers as other rare slimes: mainly, accidents in pursuit which can lead to demise. The promise of a small fortune when encountering a lucky slime has led to more than a few ranchers head-first into the slime sea.\nThis occurrence has led some of the more superstitious ranchers to see the lucky slime as a bad omen, or the universe testing their greed. These ranchers will ignore lucky slimes altogether, even purposefully shooing them away. Well, until you hear those newbucks jingling, and then, maybe just one shot wouldn\'t hurt...',
+      plortonomics:
+        'A lucky slime isn\'t known to produce plorts of any kind. Leading slime scientists believe this to be the result of the lucky slime not being a true slime variant. Rather, lucky slimes are believed to be just an abnormal tabby slime: one whose color has faded as a result of ingesting so many coins. It is perhaps this very change that also led to ceasing plort production.',
+    },
+    properties: null,
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+  },
+  {
+    id: 'quicksilver',
+    name: 'Quicksilver Slime',
+    image:
+      'https://static.wikia.nocookie.net/slimerancher/images/d/d1/Quicksilver_Slime_SP.png/revision/latest?cb=20180314161320',
+    diet: 'other',
+    favouriteToy: null,
+    favouriteFood: null,
+    type: 'special',
+    slimepedia: {
+      slimeology:
+        'Quicksilver slimes are among the rarest slimes on the Far, Far Range, thanks in large part to their only known habitat being owned exclusively by Mochi Miles.\nQuicksilver slimes are lightning quick, and feed on electricity. This is generally accomplished by their moving really fast and slowly accumulating the static charge they generate. However, Mochi has decided to speed up the process and created a method for feeding them energy in a far more direct fashion.',
+      risks:
+        "Quicksilver slimes are not normally harmful to a rancher as the static they generate has a low current.\nHowever, Mochi's method of feeding them a great deal of electricity at once makes quicksilver slimes overcharged with a current high enough to be harmful if touched. So be careful when firing those spark shots as a mob of well-fed quicksilvers could leave you zapped!",
+      plortonomics:
+        'Mochi sells quicksilver plorts off-market and little is known about her buyers or their motives.',
+    },
+    properties: [
+      'Spawns in groups once the generator has been activated',
+      'Zooms around the area in a racetrack fashion',
+      'Becomes overcharged when fed electricity; this makes it temporarily harmful on contact',
+      "Plorts can only be carried in the Augmented Vacpack, and are automatically teleported to the Augmented Vacpack's inventory",
+      'Can be directly applied with a slowing effect, and a static charge effect to "feed" nearby Quicksilver Slimes from certain projectiles found in Nimble Valley.',
+      'When time runs out, any remaining quicksilver slimes flee from the player in all directions and despawn.',
+      'Cannot be stored in the vacpack.',
+    ],
+    locations: ['valley'],
+  },
+  {
+    id: 'glitch',
+    name: 'Glitch Slime',
+    image:
+      'https://static.wikia.nocookie.net/slimerancher/images/9/92/Glitch_Slime_SP.png/revision/latest?cb=20190619005058',
+    diet: 'other',
+    favouriteToy: null,
+    favouriteFood: null,
+    type: 'special',
+    slimepedia: {
+      slimeology:
+        "Glitch slimes were formed from a bug in the codebase of Viktor's Slimeulation of the Far, Far Range. Though a wholly digital entity, these slimes could easily be considered 'real' within the limits of the world they inhabit. Glitch slimes do not seek out food like physical slimes; instead, they seem to be expanding to every corner of the Slimeulation, driven by some unknown purpose.",
+      risks:
+        "Though glitch slimes pose no direct danger to a rancher, their mischievous nature can make for hazardous situations when attempting to wrangle them. Glitch slimes will take the form of other slimes, distinguisable only by the inaccurate face they present. Vac-ing them up or using debug spray will reveal their true form.\nAdditionally, a glitch slime can take the form of objects commonly found in the Far, Far Range. If you're familiar with the real range, look for objects like rocks and trees that don't seem to belong. A splash of debug spray can reveal many glitch slimes in disguise.",
+      plortonomics:
+        "A glitch slime does not display any drive to eat the simulated food of the slimeulation and so no[sic] known plorts exist.\nHowever, if glitch slime plorts did exist, they would be virtual like everything in the slimeulation and have no actual value. Unless of course, a bunch of people decided virtual plorts have value, and then maybe everyone would start buying them. Heck, maybe eventually glitch slime plorts would worth a fortune because a bunch of us just agree on that too and then we all created our own Slimeulations to generate glitch slime plorts. But if that happened, then we would all be using an absurd amount of real energy, harming our real enviroment further, all to generate virtual plorts?\nSo obviously, that's just a very silly thing and we'd never do that.",
+    },
+    properties: null,
+    locations: ['slimeulation'],
   },
 ];

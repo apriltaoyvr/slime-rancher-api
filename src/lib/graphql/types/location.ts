@@ -9,18 +9,18 @@ export const Location = objectType({
   definition(t) {
     t.nonNull.id('id');
     t.nonNull.string('name');
-    t.nonNull.list.field('slimes', {
+    t.list.field('slimes', {
       type: Slime,
       description: 'Slimes that can be found at this location',
-      resolve(source) {
-        return slimes.filter((slime) => slime.locations.includes(source.id));
+      resolve(parent) {
+        return slimes.filter((slime) => slime.locations.includes(parent.id));
       },
     });
-    t.nonNull.list.field('foods', {
+    t.list.field('foods', {
       type: Food,
       description: 'Foods that can be found at this location',
-      resolve(source) {
-        return foods.filter((food) => food.locations.includes(source.id));
+      resolve(parent) {
+        return foods.filter((food) => food.locations.includes(parent.id));
       },
     });
   },

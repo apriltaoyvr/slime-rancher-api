@@ -23,7 +23,7 @@ export const Food = objectType({
       type: Location,
       description: 'Locations where this food can be found',
       resolve(food) {
-        return locations.filter((location) => location.foods.includes(food.id));
+        return locations.filter((location) => food.locations.includes(location.id));
       },
     });
   },

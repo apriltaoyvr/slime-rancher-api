@@ -1,7 +1,9 @@
+import type { Diet } from "./enums";
+
 export interface Food {
   id: string;
   name: string;
-  type: string;
+  type: Diet;
   slime: string | null;
   locations: string[];
 }
@@ -54,6 +56,34 @@ export const foods: Food[] = [
     name: 'Painted Hen',
     type: 'meat',
     slime: 'tangle',
+    locations: ['desert'],
+  },
+  {
+    id: 'chickadoo',
+    name: 'Chickadoo',
+    type: 'meat',
+    slime: null,
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+  },
+  {
+    id: 'stonychickadoo',
+    name: 'Stony Chickadoo',
+    type: 'meat',
+    slime: null,
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+  },
+  {
+    id: 'briarchickadoo',
+    name: 'Briar Chickadoo',
+    type: 'meat',
+    slime: null,
+    locations: ['blanket'],
+  },
+  {
+    id: 'paintedchickadoo',
+    name: 'Painted Chickadoo',
+    type: 'meat',
+    slime: null,
     locations: ['desert'],
   },
   {
@@ -125,5 +155,19 @@ export const foods: Food[] = [
     type: 'veggie',
     slime: 'mosaic',
     locations: ['desert'],
+  },
+  {
+    id: 'ginger',
+    name: 'Gilded Ginger',
+    type: 'veggie',
+    slime: 'golden',
+    locations: ['desert'],
+  },
+  {
+    id: 'kookadoba',
+    name: 'Kookadoba',
+    type: 'fruit',
+    slime: null,
+    locations: ['wilds'],
   },
 ];
