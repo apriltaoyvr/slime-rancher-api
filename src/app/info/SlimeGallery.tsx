@@ -21,12 +21,14 @@ export default function SlimeGallery({ slimes }: { slimes: SlimeFetch[] }) {
   let filteredResults = slimes;
 
   filteredResults =
-  query === ''
-    ? slimes
-    : slimes.filter((slime) => {
-        return slime.name.toLowerCase().includes(query.toLowerCase());
-      });
-  filteredResults = filteredResults.filter((slime) => slime.diet.includes(dietFilter))
+    query === ''
+      ? slimes
+      : slimes.filter((slime) => {
+          return slime.name.toLowerCase().includes(query.toLowerCase());
+        });
+  filteredResults = filteredResults.filter((slime) =>
+    slime.diet.includes(dietFilter),
+  );
 
   return (
     <>
@@ -43,12 +45,22 @@ export default function SlimeGallery({ slimes }: { slimes: SlimeFetch[] }) {
         <Select.Root name='diet' onValueChange={(e) => setDietFilter(e)}>
           <Select.Trigger placeholder='Diet' />
           <Select.Content>
-            <Select.Item value=''>Default</Select.Item>
-            <Select.Item value='all'>All</Select.Item>
-            <Select.Item value='meat'>Meat</Select.Item>
-            <Select.Item value='fruit'>Fruit</Select.Item>
-            <Select.Item value='veggie'>Veggie</Select.Item>
-            <Select.Item value='other'>Other</Select.Item>
+            <Select.Item value=''>All diets</Select.Item>
+            <Select.Separator />
+            <Select.Group>
+              <Select.Label>Common</Select.Label>
+              <Select.Item value='all'>All</Select.Item>
+              <Select.Item value='meat'>Meat</Select.Item>
+              <Select.Item value='fruit'>Fruit</Select.Item>
+              <Select.Item value='veggie'>Veggie</Select.Item>
+            </Select.Group>
+            <Select.Separator />
+            <Select.Group>
+              <Select.Label>Special</Select.Label>
+              <Select.Item value='water'>Water</Select.Item>
+              <Select.Item value='ash'>Ash</Select.Item>
+              <Select.Item value='other'>Other</Select.Item>
+            </Select.Group>
           </Select.Content>
         </Select.Root>
       </Flex>
