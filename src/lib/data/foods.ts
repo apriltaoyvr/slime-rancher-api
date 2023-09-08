@@ -336,7 +336,7 @@ export const foods: Food[] = [
     image:
       'https://static.wikia.nocookie.net/slimerancher/images/4/4c/GildedGinger_SP.png/revision/latest?cb=20170807214700',
     type: 'veggie',
-    slime: 'golden',
+    slime: 'gold',
     locations: ['desert'],
     slimepedia: {
       about:

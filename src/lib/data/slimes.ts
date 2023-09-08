@@ -25,7 +25,7 @@ export const slimes: Slime[] = [
     id: 'tarr',
     name: 'The Tarr',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/7/75/SlimeTarrSR2.png/revision/latest/scale-to-width-down/1000?cb=20220922201758',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/tarr.webp',
     diet: 'other',
     favouriteFood: null,
     favouriteToy: null,
@@ -46,7 +46,7 @@ export const slimes: Slime[] = [
     id: 'pink',
     name: 'Pink Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/6/6c/Pink_Slime_SP.png/revision/latest?cb=20170401125704',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/pink.webp',
     diet: 'all',
     favouriteToy: 'beachball',
     favouriteFood: null,
@@ -66,7 +66,7 @@ export const slimes: Slime[] = [
     id: 'tabby',
     name: 'Tabby Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/9/94/Tabby_Slime_SP.png/revision/latest/scale-to-width-down/1000?cb=20170401125706',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/tabby.webp',
     diet: 'meat',
     favouriteToy: 'yarn',
     favouriteFood: 'stonyhen',
@@ -93,7 +93,7 @@ export const slimes: Slime[] = [
     id: 'rock',
     name: 'Rock Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/9/90/Rock_Slime_SP.png/revision/latest/scale-to-width-down/1000?cb=20170401125705',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/rock.webp',
     diet: 'veggie',
     favouriteToy: 'bigrock',
     favouriteFood: 'beet',
@@ -118,7 +118,7 @@ export const slimes: Slime[] = [
     id: 'phosphor',
     name: 'Phosphor Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/e/ee/Phosphor_Slime_SP.png/revision/latest?cb=20170401125705',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/phosphor.webp',
     diet: 'fruit',
     favouriteToy: 'nightlight',
     favouriteFood: 'cuberry',
@@ -142,7 +142,7 @@ export const slimes: Slime[] = [
     id: 'honey',
     name: 'Honey Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/b/b6/Honey_Slime_SP.png/revision/latest?cb=20170401125706',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/honey.webp',
     diet: 'fruit',
     favouriteToy: 'bee',
     favouriteFood: 'mango',
@@ -165,7 +165,7 @@ export const slimes: Slime[] = [
     id: 'puddle',
     name: 'Puddle Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/9/97/Puddle_Slime_SP.png/revision/latest?cb=20170401125707',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/puddle.webp',
     diet: 'water',
     favouriteToy: 'ducky',
     favouriteFood: null,
@@ -185,7 +185,7 @@ export const slimes: Slime[] = [
     id: 'boom',
     name: 'Boom Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/9/97/Puddle_Slime_SP.png/revision/latest?cb=20170401125707',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/boom.webp',
     diet: 'meat',
     favouriteToy: 'bomb',
     favouriteFood: 'briarhen',
@@ -209,7 +209,7 @@ export const slimes: Slime[] = [
     id: 'hunter',
     name: 'Hunter Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/9/97/Puddle_Slime_SP.png/revision/latest?cb=20170401125707',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/hunter.webp',
     diet: 'fruit',
     favouriteToy: 'chicken',
     favouriteFood: 'roostro',
@@ -236,7 +236,7 @@ export const slimes: Slime[] = [
     id: 'rad',
     name: 'Rad Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/1/11/IconSlimeRadSR2.png/revision/latest?cb=20220929193455',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/rad.webp',
     diet: 'veggie',
     favouriteToy: 'cell',
     favouriteFood: 'oca',
@@ -250,13 +250,13 @@ export const slimes: Slime[] = [
         "Given that raddies are basically mobile batteries, it's no surprise that corporations value rad plorts for their incredible energy-producing capabilities. Most rad plorts get turned into 'plortonium' and everything from the latest holophone to a radwave microcook system runs on the stuff.",
     },
     locations: ['quarry', 'wilds'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'crystal',
     name: 'Crystal Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/4/4a/Crystal_Slime_SP.png/revision/latest?cb=20170401125708',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/crystal.webp',
     diet: 'veggie',
     favouriteToy: 'crystalball',
     favouriteFood: 'oca',
@@ -282,7 +282,7 @@ export const slimes: Slime[] = [
     id: 'quantum',
     name: 'Quantum Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/9/9c/IconSlimeQuantumSR2.png/revision/latest?cb=20220929193454',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/quantum.webp',
     diet: 'fruit',
     favouriteToy: 'puzzlecube',
     favouriteFood: 'lemon',
@@ -296,13 +296,13 @@ export const slimes: Slime[] = [
         "Quantum plorts are believed by many to hold the secret to infinite resources. Given the quantum slime's ability to change reality, it's theorized that unlocking the potential of quantum plorts would allow for a technology that converges the realities of other entities into our reality and- well basically we're talking about cloning stuff. Infinite energy, chickens, whatever. Probably no harmful side effects to this at all",
     },
     locations: ['ruins', 'desert'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'dervish',
     name: 'Dervish Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/5/50/Dervish_Slime_SP.png/revision/latest?cb=20221221183332',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/dervish.webp',
     diet: 'fruit',
     favouriteToy: 'gyro',
     favouriteFood: 'pear',
@@ -320,13 +320,13 @@ export const slimes: Slime[] = [
       'When agitated they can create large cyclones independant of the Slime, which reduces visibility and can sweep up Food, Slimes, and Plorts. Other Dervish Slimes, including Largos, are immune to these tornadoes.',
     ],
     locations: ['desert'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'tangle',
     name: 'Tangle Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/d/d6/Tangle_Slime_SP.png/revision/latest?cb=20170612214513',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/tangle.webp',
     diet: 'meat',
     favouriteToy: 'solmate',
     favouriteFood: 'paintedhen',
@@ -350,7 +350,7 @@ export const slimes: Slime[] = [
     id: 'fire',
     name: 'Fire Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/5/58/Fire_Slime_SP.png/revision/latest?cb=20170613212118',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/fire.webp',
     diet: 'ash',
     favouriteToy: 'brick',
     favouriteFood: null,
@@ -375,7 +375,7 @@ export const slimes: Slime[] = [
     id: 'mosaic',
     name: 'Mosaic Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/6/69/Mosaic_Slime_SP.png/revision/latest?cb=20170612214624',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/mosaic.webp',
     diet: 'veggie',
     favouriteToy: 'disco',
     favouriteFood: 'parsnip',
@@ -402,7 +402,7 @@ export const slimes: Slime[] = [
     id: 'saber',
     name: 'Saber Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/a/a6/Saber_Slime_SP.png/revision/latest?cb=20171018150733',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/saber.webp',
     diet: 'meat',
     favouriteToy: 'stegobuddy',
     favouriteFood: null,
@@ -425,10 +425,10 @@ export const slimes: Slime[] = [
     games: [1, 2],
   },
   {
-    id: 'golden',
-    name: 'Golden Slime',
+    id: 'gold',
+    name: 'Gold Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/6/67/Gold_Slime_SP.png/revision/latest/scale-to-width-down/1000?cb=20170401125802',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/gold.webp',
     diet: 'other',
     favouriteToy: null,
     favouriteFood: null,
@@ -453,7 +453,7 @@ export const slimes: Slime[] = [
     id: 'lucky',
     name: 'Lucky Slime',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/6/6a/Lucky_Slime_SP.png/revision/latest/scale-to-width-down/1000?cb=20170401125804',
+      '6/6a/Lucky_Slime_SP.png/revision/latest/scale-to-width-down/1000?cb=20170401125804',
     diet: 'meat',
     favouriteToy: null,
     favouriteFood: null,
@@ -473,8 +473,7 @@ export const slimes: Slime[] = [
   {
     id: 'quicksilver',
     name: 'Quicksilver Slime',
-    image:
-      'https://static.wikia.nocookie.net/slimerancher/images/d/d1/Quicksilver_Slime_SP.png/revision/latest?cb=20180314161320',
+    image: 'd/d1/Quicksilver_Slime_SP.png/revision/latest?cb=20180314161320',
     diet: 'other',
     favouriteToy: null,
     favouriteFood: null,
@@ -502,8 +501,7 @@ export const slimes: Slime[] = [
   {
     id: 'glitch',
     name: 'Glitch Slime',
-    image:
-      'https://static.wikia.nocookie.net/slimerancher/images/9/92/Glitch_Slime_SP.png/revision/latest?cb=20190619005058',
+    image: '9/92/Glitch_Slime_SP.png/revision/latest?cb=20190619005058',
     diet: 'other',
     favouriteToy: null,
     favouriteFood: null,
@@ -523,8 +521,7 @@ export const slimes: Slime[] = [
   {
     id: 'twinkle',
     name: 'Twinkle Slime',
-    image:
-      'https://static.wikia.nocookie.net/slimerancher/images/b/b4/Twinkle_Slime_SP.png/revision/latest?cb=20190924192504',
+    image: 'b/b4/Twinkle_Slime_SP.png/revision/latest?cb=20190924192504',
     diet: 'other',
     favouriteToy: null,
     favouriteFood: null,
