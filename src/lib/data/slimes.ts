@@ -18,7 +18,7 @@ export interface Slime {
   games: number[];
 }
 
-type SlimeType = 'docile' | 'harmful' | 'special' | 'hostile';
+export type SlimeType = 'docile' | 'harmful' | 'special' | 'hostile';
 
 export const slimes: Slime[] = [
   {

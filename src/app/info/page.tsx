@@ -1,45 +1,12 @@
 import { Container, Flex, Section, Heading, Text } from '@radix-ui/themes';
-import gql from 'gql-tag';
 import CalloutComponent from '@/components/CalloutComponent';
-import fetcher from '@/lib/fetcher';
-import SlimeGallery from './SlimeGallery';
-import type { Diet } from '@/lib/data/enums';
-
-export interface SlimeFetch {
-  id: string;
-  name: string;
-  image: string;
-  diet: Diet;
-  favouriteToy?: { id: string; name: string };
-  favouriteFood?: {
-    id: string;
-    name: string;
-  };
-  games: number[];
-}
+import graphqlFetcher from '@/lib/gqlFetcher';
+import SlimeGallery from './(sections)/SlimeGallery';
+import { type ISlimeDirectory, allSlimesQuery } from './slimeFetch';
 
 export default async function Info() {
-  const allSlimesQuery = gql`
-    query Query {
-      slimes {
-        id
-        name
-        image
-        diet
-        favouriteToy {
-          id
-          name
-        }
-        favouriteFood {
-          id
-          name
-        }
-        games
-      }
-    }
-  `;
-  const fetchAllSlimes = await fetcher(allSlimesQuery);
-  const slimes: SlimeFetch[] = fetchAllSlimes.data.slimes;
+  const fetchAllSlimes = await graphqlFetcher(allSlimesQuery);
+  const slimes: ISlimeDirectory[] = fetchAllSlimes.data.slimes;
 
   return (
     <Container>

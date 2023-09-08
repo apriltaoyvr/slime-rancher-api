@@ -2,7 +2,7 @@
 import { Flex, Text, Separator } from '@radix-ui/themes';
 import Link from 'next/link';
 import { GitHubLogoIcon, HomeIcon } from '@radix-ui/react-icons';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const pathname = usePathname();

@@ -1,5 +1,7 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   Flex,
   Section,
@@ -10,12 +12,10 @@ import {
   Card,
   Table,
 } from '@radix-ui/themes';
-import Link from 'next/link';
 import { MagnifyingGlassIcon, Cross2Icon } from '@radix-ui/react-icons';
-import Image from 'next/image';
+import type { ISlimeDirectory } from '../../slimeFetch';
 
-import type { SlimeFetch } from './page';
-export default function SlimeGallery({ slimes }: { slimes: SlimeFetch[] }) {
+export default function SlimeGallery({ slimes }: { slimes: ISlimeDirectory[] }) {
   const [query, setQuery] = useState('');
   const [dietFilter, setDietFilter] = useState('');
   let filteredResults = slimes;
@@ -77,17 +77,20 @@ export default function SlimeGallery({ slimes }: { slimes: SlimeFetch[] }) {
               id,
               name,
               image,
+              type,
               diet,
               favouriteToy,
               favouriteFood,
               games,
             } = slime;
 
+            console.log(type);
+
             return (
               <Card key={id}>
                 <Flex direction='column' align='center' justify='center'>
                   <Heading as='h3' size='5' align='center'>
-                    <Link href={`/api/slime/${slime.id}`}>{name}</Link>
+                    <Link href={`/info/slime/${slime.id}`}>{name}</Link>
                   </Heading>
                   <Heading as='h4' size='3' color='gray' align='center'>
                     {id}
@@ -104,6 +107,7 @@ export default function SlimeGallery({ slimes }: { slimes: SlimeFetch[] }) {
                   <Table.Root>
                     <Table.Header>
                       <Table.Row>
+                        <Table.ColumnHeaderCell>Type</Table.ColumnHeaderCell>
                         <Table.ColumnHeaderCell>Diet</Table.ColumnHeaderCell>
                         <Table.ColumnHeaderCell>
                           Fave Food
@@ -117,6 +121,7 @@ export default function SlimeGallery({ slimes }: { slimes: SlimeFetch[] }) {
 
                     <Table.Body>
                       <Table.Row align='center'>
+                        <Table.Cell className='capitalize'>{type}</Table.Cell>
                         <Table.Cell className='capitalize'>{diet}</Table.Cell>
                         <Table.Cell>
                           {favouriteFood !== null ? (
