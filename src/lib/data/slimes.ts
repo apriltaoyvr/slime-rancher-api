@@ -27,7 +27,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/tarr.webp',
     diet: 'other',
-    favouriteFood: null,
+    favouriteFood: 'ranchers',
     favouriteToy: null,
     type: 'hostile',
     slimepedia: {

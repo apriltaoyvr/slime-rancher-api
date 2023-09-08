@@ -7,7 +7,7 @@ export interface Food {
   type: Diet;
   slime: string | null;
   locations: string[];
-  slimepedia: {
+  slimepedia?: {
     about: string;
     ranch: string;
   };
@@ -15,10 +15,23 @@ export interface Food {
 
 export const foods: Food[] = [
   {
+    id: 'ranchers',
+    name: 'Ranchers',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/beatrix.webp',
+    type: 'meat',
+    slime: 'tarr',
+    locations: [],
+    slimepedia: {
+      about: '',
+      ranch: '',
+    },
+  },
+  {
     id: 'roostro',
     name: 'Roostro',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/b/ba/Roostro.png/revision/latest/scale-to-width-down/1000?cb=20191024180716',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/roostro.webp',
     type: 'meat',
     slime: 'hunter',
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
@@ -33,7 +46,7 @@ export const foods: Food[] = [
     id: 'elderroostro',
     name: 'Elder Roostro',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/8/83/Elder_roostro.png/revision/latest/scale-to-width-down/1000?cb=20170406171429',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/elderroostro.webp',
     type: 'meat',
     slime: null,
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
@@ -48,7 +61,7 @@ export const foods: Food[] = [
     id: 'hen',
     name: 'Hen Hen',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/e/e9/Hen_hen.png/revision/latest/scale-to-width-down/1000?cb=20170406171026',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/hen.webp',
     type: 'meat',
     slime: null,
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
@@ -63,7 +76,7 @@ export const foods: Food[] = [
     id: 'elderhen',
     name: 'Elder Hen',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/5/55/Elder_hen.png/revision/latest?cb=20170406171151',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/elderhen.webp',
 
     type: 'meat',
     slime: null,
@@ -79,7 +92,7 @@ export const foods: Food[] = [
     id: 'stonyhen',
     name: 'Stony Hen',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/d/d0/Stony_hen.png/revision/latest/scale-to-width-down/1000?cb=20170406170944',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/stonyhen.webp',
     type: 'meat',
     slime: 'tabby',
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
@@ -94,7 +107,7 @@ export const foods: Food[] = [
     id: 'briarhen',
     name: 'Briar Hen',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/e/ec/Briar_hen.png/revision/latest/scale-to-width-down/1000?cb=20170406171056',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/briarhen.webp',
     type: 'meat',
     slime: 'boom',
     locations: ['blanket'],
@@ -109,7 +122,7 @@ export const foods: Food[] = [
     id: 'paintedhen',
     name: 'Painted Hen',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/7/73/Painted_hen.png/revision/latest?cb=20170613003606',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/paintedhen.webp',
     type: 'meat',
     slime: 'tangle',
     locations: ['desert'],
@@ -124,7 +137,7 @@ export const foods: Food[] = [
     id: 'chickadoo',
     name: 'Chickadoo',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/7/71/Chickadoo.png/revision/latest/scale-to-width-down/1000?cb=20170406171506',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/chickadoo.webp',
     type: 'meat',
     slime: null,
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
@@ -139,7 +152,7 @@ export const foods: Food[] = [
     id: 'stonychickadoo',
     name: 'Stony Chickadoo',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/b/b8/Stony_Chickadoo.png/revision/latest/scale-to-width-down/1000?cb=20170406171540',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/stonychickadoo.webp',
     type: 'meat',
     slime: null,
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
@@ -154,7 +167,7 @@ export const foods: Food[] = [
     id: 'briarchickadoo',
     name: 'Briar Chickadoo',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/0/0d/Briar_chickadoo.png/revision/latest/scale-to-width-down/1000?cb=20170406171612',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/briarchickadoo.webp',
     type: 'meat',
     slime: null,
     locations: ['blanket'],
@@ -169,7 +182,7 @@ export const foods: Food[] = [
     id: 'paintedchickadoo',
     name: 'Painted Chickadoo',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/2/2f/Painted_Chickadoo.png/revision/latest?cb=20170701234223',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/paintedchickadoo.webp',
     type: 'meat',
     slime: null,
     locations: ['desert'],
@@ -184,7 +197,7 @@ export const foods: Food[] = [
     id: 'pogo',
     name: 'Pogo Fruit',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/0/07/Pogo_fruit.png/revision/latest/scale-to-width-down/1000?cb=20170406164718',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/pogo.webp',
     type: 'fruit',
     slime: null,
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
@@ -199,7 +212,7 @@ export const foods: Food[] = [
     id: 'carrot',
     name: 'Carrot',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/0/07/Pogo_fruit.png/revision/latest/scale-to-width-down/1000?cb=20170406164718',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/carrot.webp',
     type: 'veggie',
     slime: null,
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
@@ -214,7 +227,7 @@ export const foods: Food[] = [
     id: 'beet',
     name: 'Heart Beet',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/1/15/Heart_Beet.png/revision/latest/scale-to-width-down/1000?cb=20170406165726',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/beet.webp',
     type: 'veggie',
     slime: 'rock',
     locations: ['reef', 'quarry', 'ruins', 'desert', 'wilds'],
@@ -229,7 +242,7 @@ export const foods: Food[] = [
     id: 'cuberry',
     name: 'Cuberry',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/b/b9/Cuberry.png/revision/latest/scale-to-width-down/1000?cb=20170406164647',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/cuberry.webp',
     type: 'fruit',
     slime: 'phosphor',
     locations: ['reef', 'blanket', 'ruins', 'desert', 'wilds'],
@@ -244,7 +257,7 @@ export const foods: Food[] = [
     id: 'mango',
     name: 'Mint Mango',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/c/c9/Mint_mango.png/revision/latest/scale-to-width-down/1000?cb=20170406164559',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/mango.webp',
     type: 'fruit',
     slime: 'honey',
     locations: ['blanket'],
@@ -259,7 +272,7 @@ export const foods: Food[] = [
     id: 'oca',
     name: 'Oca Oca',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/7/72/Oca_Oca.png/revision/latest/scale-to-width-down/1000?cb=20170406170049',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/oca.webp',
     type: 'veggie',
     slime: 'rad',
     locations: ['quarry'],
@@ -274,7 +287,7 @@ export const foods: Food[] = [
     id: 'onion',
     name: 'Odd Onion',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/2/24/OddOnion_SP.png/revision/latest?cb=20170406170302',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/onion.webp',
     type: 'veggie',
     slime: 'crystal',
     locations: ['quarry'],
@@ -289,7 +302,7 @@ export const foods: Food[] = [
     id: 'lemon',
     name: 'Quantum Lemon',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/0/0b/PhaseLemon_SP.png/revision/latest?cb=20170307145023',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/lemon.webp',
     type: 'fruit',
     slime: 'quantum',
     locations: ['ruins'],
@@ -304,7 +317,7 @@ export const foods: Food[] = [
     id: 'pear',
     name: 'Prickle Pear',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/5/56/Prickle_Pear.png/revision/latest/scale-to-width-down/1000?cb=20170406164523',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/pear.webp',
     type: 'fruit',
     slime: 'dervish',
     locations: ['desert'],
@@ -319,7 +332,7 @@ export const foods: Food[] = [
     id: 'parsnip',
     name: 'Silver Parsnip',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/6/65/Silver_Parsnip.png/revision/latest/scale-to-width-down/1000?cb=20170406170330',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/parsnip.webp',
     type: 'veggie',
     slime: 'mosaic',
     locations: ['desert'],
@@ -334,7 +347,7 @@ export const foods: Food[] = [
     id: 'ginger',
     name: 'Gilded Ginger',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/4/4c/GildedGinger_SP.png/revision/latest?cb=20170807214700',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/ginger.webp',
     type: 'veggie',
     slime: 'gold',
     locations: ['desert'],
@@ -349,7 +362,7 @@ export const foods: Food[] = [
     id: 'kookadoba',
     name: 'Kookadoba',
     image:
-      'https://static.wikia.nocookie.net/slimerancher/images/5/56/KookadobaSP.png/revision/latest?cb=20171018195508',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/kookadoba.webp',
     type: 'fruit',
     slime: null,
     locations: ['wilds'],
