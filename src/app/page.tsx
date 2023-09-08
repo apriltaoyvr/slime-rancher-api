@@ -20,17 +20,17 @@ export default async function Home() {
             Slime Rancher
           </Heading>
           <Flex align='center' justify='center' gap='2' m='4' wrap='wrap'>
-            <Button size='3' color='gray' variant='soft'>
+            <Button size='3' color='gray' variant='soft' asChild>
               <Link href='/info'>Info</Link>
             </Button>
             <Separator orientation='vertical' />
-            <Button size='3' color='ruby' variant='soft'>
+            <Button size='3' color='ruby' variant='soft' asChild>
               <Link href='/api'>API</Link>
             </Button>
-            <Button size='3' color='pink' variant='soft'>
+            <Button size='3' color='pink' variant='soft' asChild>
               <Link href='/graphql'>GraphQL</Link>
             </Button>
-            <Button size='3' color='purple' variant='soft'>
+            <Button size='3' color='purple' variant='soft' asChild>
               <Link href='/docs'>API Docs</Link>
             </Button>
           </Flex>
