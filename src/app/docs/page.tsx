@@ -11,7 +11,7 @@ export default function Docs() {
     <Container>
       <Flex direction='column' align='center' m='2' gap='4'>
         <Heading align='center' size='8' as='h1' mb='2'>
-          Info
+          API Documentation
         </Heading>
         <CalloutComponent>
           Slime Rancher 2 information is currently being added.

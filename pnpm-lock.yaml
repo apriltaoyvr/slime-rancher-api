@@ -17,6 +17,9 @@ dependencies:
   '@radix-ui/themes':
     specifier: ^1.1.2
     version: 1.1.2(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
+  gql-tag:
+    specifier: ^1.0.1
+    version: 1.0.1
   next:
     specifier: 13.4.19
     version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
@@ -3063,6 +3066,10 @@ packages:
     dependencies:
       get-intrinsic: 1.2.1
     dev: true
+
+  /gql-tag@1.0.1:
+    resolution: {integrity: sha512-eVxldTiOtJJ3ySNgYbfRwyIyDDMATJ/ykojlQng5ihX1V0Xpr4C7ZXSZuWo7tg+kf+GS8lzhlbZmKSDjbYGhyA==}
+    dev: false
 
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}

@@ -1,13 +1,15 @@
 import {
   Container,
-  Section,
   Box,
   Flex,
   Heading,
   Text,
   Button,
+  Separator
 } from '@radix-ui/themes';
 import Link from 'next/link';
+import Image from 'next/image';
+import slimes from '@/images/slimes.webp';
 
 export default async function Home() {
   return (
@@ -15,9 +17,13 @@ export default async function Home() {
       <Box mt='8'>
         <Flex direction='column' justify='center' align='center' gap='2'>
           <Heading as='h1' align='center' size='9' mb='1'>
-            Slime Rancher API
+            Slime Rancher
           </Heading>
           <Flex align='center' justify='center' gap='2' m='4' wrap='wrap'>
+            <Button size='3' color='gray' variant='soft'>
+              <Link href='/info'>Info</Link>
+            </Button>
+            <Separator orientation='vertical' />
             <Button size='3' color='ruby' variant='soft'>
               <Link href='/api'>API</Link>
             </Button>
@@ -25,12 +31,14 @@ export default async function Home() {
               <Link href='/graphql'>GraphQL</Link>
             </Button>
             <Button size='3' color='purple' variant='soft'>
-              <Link href='/docs'>Docs</Link>
-            </Button>
-            <Button size='3' color='gray' variant='soft'>
-              <Link href='/docs'>Info</Link>
+              <Link href='/docs'>API Docs</Link>
             </Button>
           </Flex>
+          <Image
+            src={slimes}
+            alt='A cute photo of a pink slime and tabby slime'
+            className='m-4 max-w-sm'
+          />
           <Text as='p' align='center'>
             If you notice any errors or wish the contribute, please submit a
             pull request at{' '}
