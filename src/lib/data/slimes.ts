@@ -431,7 +431,7 @@ export const slimes: Slime[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/gold.webp',
     diet: 'other',
     favouriteToy: null,
-    favouriteFood: null,
+    favouriteFood: 'ginger',
     type: 'special',
     slimepedia: {
       slimeology:
