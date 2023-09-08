@@ -1,8 +1,4 @@
-import {
-  Section,
-  Flex,
-  Heading,
-} from '@radix-ui/themes';
+import { Section, Flex, Heading } from '@radix-ui/themes';
 import Link from 'next/link';
 import ObjectCard from '@/components/ObjectCard';
 import ObjectFields from '@/components/ObjectFields';

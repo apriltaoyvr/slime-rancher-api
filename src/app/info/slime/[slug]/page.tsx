@@ -11,7 +11,6 @@ import Image from 'next/image';
 import graphqlFetcher from '@/lib/gqlFetcher';
 import { type ISlime, singleSlimeQuery } from './query';
 
-
 export default async function SlimePage({
   params: { slug },
 }: {
@@ -21,7 +20,7 @@ export default async function SlimePage({
     data: {
       slimes: ISlime[];
     };
-  };
+  }
 
   const res: IFetchRes = await graphqlFetcher(singleSlimeQuery, {
     slimeId: slug,

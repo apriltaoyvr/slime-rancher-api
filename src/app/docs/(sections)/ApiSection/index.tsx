@@ -1,8 +1,4 @@
-import {
-  Section,
-  Heading,
-  Table,
-} from '@radix-ui/themes';
+import { Section, Heading, Table } from '@radix-ui/themes';
 import Link from 'next/link';
 
 export default function ApiSection() {

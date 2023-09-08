@@ -9,12 +9,11 @@ export default async function graphqlFetcher(
     },
     body: JSON.stringify({
       query: query,
-      variables: {...args},
+      variables: { ...args },
     }),
   });
 
-
   console.log(args);
-  
+
   return res.json();
 }

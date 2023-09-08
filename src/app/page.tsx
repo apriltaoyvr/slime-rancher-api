@@ -5,7 +5,7 @@ import {
   Heading,
   Text,
   Button,
-  Separator
+  Separator,
 } from '@radix-ui/themes';
 import Link from 'next/link';
 import Image from 'next/image';
