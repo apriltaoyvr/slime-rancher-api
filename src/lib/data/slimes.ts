@@ -210,7 +210,7 @@ export const slimes: Slime[] = [
     name: 'Hunter Slime',
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/hunter.webp',
-    diet: 'fruit',
+    diet: 'meat',
     favouriteToy: 'chicken',
     favouriteFood: 'roostro',
     type: 'docile',
@@ -259,7 +259,7 @@ export const slimes: Slime[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/crystal.webp',
     diet: 'veggie',
     favouriteToy: 'crystalball',
-    favouriteFood: 'oca',
+    favouriteFood: 'onion',
     type: 'harmful',
     slimepedia: {
       slimeology:
