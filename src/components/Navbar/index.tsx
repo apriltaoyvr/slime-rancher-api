@@ -45,7 +45,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className='border-accent-6 sticky top-0 z-40 flex w-full flex-row place-content-between place-items-center border-b p-2 bg-blend-overlay backdrop-blur-sm'
+      className='border-accent-6 sticky top-0 z-40 flex w-full flex-row place-content-between place-items-center border-b p-2 bg-blend-overlay backdrop-blur-sm mb-4'
       data-accent-color='gray'
     >
       <header>
