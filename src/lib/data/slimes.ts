@@ -453,7 +453,7 @@ export const slimes: Slime[] = [
     id: 'lucky',
     name: 'Lucky Slime',
     image:
-      '6/6a/Lucky_Slime_SP.png/revision/latest/scale-to-width-down/1000?cb=20170401125804',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/lucky.webp',
     diet: 'meat',
     favouriteToy: null,
     favouriteFood: null,
@@ -473,7 +473,8 @@ export const slimes: Slime[] = [
   {
     id: 'quicksilver',
     name: 'Quicksilver Slime',
-    image: 'd/d1/Quicksilver_Slime_SP.png/revision/latest?cb=20180314161320',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/quicksilver.webp',
     diet: 'other',
     favouriteToy: null,
     favouriteFood: null,
@@ -501,7 +502,8 @@ export const slimes: Slime[] = [
   {
     id: 'glitch',
     name: 'Glitch Slime',
-    image: '9/92/Glitch_Slime_SP.png/revision/latest?cb=20190619005058',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/glitch.webp',
     diet: 'other',
     favouriteToy: null,
     favouriteFood: null,
@@ -521,7 +523,8 @@ export const slimes: Slime[] = [
   {
     id: 'twinkle',
     name: 'Twinkle Slime',
-    image: 'b/b4/Twinkle_Slime_SP.png/revision/latest?cb=20190924192504',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/twinkle.webp',
     diet: 'other',
     favouriteToy: null,
     favouriteFood: null,
