@@ -40,7 +40,7 @@ export const slimes: Slime[] = [
     },
     locations: [],
     properties: ['They attack the Rancher, and eat slimes'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'pink',
@@ -60,7 +60,7 @@ export const slimes: Slime[] = [
         'Pink Plorts are an excellent "multipurpose generic substance" used to manufacture everything from food products to household cleaners. All over earth, people are eating burgers, sweetening their coffees or scrubbing their floors with pink plort products. That\'s some serious versatility!',
     },
     locations: ['reef', 'blanket', 'ruins', 'quarry', 'desert', 'wilds'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'tabby',
@@ -87,7 +87,7 @@ export const slimes: Slime[] = [
       'Occasionally attempts to pounce at the player, indicated by wiggling before making a jump in her direction.',
     ],
     locations: ['reef', 'blanket', 'ruins', 'desert'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'rock',
@@ -112,7 +112,7 @@ export const slimes: Slime[] = [
       'Rolls more often when agitated',
     ],
     locations: ['reef', 'quarry', 'ruins', 'desert', 'wilds'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'phosphor',
@@ -136,7 +136,7 @@ export const slimes: Slime[] = [
       'Disappears in prolonged exposure to sunlight.',
     ],
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'honey',
@@ -159,7 +159,7 @@ export const slimes: Slime[] = [
       'Its plorts attract Slimes from further distances than other plorts',
     ],
     locations: ['blanket'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'puddle',
@@ -179,7 +179,7 @@ export const slimes: Slime[] = [
         'Puddle plorts are made almost entirely from an incredible hydro compound known by chemists across the galaxy as H2Ohhhhh. This compound is used to create an absurdly expensive brand of bottled drinking water that is sought after by the elite back on Earth. While some people argue that there is little difference in taste between it and tap water, those people seriously are not getting it.',
     },
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'boom',
@@ -203,7 +203,7 @@ export const slimes: Slime[] = [
       'Explodes occasionally, telegraphed by the intensity of its core and veins, sending everything in its blast radius flying and stunning itself in the process. Explosions can be temporarily nullified with Water or Ancient Water.',
       'Explodes more often when agitated.',
     ],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'hunter',
@@ -230,7 +230,7 @@ export const slimes: Slime[] = [
       'Hunter Largos will go feral again if they are sufficiently agitated, either from hunger or other sources.',
       'Feral Hunter Largos can be calmed with Food or with the Taming Bell',
     ],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'rad',
@@ -276,7 +276,7 @@ export const slimes: Slime[] = [
       'Produces crystals more frequently when agitated.',
       'Crystals can be destroyed and production of more can be temporarily nullified with Water or Ancient Water.',
     ],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'quantum',
@@ -369,7 +369,7 @@ export const slimes: Slime[] = [
       'Food and Chickadoos that touch a burning fire slime are destroyed. Slimes that touch a burning fire slime get agitated and knocked back.',
     ],
     locations: ['desert'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'mosaic',
@@ -422,7 +422,7 @@ export const slimes: Slime[] = [
       'Are found feral in The Wilds.',
     ],
     locations: ['wilds'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'golden',
@@ -447,7 +447,7 @@ export const slimes: Slime[] = [
       'Exclusively eats Gilded Ginger',
     ],
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'lucky',
@@ -468,7 +468,7 @@ export const slimes: Slime[] = [
     },
     properties: null,
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
-    games: [1],
+    games: [1, 2],
   },
   {
     id: 'quicksilver',
