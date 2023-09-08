@@ -25,7 +25,10 @@ export default async function Home() {
               <Link href='/graphql'>GraphQL</Link>
             </Button>
             <Button size='3' color='purple' variant='soft'>
-              <Link href='/info'>Info</Link>
+              <Link href='/docs'>Docs</Link>
+            </Button>
+            <Button size='3' color='gray' variant='soft'>
+              <Link href='/docs'>Info</Link>
             </Button>
           </Flex>
           <Text as='p' align='center'>
