@@ -15,17 +15,26 @@ import {
 import { MagnifyingGlassIcon, Cross2Icon } from '@radix-ui/react-icons';
 import type { ISlimeDirectory } from '../../slimeFetch';
 
-export default function SlimeGallery({ slimes }: { slimes: ISlimeDirectory[] }) {
+export default function SlimeGallery({
+  slimes,
+}: {
+  slimes: ISlimeDirectory[];
+}) {
   const [query, setQuery] = useState('');
   const [dietFilter, setDietFilter] = useState('');
+  const [typeFilter, setTypeFilter] = useState('');
   let filteredResults = slimes;
 
+  // TODO: Cleaner way?
   filteredResults =
     query === ''
       ? slimes
       : slimes.filter((slime) => {
           return slime.name.toLowerCase().includes(query.toLowerCase());
         });
+  filteredResults = filteredResults.filter((slime) =>
+    slime.type.includes(typeFilter),
+  );
   filteredResults = filteredResults.filter((slime) =>
     slime.diet.includes(dietFilter),
   );
@@ -42,6 +51,17 @@ export default function SlimeGallery({ slimes }: { slimes: ISlimeDirectory[] }) 
             onChange={(e) => setQuery(e.target.value)}
           />
         </TextField.Root>
+        <Select.Root name='type' onValueChange={(e) => setTypeFilter(e)}>
+          <Select.Trigger placeholder='Type' />
+          <Select.Content>
+            <Select.Item value=''>All</Select.Item>
+            <Select.Separator />
+            <Select.Item value='docile'>Docile</Select.Item>
+            <Select.Item value='harmful'>Harmful</Select.Item>
+            <Select.Item value='hostile'>Hostile</Select.Item>
+            <Select.Item value='special'>Special</Select.Item>
+          </Select.Content>
+        </Select.Root>
         <Select.Root name='diet' onValueChange={(e) => setDietFilter(e)}>
           <Select.Trigger placeholder='Diet' />
           <Select.Content>
