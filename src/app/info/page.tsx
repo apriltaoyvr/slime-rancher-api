@@ -11,7 +11,6 @@ import ObjectCard from '@/components/ObjectCard';
 import ObjectFields from '@/components/ObjectFields';
 
 // Static Image Imports
-import question from '@/images/question.webp';
 import slimes from '@/images/slimes.webp';
 import food from '@/images/food.webp';
 import location from '@/images/location.webp';
