@@ -8,9 +8,9 @@ import {
   Link,
   Separator,
 } from '@radix-ui/themes';
-import CalloutComponent from '../components/CalloutComponent';
-import ObjectCard from '../components/ObjectCard';
-import ObjectFields from '../components/ObjectFields';
+import CalloutComponent from '@/components/CalloutComponent';
+import ObjectCard from '@/components/ObjectCard';
+import ObjectFields from '@/components/ObjectFields';
 
 // Static Image Imports
 import slimes from '@/images/slimes.webp';
@@ -19,7 +19,7 @@ import location from '@/images/location.webp';
 import toys from '@/images/toys.webp';
 import slimepedia from '@/images/slimepedia.webp';
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Container>
@@ -31,8 +31,8 @@ export default function Home() {
             <CalloutComponent />
             <Box m='4'>
               <Text as='p' align='center'>
-                The endpoint is available at{' '}
-                <Link href='/api/graphql'>/api/graphql</Link>
+                The GraphQL endpoint is available at{' '}
+                <Link href='/api/graphql'>/graphql</Link>
               </Text>
               <Text as='p' align='center'>
                 If you notice any errors or wish the contribute, please submit a

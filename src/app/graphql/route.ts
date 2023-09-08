@@ -11,7 +11,6 @@ const server = new ApolloServer({
   schema,
   introspection: true,
   plugins: [
-    // Install a landing page plugin based on NODE_ENV
     process.env.NODE_ENV === 'production'
       ? ApolloServerPluginLandingPageProductionDefault({
           graphRef: 'slime-rancher@current',
