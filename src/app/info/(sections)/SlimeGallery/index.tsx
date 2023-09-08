@@ -54,7 +54,7 @@ export default function SlimeGallery({
         <Select.Root name='type' onValueChange={(e) => setTypeFilter(e)}>
           <Select.Trigger placeholder='Type' />
           <Select.Content>
-            <Select.Item value=''>All</Select.Item>
+            <Select.Item value=''>All types</Select.Item>
             <Select.Separator />
             <Select.Item value='docile'>Docile</Select.Item>
             <Select.Item value='harmful'>Harmful</Select.Item>

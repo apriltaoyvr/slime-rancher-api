@@ -13,7 +13,5 @@ export default async function graphqlFetcher(
     }),
   });
 
-  console.log(args);
-
   return res.json();
 }
