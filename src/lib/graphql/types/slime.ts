@@ -1,6 +1,6 @@
-import { toys, foods, locations } from "@/lib/data";
-import { objectType } from "nexus";
-import { FoodType, Toy, Food, SlimeType, Slimepedia, Location } from ".";
+import { toys, foods, locations } from '@/lib/data';
+import { objectType } from 'nexus';
+import { FoodType, Toy, Food, SlimeType, Slimepedia, Location } from '.';
 
 export const Slime = objectType({
   name: 'Slime',
@@ -9,7 +9,10 @@ export const Slime = objectType({
     t.nonNull.id('id');
     t.nonNull.string('name');
     t.nonNull.string('image');
-    t.nonNull.field('diet', { type: FoodType, description: 'What a slime can eat' });
+    t.nonNull.field('diet', {
+      type: FoodType,
+      description: 'What a slime can eat',
+    });
     t.field('favouriteToy', {
       type: Toy,
       description: "The slime's favourite toy",
@@ -28,8 +31,11 @@ export const Slime = objectType({
       type: SlimeType,
       description: "The slime's type",
     });
-    t.nonNull.field('slimepedia', { type: Slimepedia, description: "The slime's Slimepedia entries" });
-    t.nonNull.list.field('locations', {
+    t.nonNull.field('slimepedia', {
+      type: Slimepedia,
+      description: "The slime's Slimepedia entries",
+    });
+    t.list.field('locations', {
       type: Location,
       description: 'Locations where this slime appears',
       resolve(slime) {
@@ -39,5 +45,6 @@ export const Slime = objectType({
       },
     });
     t.list.string('properties');
+    t.nonNull.list.nonNull.int('games', { description: 'The games the slime appears in' });
   },
 });

@@ -54,8 +54,9 @@ export default function Info() {
                 <ObjectFields name='favouriteFood' type='Food' />
                 <ObjectFields name='type' type='SlimeType!' />
                 <ObjectFields name='slimepedia' type='Slimepedia!' />
-                <ObjectFields name='locations' type='[Location]!' />
+                <ObjectFields name='locations' type='[Location]' />
                 <ObjectFields name='properties' type='[String]' />
+                <ObjectFields name='games' type='[Integer!]!' />
               </ObjectCard>
               <ObjectCard
                 name='Foods'
@@ -67,7 +68,7 @@ export default function Info() {
                 <ObjectFields name='image' type='String!' />
                 <ObjectFields name='type' type='FoodType!' />
                 <ObjectFields name='favouredBy' type='Slime!' />
-                <ObjectFields name='locations' type='[Location]!' />
+                <ObjectFields name='locations' type='[Location]' />
                 <ObjectFields name='slimepedia' type='Slimepedia!' />
               </ObjectCard>
               <ObjectCard
@@ -177,7 +178,7 @@ export default function Info() {
         </Section>
       </Section>
 
-      <Section size='1'>
+      <Section id='credits' size='1'>
         <Flex direction='column' align='center'>
           <Heading align='center' as='h2' m='2'>
             Credit

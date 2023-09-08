@@ -20,7 +20,7 @@ export const Food = objectType({
         return slimes.find((slime) => slime.favouriteFood === food.id);
       },
     });
-    t.nonNull.list.field('locations', {
+    t.list.field('locations', {
       type: Location,
       description: 'Locations where this food can be found',
       resolve(food) {
