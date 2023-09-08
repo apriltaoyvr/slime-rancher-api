@@ -7,10 +7,6 @@ import {
 import schema from '@/lib/graphql/schema';
 import type { NextRequest } from 'next/server';
 
-export const config = {
-  runtime: 'edge',
-};
-
 const server = new ApolloServer({
   schema,
   introspection: true,
