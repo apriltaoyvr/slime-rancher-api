@@ -40,11 +40,13 @@ export const Slime = objectType({
       description: 'Locations where this slime appears',
       resolve(slime) {
         return locations.filter((location) =>
-          slime.locations.includes(location.id)
+          slime.locations.includes(location.id),
         );
       },
     });
     t.list.string('properties');
-    t.nonNull.list.nonNull.int('games', { description: 'The games the slime appears in' });
+    t.nonNull.list.nonNull.int('games', {
+      description: 'The games the slime appears in',
+    });
   },
 });

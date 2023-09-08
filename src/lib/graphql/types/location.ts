@@ -1,8 +1,8 @@
-import { objectType } from "nexus";
-import { foods, slimes } from "@/lib/data";
-import { Slime } from "./slime";
-import { Food } from "./food";
-import { Slimepedia } from "./slimepedia";
+import { objectType } from 'nexus';
+import { foods, slimes } from '@/lib/data';
+import { Slime } from './slime';
+import { Food } from './food';
+import { Slimepedia } from './slimepedia';
 
 export const Location = objectType({
   name: 'Location',
@@ -12,7 +12,7 @@ export const Location = objectType({
     t.nonNull.string('name');
     t.nonNull.field('slimepedia', {
       type: Slimepedia,
-      description: 'A location\'s slimepedia entry'
+      description: "A location's slimepedia entry",
     });
     t.list.field('slimes', {
       type: Slime,

@@ -1,5 +1,4 @@
-'use client'
-import { Flex } from '@radix-ui/themes';
+'use client';
 import Link from 'next/link';
 import { GitHubLogoIcon, HomeIcon } from '@radix-ui/react-icons';
 
@@ -9,7 +8,7 @@ export default function Navbar() {
       <header>
         <Link
           href='/'
-          className='rt-reset-button rt-reset-a rt-BaseButton rt-Button rt-variant-ghost p-2 rounded'
+          className='rt-reset-button rt-reset-a rt-BaseButton rt-Button rt-variant-ghost rounded p-2'
           data-accent-color='crimson'
         >
           <HomeIcon width='16' height='16' />
@@ -18,7 +17,7 @@ export default function Navbar() {
       <footer>
         <Link
           href='https://github.com/apriltaoyvr/slime-rancher-api'
-          className='rt-reset-button rt-reset-a rt-BaseButton rt-Button rt-variant-ghost p-2 rounded'
+          className='rt-reset-button rt-reset-a rt-BaseButton rt-Button rt-variant-ghost rounded p-2'
           data-accent-color='crimson'
         >
           <GitHubLogoIcon width='16' height='16' />

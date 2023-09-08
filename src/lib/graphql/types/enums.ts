@@ -1,4 +1,4 @@
-import { enumType } from "nexus";
+import { enumType } from 'nexus';
 
 export const FoodType = enumType({
   name: 'FoodType',

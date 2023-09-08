@@ -1,8 +1,14 @@
-import { Text } from "@radix-ui/themes";
+import { Text } from '@radix-ui/themes';
 
-export default function ObjectFields({name, type}: {name: string, type: string}) {
+export default function ObjectFields({
+  name,
+  type,
+}: {
+  name: string;
+  type: string;
+}) {
   return (
-    <Text size='2' >
+    <Text size='2'>
       {name}: <Text color='gray'>{type}</Text>
     </Text>
   );

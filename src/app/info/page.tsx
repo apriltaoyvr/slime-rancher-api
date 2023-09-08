@@ -4,7 +4,7 @@ import {
   Flex,
   Heading,
   Text,
-  Table
+  Table,
 } from '@radix-ui/themes';
 import Link from 'next/link';
 import ObjectCard from '@/components/ObjectCard';
@@ -169,8 +169,8 @@ export default function Info() {
                 <Table.Cell>GET</Table.Cell>
                 <Table.Cell>{`https://slime-rancher.vercel.app/api/toy/{toy id}`}</Table.Cell>
                 <Table.Cell>
-                  Returns all toys. If appended with a toy's id,
-                  returns only that toy's info.
+                  Returns all toys. If appended with a toy's id, returns only
+                  that toy's info.
                 </Table.Cell>
               </Table.Row>
             </Table.Body>

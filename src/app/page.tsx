@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 export default async function Home() {
   return (
-    <Container className='min-h-[80vh] flex flex-col place-content-center place-items-center'>
+    <Container className='flex min-h-[80vh] flex-col place-content-center place-items-center'>
       <Box mt='8'>
         <Flex direction='column' justify='center' align='center' gap='2'>
           <Heading as='h1' align='center' size='9' mb='1'>

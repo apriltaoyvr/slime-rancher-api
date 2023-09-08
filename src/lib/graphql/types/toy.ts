@@ -1,6 +1,6 @@
-import { objectType } from "nexus";
-import { Slime } from ".";
-import { slimes } from "@/lib/data";
+import { objectType } from 'nexus';
+import { Slime } from '.';
+import { slimes } from '@/lib/data';
 
 export const Toy = objectType({
   name: 'Toy',
@@ -15,7 +15,7 @@ export const Toy = objectType({
         return slimes.find((slime) => slime.favouriteToy === toy.id);
       },
     });
-    t.nonNull.string('description', {description: 'A description of a toy'});
-    t.nonNull.int('price', {description: 'The cost of a toy'});
+    t.nonNull.string('description', { description: 'A description of a toy' });
+    t.nonNull.int('price', { description: 'The cost of a toy' });
   },
 });

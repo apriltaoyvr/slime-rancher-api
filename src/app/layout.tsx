@@ -42,7 +42,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body className={inter.variable}>
         <Providers>
-          <Navbar/>
+          <Navbar />
           {children}
         </Providers>
       </body>

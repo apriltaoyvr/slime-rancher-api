@@ -6,7 +6,7 @@ import {
   Heading,
   Text,
   Button,
-  Separator
+  Separator,
 } from '@radix-ui/themes';
 import Link from 'next/link';
 import ObjectCard from '@/components/ObjectCard';
@@ -16,7 +16,6 @@ import food from '@/images/food.webp';
 import location from '@/images/location.webp';
 import toys from '@/images/toys.webp';
 import slimepedia from '@/images/slimepedia.webp';
-
 
 export default async function Home() {
   return (
@@ -51,7 +50,7 @@ export default async function Home() {
               <Heading as='h2' align='center' mb='2'>
                 Objects
               </Heading>
-              <div className='lg:grid lg:grid-cols-3 xl:grid-cols-4 gap-2 flex flex-row flex-wrap p-2'>
+              <div className='flex flex-row flex-wrap gap-2 p-2 lg:grid lg:grid-cols-3 xl:grid-cols-4'>
                 <ObjectCard
                   name='Slimes'
                   desc='A list of all slimes in the game'

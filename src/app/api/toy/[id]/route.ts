@@ -3,7 +3,7 @@ import { toys } from '@/lib/data';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: { id: string } },
 ) {
   const id = params.id;
   const toy = toys.find((e) => e.id === id);

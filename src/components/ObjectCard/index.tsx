@@ -26,7 +26,7 @@ export default function ObjectCard({
           >
             <Image
               src={src}
-              className='object-contain aspect-video'
+              className='aspect-video object-contain'
               sizes='sizes="(max-width: 768px) 25vw"'
               alt={`An icon of ${name}`}
             />
