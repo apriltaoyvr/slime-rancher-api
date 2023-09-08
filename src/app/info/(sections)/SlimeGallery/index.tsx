@@ -104,8 +104,6 @@ export default function SlimeGallery({
               games,
             } = slime;
 
-            console.log(type);
-
             return (
               <Card key={id}>
                 <Flex direction='column' align='center' justify='center'>
