@@ -11,6 +11,12 @@ export interface ISlime extends ISlimeDirectory {
   properties: string[];
 }
 
+export interface IFetchRes {
+  data: {
+    slimes: ISlime[];
+  };
+}
+
 export const singleSlimeQuery = gql`
   query Slime($slimeId: String) {
     slimes(slimeId: $slimeId) {

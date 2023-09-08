@@ -12,8 +12,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Slime Rancher',
+  title: { template: '%s | Slime Rancher', default: 'Slime Rancher' },
   description: 'An API and info site for Slime Rancer',
+  metadataBase: new URL('https://slime-rancher.vercel.app/'),
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#ffffff' },
     { media: '(prefers-color-scheme: dark)', color: '#191719' },

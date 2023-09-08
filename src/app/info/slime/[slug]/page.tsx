@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import {
   Container,
   Card,
@@ -9,19 +10,13 @@ import {
 } from '@radix-ui/themes';
 import Image from 'next/image';
 import graphqlFetcher from '@/lib/gqlFetcher';
-import { type ISlime, singleSlimeQuery } from './query';
+import { type IFetchRes, singleSlimeQuery } from './query';
 
 export default async function SlimePage({
   params: { slug },
 }: {
   params: { slug: string };
 }) {
-  interface IFetchRes {
-    data: {
-      slimes: ISlime[];
-    };
-  }
-
   const res: IFetchRes = await graphqlFetcher(singleSlimeQuery, {
     slimeId: slug,
   });
@@ -61,7 +56,6 @@ export default async function SlimePage({
                 <Table.ColumnHeaderCell>Games</Table.ColumnHeaderCell>
               </Table.Row>
             </Table.Header>
-
             <Table.Body>
               <Table.Row>
                 <Table.RowHeaderCell className='capitalize'>
@@ -80,7 +74,6 @@ export default async function SlimePage({
               </Table.Row>
             </Table.Body>
           </Table.Root>
-
           <Flex direction='column' justify='center' align='center'>
             {locations.length > 0 && (
               <Flex direction='column' m='2'>

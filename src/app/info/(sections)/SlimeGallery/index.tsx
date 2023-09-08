@@ -105,7 +105,7 @@ export default function SlimeGallery({
             } = slime;
 
             return (
-              <Card key={id}>
+              <Card key={id} className='hover:bg-gray-4 transition-colors'>
                 <Flex direction='column' align='center' justify='center'>
                   <Heading as='h3' size='5' align='center'>
                     <Link href={`/info/slime/${slime.id}`}>{name}</Link>
