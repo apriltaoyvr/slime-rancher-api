@@ -132,13 +132,13 @@ export default function Info() {
               <Table.Row>
                 <Table.RowHeaderCell>Resource List</Table.RowHeaderCell>
                 <Table.Cell>GET</Table.Cell>
-                <Table.Cell>{`https://slime-rancher-graphql.vercel.app/api/`}</Table.Cell>
+                <Table.Cell>{`https://slime-rancher.vercel.app/api/`}</Table.Cell>
                 <Table.Cell>Returns all resource lists as an array</Table.Cell>
               </Table.Row>
               <Table.Row>
                 <Table.RowHeaderCell>Slime</Table.RowHeaderCell>
                 <Table.Cell>GET</Table.Cell>
-                <Table.Cell>{`https://slime-rancher-graphql.vercel.app/api/slime/{slime id}`}</Table.Cell>
+                <Table.Cell>{`https://slime-rancher.vercel.app/api/slime/{slime id}`}</Table.Cell>
                 <Table.Cell>
                   Returns all slimes. If appended with a slime's id, returns
                   only that slime's info.
@@ -148,7 +148,7 @@ export default function Info() {
               <Table.Row>
                 <Table.RowHeaderCell>Food</Table.RowHeaderCell>
                 <Table.Cell>GET</Table.Cell>
-                <Table.Cell>{`https://slime-rancher-graphql.vercel.app/api/food/{food id}`}</Table.Cell>
+                <Table.Cell>{`https://slime-rancher.vercel.app/api/food/{food id}`}</Table.Cell>
                 <Table.Cell>
                   Returns all foods. If appended with a food's id, returns only
                   that food's info.
@@ -158,7 +158,7 @@ export default function Info() {
               <Table.Row>
                 <Table.RowHeaderCell>Location</Table.RowHeaderCell>
                 <Table.Cell>GET</Table.Cell>
-                <Table.Cell>{`https://slime-rancher-graphql.vercel.app/api/location/{location id}`}</Table.Cell>
+                <Table.Cell>{`https://slime-rancher.vercel.app/api/location/{location id}`}</Table.Cell>
                 <Table.Cell>
                   Returns all locations. If appended with a location's id,
                   returns only that location's info.
@@ -167,7 +167,7 @@ export default function Info() {
               <Table.Row>
                 <Table.RowHeaderCell>Toy</Table.RowHeaderCell>
                 <Table.Cell>GET</Table.Cell>
-                <Table.Cell>{`https://slime-rancher-graphql.vercel.app/api/toy/{toy id}`}</Table.Cell>
+                <Table.Cell>{`https://slime-rancher.vercel.app/api/toy/{toy id}`}</Table.Cell>
                 <Table.Cell>
                   Returns all toys. If appended with a toy's id,
                   returns only that toy's info.

@@ -1,9 +1,6 @@
-# Slime Rancher GraphQL
-A GraphQL API for Slime Rancher
-
-## Screenshots
-![image](https://github.com/apriltaoyvr/slime-rancher-graphql/assets/95392008/e0ed301a-4a71-4bcf-9459-44b017699d2f)
-![image](https://github.com/apriltaoyvr/slime-rancher-graphql/assets/95392008/e6b5b048-83c3-4f6d-a7a0-d68cb0c5d65f)
+![image](https://github.com/apriltaoyvr/slime-rancher-graphql/assets/95392008/7220862b-024e-438c-a48c-bd63f3ffc978)
+# Slime Rancher API
+A GraphQL and RESTful API for Slime Rancher
 
 ## Stack
 - Next.js

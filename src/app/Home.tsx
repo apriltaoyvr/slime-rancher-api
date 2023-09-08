@@ -38,7 +38,7 @@ export default async function Home() {
             <Text as='p' align='center'>
               If you notice any errors or wish the contribute, please submit a
               pull request at{' '}
-              <Link href='https://github.com/apriltaoyvr/slime-rancher-graphql'>
+              <Link href='https://github.com/apriltaoyvr/slime-rancher-api'>
                 the repo
               </Link>
               !

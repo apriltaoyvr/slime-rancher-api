@@ -32,7 +32,7 @@ export default async function Home() {
             If you notice any errors or wish the contribute, please submit a
             pull request at{' '}
             <Link
-              href='https://github.com/apriltaoyvr/slime-rancher-graphql'
+              href='https://github.com/apriltaoyvr/slime-rancher-api'
               className='rt-Link rt-underline-auto'
             >
               the repo

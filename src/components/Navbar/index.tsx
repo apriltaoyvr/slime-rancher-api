@@ -17,7 +17,7 @@ export default function Navbar() {
       </header>
       <footer>
         <Link
-          href='/'
+          href='https://github.com/apriltaoyvr/slime-rancher-api'
           className='rt-reset-button rt-reset-a rt-BaseButton rt-Button rt-variant-ghost p-2 rounded'
           data-accent-color='crimson'
         >

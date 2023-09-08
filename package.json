@@ -1,12 +1,13 @@
 {
-  "name": "slime-rancher-graphql",
+  "name": "slime-rancher-api",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write ./src/**/*.{tsx,ts,css,json}"
   },
   "dependencies": {
     "@apollo/server": "^4.9.3",
