@@ -8,3 +8,10 @@
     @apply max-w-prose;
   }
 }
+
+@layer components {
+  .navbar {
+    @apply sticky top-0 w-full p-4 flex flex-row place-content-between place-items-center border-b mb-2 backdrop-blur-sm;
+    border-color: var(--accent-a6);
+  }
+}

@@ -1,6 +1,8 @@
 import '@radix-ui/themes/styles.css';
-import './globals.css'
+import './globals.css';
 import Providers from './providers';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -18,8 +20,8 @@ export const metadata: Metadata = {
     { media: '(prefers-color-scheme: dark)', color: '#191719' },
   ],
   openGraph: {
-    title: 'Slime Rancher GraphQL',
-    description: 'A GraphQL endpoint for Slime Rancer',
+    title: 'Slime Rancher API',
+    description: 'A RESTful and GraphQL API for Slime Rancher',
     url: 'https://slime-rancher-graphql.vercel.app/',
     locale: 'en_CA',
     type: 'website',
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Slime Rancher GraphQL',
-    description: 'A GraphQL endpoint for Slime Rancer',
+    description: 'A RESTful and GraphQL API for Slime Rancher',
   },
 };
 
@@ -39,7 +41,10 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={inter.variable}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navbar/>
+          {children}
+        </Providers>
       </body>
     </html>
   );

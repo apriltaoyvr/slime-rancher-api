@@ -14,24 +14,24 @@ export default function ObjectCard({
   children: React.ReactNode;
 }) {
   return (
-    <Card size='2' className='w-full h-full'>
+    <Card size='2'>
       <Flex direction='column' justify='center' align='center'>
-        {src && 
-        <Flex
-          m='1'
-          mb='4'
-          justify='center'
-          align='center'
-          className='aspect-video object-contain'
-          asChild
-        >
-          <Image
-            src={src}
-            sizes='sizes="(max-width: 768px) 25vw"'
-            alt={`An icon of ${name}`}
-          />
-        </Flex>
-        }
+        {src && (
+          <Flex
+            m='1'
+            mb='4'
+            justify='center'
+            align='center'
+            className='max-w-xs'
+          >
+            <Image
+              src={src}
+              className='object-contain aspect-video'
+              sizes='sizes="(max-width: 768px) 25vw"'
+              alt={`An icon of ${name}`}
+            />
+          </Flex>
+        )}
         <Box>
           <Heading as='h3'>{name}</Heading>
           <Text as='p' color='gray' size='2'>
