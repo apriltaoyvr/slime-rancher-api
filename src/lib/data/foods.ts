@@ -360,4 +360,19 @@ export const foods: Food[] = [
         "Kookadoba can only grow in the soils of The Wilds. A garden's replicator will reject it.",
     },
   },
+  {
+    id: 'lettuce',
+    name: 'Water Lettuce',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/lettuce.webp',
+    type: 'veggie',
+    slime: 'cotton',
+    locations: ['fields', 'strand', 'valley'],
+    slimepedia: {
+      about:
+        "Like a desert bloom or a deep sea pearl, water lettuce is a small miracle. The dry season can be difficult for wildlife on the Far, Far Range. But through the humble water lettuce, nature has found a way to provide. The water stored inside the plant prevents its leaves from wilting under the sun's rays, and in turn the crisp leaves keep the water cool and protected, perfect for a thirsty critter in search of relief from the heat",
+      ranch:
+        "Deposit a water lettuce into a garden's depositor and you'll have a large water lettuce crop of your very own.",
+    },
+  },
 ];

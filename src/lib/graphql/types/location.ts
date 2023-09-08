@@ -6,10 +6,11 @@ import { Slimepedia } from './slimepedia';
 
 export const Location = objectType({
   name: 'Location',
-  description: 'A location on The Far, Far Range',
+  description: 'A location in Slime Rancher',
   definition(t) {
     t.nonNull.id('id');
     t.nonNull.string('name');
+    t.nonNull.list.nonNull.int('games', {description: 'The games this location appears in'})
     t.nonNull.field('slimepedia', {
       type: Slimepedia,
       description: "A location's slimepedia entry",

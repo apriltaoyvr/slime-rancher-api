@@ -541,4 +541,25 @@ export const slimes: Slime[] = [
     locations: [],
     games: [1],
   },
+  {
+    id: 'cotton',
+    name: 'Cotton Slime',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/cotton.webp',
+    diet: 'veggie',
+    favouriteToy: null,
+    favouriteFood: 'lettuce',
+    type: 'docile',
+    slimepedia: {
+      slimeology:
+        'Cotton slimes seem to have adapted to life among the tall grasses of Rainbow Island by developing a spring in their step that allows them to leap far higher into the air than any other slime. Once airborne, these floofy-tailed slimes are always hoping their hops land them in a patch of delicious water lettuce.',
+      risks:
+        "Cotton slimes are always looking for an excuse to leap high into the air: be it to escape a corral, because they're agitated, or for secret bunny things. Either way, they ensure that ranchers stay on their toes. (which would still mean you're not tall enough to reach them).",
+      plortonomics:
+        'Cotton plorts have an inexplicable "fluffy" quality to them, making them a great alternative to cotton, which is not native to the Far, Far Range. If one desired a quiet, isolated life on Rainbow Island, but still have soft pillows, warm sweaters, and lots of dry socks, they would do well to keep cotton slimes happily hopping about their ranch.',
+    },
+    properties: null,
+    locations: ['fields', 'strand', 'bluffs'],
+    games: [2],
+  },
 ];
