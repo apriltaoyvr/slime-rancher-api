@@ -8,6 +8,7 @@ export const Toy = objectType({
   definition(t) {
     t.nonNull.id('id');
     t.nonNull.string('name');
+    t.nonNull.string('image');
     t.field('favouredBy', {
       type: Slime,
       description: 'The slime whose favourite toy it is',
