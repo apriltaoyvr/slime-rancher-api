@@ -9,7 +9,7 @@ export default async function Info() {
   const slimes: ISlimeDirectory[] = fetchAllSlimes.data.slimes;
 
   return (
-    <Container>
+    <Container width='auto'>
       <Flex direction='column' align='center' justify='center'>
         <Heading as='h1' size='8' align='center' mb='2'>
           Slime Rancher Info
@@ -22,12 +22,7 @@ export default async function Info() {
           </Text>
         </Section>
       </Flex>
-      <Section size='2'>
-        <Heading as='h2' align='center' mb='2'>
-          Slimes
-        </Heading>
-        <SlimeGallery slimes={slimes} />
-      </Section>
+      <SlimeGallery slimes={slimes} />
     </Container>
   );
 }

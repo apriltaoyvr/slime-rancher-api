@@ -40,7 +40,10 @@ export default function SlimeGallery({
   );
 
   return (
-    <>
+    <Section size='2'>
+      <Heading as='h2' align='center' mb='2'>
+        Slimes
+      </Heading>
       <Flex direction='row' align='center' justify='center' gap='2'>
         <TextField.Root>
           <TextField.Slot>
@@ -105,7 +108,7 @@ export default function SlimeGallery({
             } = slime;
 
             return (
-              <Card key={id} className='hover:bg-gray-4 transition-colors'>
+              <Card key={id} className='transition-colors hover:bg-gray-4'>
                 <Flex direction='column' align='center' justify='center'>
                   <Heading as='h3' size='5' align='center'>
                     <Link href={`/info/slime/${slime.id}`}>{name}</Link>
@@ -171,6 +174,6 @@ export default function SlimeGallery({
           })}
         </Flex>
       </Section>
-    </>
+    </Section>
   );
 }
