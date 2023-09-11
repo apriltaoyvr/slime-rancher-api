@@ -41,9 +41,15 @@ export default function SlimeGallery({
 
   return (
     <Section size='2'>
-      <Heading as='h2' align='center' mb='2'>
-        Slimes
-      </Heading>
+      <Link
+        href='/info/slime'
+        data-accent-color='gray'
+        className='rt-Link rt-underline-auto'
+      >
+        <Heading as='h2' align='center' mb='2'>
+          Slimes
+        </Heading>
+      </Link>
       <Flex direction='row' align='center' justify='center' gap='2'>
         <TextField.Root>
           <TextField.Slot>

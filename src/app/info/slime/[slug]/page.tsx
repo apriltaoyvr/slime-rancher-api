@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import {
   Container,
   Card,
@@ -97,7 +96,7 @@ export default async function SlimePage({
                 <Heading as='h4' size='5'>
                   Slimeology
                 </Heading>
-                <Text as='p' color='gray'>
+                <Text as='p' color='gray' className='whitespace-pre-line'>
                   {slimepedia.slimeology}
                 </Text>
               </Box>
@@ -105,7 +104,7 @@ export default async function SlimePage({
                 <Heading as='h4' size='5'>
                   Risks
                 </Heading>
-                <Text as='p' color='gray'>
+                <Text as='p' color='gray' className='whitespace-pre-line'>
                   {slimepedia.risks}
                 </Text>
               </Box>
@@ -113,7 +112,7 @@ export default async function SlimePage({
                 <Heading as='h4' size='5'>
                   Plortonomics
                 </Heading>
-                <Text as='p' color='gray'>
+                <Text as='p' color='gray' className='whitespace-pre-line'>
                   {slimepedia.plortonomics}
                 </Text>
               </Box>

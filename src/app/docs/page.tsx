@@ -9,7 +9,7 @@ import ApiSection from './(sections)/ApiSection';
 export default function Docs() {
   return (
     <Container>
-      <Flex direction='column' align='center' m='2' gap='4'>
+      <Flex direction='column' align='center' m='2' mt='4' gap='4'>
         <Heading align='center' size='8' as='h1' mb='2'>
           API Documentation
         </Heading>
