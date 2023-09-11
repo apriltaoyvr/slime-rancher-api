@@ -16,6 +16,12 @@ export interface ISlimeGallery {
   games: number[];
 }
 
+export interface ISlimeGalleryFetch {
+  data: {
+    slimes: ISlimeGallery[]
+  }
+}
+
 export const allSlimesQuery = gql`
   query Query {
     slimes {

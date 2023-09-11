@@ -9,30 +9,26 @@ import {
 } from '@radix-ui/themes';
 import Image from 'next/image';
 import graphqlFetcher from '@/lib/gqlFetcher';
-import { type IFetchRes, singleSlimeQuery } from './query';
+import { type IFetchRes, singleFoodQuery } from './query';
 
 export default async function SlimePage({
   params: { slug },
 }: {
   params: { slug: string };
 }) {
-  const res: IFetchRes = await graphqlFetcher(singleSlimeQuery, {
-    slimeId: slug,
+  const res: IFetchRes = await graphqlFetcher(singleFoodQuery, {
+    foodId: slug,
   });
 
   const {
     id,
     name,
     image,
-    diet,
-    favouriteFood,
-    favouriteToy,
     type,
+    favouredBy,
     slimepedia,
     locations,
-    properties,
-    games,
-  } = res.data.slimes[0];
+  } = res.data.foods[0];
 
   return (
     <Container>
@@ -49,10 +45,7 @@ export default async function SlimePage({
             <Table.Header>
               <Table.Row>
                 <Table.ColumnHeaderCell>Type</Table.ColumnHeaderCell>
-                <Table.ColumnHeaderCell>Diet</Table.ColumnHeaderCell>
-                <Table.ColumnHeaderCell>Favourite Food</Table.ColumnHeaderCell>
-                <Table.ColumnHeaderCell>Favourite Toy</Table.ColumnHeaderCell>
-                <Table.ColumnHeaderCell>Games</Table.ColumnHeaderCell>
+                <Table.ColumnHeaderCell>Favoured By</Table.ColumnHeaderCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>
@@ -60,15 +53,8 @@ export default async function SlimePage({
                 <Table.RowHeaderCell className='capitalize'>
                   {type}
                 </Table.RowHeaderCell>
-                <Table.Cell className='capitalize'>{diet}</Table.Cell>
                 <Table.Cell className='capitalize'>
-                  {favouriteFood?.name ?? 'Not Applicable'}
-                </Table.Cell>
-                <Table.Cell className='capitalize'>
-                  {favouriteToy?.name ?? 'Not Applicable'}
-                </Table.Cell>
-                <Table.Cell className='capitalize'>
-                  {games.join(', ')}
+                  {favouredBy?.name ?? 'Not Applicable'}
                 </Table.Cell>
               </Table.Row>
             </Table.Body>
@@ -94,43 +80,21 @@ export default async function SlimePage({
               </Heading>
               <Box>
                 <Heading as='h4' size='5'>
-                  Slimeology
+                  About
                 </Heading>
                 <Text as='p' color='gray' className='whitespace-pre-line'>
-                  {slimepedia.slimeology}
+                  {slimepedia.about}
                 </Text>
               </Box>
               <Box>
                 <Heading as='h4' size='5'>
-                  Risks
+                  On the Ranch
                 </Heading>
                 <Text as='p' color='gray' className='whitespace-pre-line'>
-                  {slimepedia.risks}
-                </Text>
-              </Box>
-              <Box>
-                <Heading as='h4' size='5'>
-                  Plortonomics
-                </Heading>
-                <Text as='p' color='gray' className='whitespace-pre-line'>
-                  {slimepedia.plortonomics}
+                  {slimepedia.ranch}
                 </Text>
               </Box>
             </Flex>
-            {properties && (
-              <Flex direction='column' m='2'>
-                <Heading as='h3' size='6' align='center' mb='2'>
-                  Properties
-                </Heading>
-                <ul className='list-disc marker:text-gray-11'>
-                  {properties?.map((property) => (
-                    <Text color='gray' key={property} asChild>
-                      <li className='max-w-prose'>{property}</li>
-                    </Text>
-                  ))}
-                </ul>
-              </Flex>
-            )}
           </Flex>
         </Flex>
       </Card>

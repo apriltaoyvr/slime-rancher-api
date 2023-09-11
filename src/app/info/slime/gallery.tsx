@@ -3,8 +3,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Flex, Section, Heading, TextField, Select } from '@radix-ui/themes';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import SlimeCard from './SlimeCard';
-import type { ISlimeGallery } from '../../slimeFetch';
+import SlimeCard from '@/components/(Info)/SlimeGalleryCard';
+import type { ISlimeGallery } from './slimeFetch';
 
 export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
   const [query, setQuery] = useState('');
@@ -20,15 +20,9 @@ export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
 
   return (
     <Section size='2'>
-      <Link
-        href='/info/slime'
-        data-accent-color='gray'
-        className='rt-Link rt-underline-auto'
-      >
-        <Heading as='h2' align='center' mb='2'>
-          Slimes
-        </Heading>
-      </Link>
+      <Heading as='h2' align='center' mb='2'>
+        Slimes
+      </Heading>
       <Flex
         id='filters'
         direction='row'
@@ -67,6 +61,7 @@ export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
               <Select.Item value='meat'>Meat</Select.Item>
               <Select.Item value='fruit'>Fruit</Select.Item>
               <Select.Item value='veggie'>Veggie</Select.Item>
+              <Select.Item value='nectar'>Nectar</Select.Item>
             </Select.Group>
             <Select.Separator />
             <Select.Group>

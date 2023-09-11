@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Flex, Text, Separator, Button, IconButton } from '@radix-ui/themes';
 import { GitHubLogoIcon, HomeIcon } from '@radix-ui/react-icons';
+import InfoDropdown from './InfoDropdown';
 import ThemeChanger from './ThemeChanger';
 
 export default function Navbar() {
@@ -55,7 +56,7 @@ export default function Navbar() {
       </header>
       {pathname !== '/' && (
         <Flex align='center' justify='center' gap='4' className='span-3'>
-          <Navlink href='/info'>Info</Navlink>
+          <InfoDropdown pathname={pathname}/>
           <Separator orientation='vertical' />
           <Navlink href='/docs'>Docs</Navlink>
           <Navlink href='/api'>API</Navlink>

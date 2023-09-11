@@ -1,7 +1,7 @@
 import { Section, Flex, Heading } from '@radix-ui/themes';
 import Link from 'next/link';
-import ObjectCard from '@/components/ObjectCard';
-import ObjectFields from '@/components/ObjectFields';
+import ObjectCard from '@/components/(Docs)/ObjectCard';
+import ObjectFields from '@/components/(Docs)/ObjectFields';
 
 // Static Image Imports
 import slimes from '@/images/slimes.webp';

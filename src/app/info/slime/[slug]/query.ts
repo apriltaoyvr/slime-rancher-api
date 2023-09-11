@@ -1,5 +1,5 @@
 import gql from 'gql-tag';
-import { ISlimeGallery } from '../../slimeFetch';
+import { ISlimeGallery } from '../slimeFetch';
 
 export interface ISlime extends ISlimeGallery {
   locations: { id: string; name: string }[];
