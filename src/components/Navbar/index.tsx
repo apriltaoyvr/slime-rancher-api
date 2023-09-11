@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Flex, Text, Separator, Button } from '@radix-ui/themes';
+import { Flex, Text, Separator, Button, IconButton } from '@radix-ui/themes';
 import { GitHubLogoIcon, HomeIcon } from '@radix-ui/react-icons';
 import ThemeChanger from './ThemeChanger';
 
@@ -37,9 +37,9 @@ export default function Navbar() {
     children: React.ReactNode;
   }) => {
     return (
-      <Button variant='ghost' m='2' className='p-2' asChild>
+      <IconButton variant='ghost' m='2' asChild>
         <Link href={href}>{children}</Link>
-      </Button>
+      </IconButton>
     );
   };
 

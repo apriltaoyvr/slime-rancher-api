@@ -119,7 +119,7 @@ export default async function SlimePage({
             </Flex>
             {properties && (
               <Flex direction='column' m='2'>
-                <Heading as='h3' size='6' align='center'>
+                <Heading as='h3' size='6' align='center' mb='2'>
                   Properties
                 </Heading>
                 <ul className='list-disc marker:text-gray-11'>

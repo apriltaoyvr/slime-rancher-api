@@ -10,16 +10,20 @@ export default async function Info() {
 
   return (
     <Container width='auto'>
-      <Flex direction='column' align='center' justify='center' mt='2'>
-        <Heading as='h1' size='8' align='center' mb='2'>
+      <Flex direction='column' align='center' justify='center' mt='4'>
+        <Heading as='h1' size='8' align='center'>
           Slime Rancher Info
         </Heading>
-        <CalloutComponent>This page is a work in progress.</CalloutComponent>
         <Section size='1'>
-          <Text align='center'>
-            This is a page for visually displaying the Slime Rancher API's data.
-            It can also be a handy way to look up information!
-          </Text>
+          <Flex direction='column' align='center' justify='center'>
+            <Text align='center'>
+              This is a page for visually displaying the Slime Rancher API's
+              data.
+            </Text>
+            <Text align='center'>
+              It can also be a handy way to look up information!
+            </Text>
+          </Flex>
         </Section>
       </Flex>
       <SlimeGallery slimes={slimes} />

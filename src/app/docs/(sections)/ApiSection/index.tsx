@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ApiSection() {
   return (
-    <Section id='api'>
+    <Section id='api' size='2'>
       <Heading as='h2' size='7' align='center'>
         <Link href='/api' className='rt-Link rt-underline-auto'>
           RESTful API
