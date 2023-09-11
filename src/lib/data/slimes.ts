@@ -594,7 +594,7 @@ export const slimes: Slime[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/batty.webp',
     diet: 'fruit',
     favouriteToy: null,
-    favouriteFood: 'moondewnectar',
+    favouriteFood: 'pomegranite',
     type: 'docile',
     slimepedia: {
       slimeology:

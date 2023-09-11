@@ -437,8 +437,8 @@ export const foods: Food[] = [
     name: 'Sea Chickadoo',
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/seachickadoo.webp',
-    type: 'fruit',
-    slime: 'batty',
+    type: 'meat',
+    slime: null,
     locations: ['strand', 'valley'],
     slimepedia: {
       about:
