@@ -1,8 +1,9 @@
 'use client';
-import { Flex, Text, Separator, Button } from '@radix-ui/themes';
 import Link from 'next/link';
-import { GitHubLogoIcon, HomeIcon } from '@radix-ui/react-icons';
 import { usePathname } from 'next/navigation';
+import { Flex, Text, Separator, Button } from '@radix-ui/themes';
+import { GitHubLogoIcon, HomeIcon } from '@radix-ui/react-icons';
+import ThemeChanger from './ThemeChanger'
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -30,20 +31,15 @@ export default function Navbar() {
     children: React.ReactNode;
   }) => {
     return (
-      <Button variant='ghost' m='2' asChild>
-        <Link
-          href={href}
-          className='rt-reset-button rt-BaseButton rt-Button rt-variant-ghost p-2'
-        >
-          {children}
-        </Link>
+      <Button variant='ghost' m='2' className='p-2' asChild>
+        <Link href={href}>{children}</Link>
       </Button>
     );
   };
 
   return (
     <nav
-      className='sticky top-0 z-40 mb-4 flex w-full flex-row place-content-between place-items-center border-b border-accent-6 p-2 bg-blend-overlay backdrop-blur-sm'
+      className='sticky top-0 z-40 mb-4 w-full flex flex-row place-content-between place-items-center border-b border-accent-6 p-2 bg-blend-overlay backdrop-blur-lg'
       data-accent-color='gray'
     >
       <header>
@@ -52,7 +48,7 @@ export default function Navbar() {
         </Iconlink>
       </header>
       {pathname !== '/' && (
-        <Flex align='center' justify='center' gap='4'>
+        <Flex align='center' justify='center' gap='4' className='span-3'>
           <Navlink href='/info'>Info</Navlink>
           <Separator orientation='vertical' />
           <Navlink href='/docs'>Docs</Navlink>
@@ -60,11 +56,12 @@ export default function Navbar() {
           <Navlink href='/graphql'>GraphQL</Navlink>
         </Flex>
       )}
-      <footer>
+      <Flex align='center' justify='center' gap='2'>
+        <ThemeChanger />
         <Iconlink href='https://github.com/apriltaoyvr/slime-rancher-api'>
           <GitHubLogoIcon width='16' height='16' />
         </Iconlink>
-      </footer>
+      </Flex>
     </nav>
   );
 }

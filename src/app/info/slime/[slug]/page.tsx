@@ -123,7 +123,7 @@ export default async function SlimePage({
                 <Heading as='h3' size='6' align='center'>
                   Properties
                 </Heading>
-                <ul className='list-disc'>
+                <ul className='list-disc marker:text-gray-11'>
                   {properties?.map((property) => (
                     <Text color='gray' key={property} asChild>
                       <li className='max-w-prose'>{property}</li>
