@@ -4,5 +4,6 @@ export type Diet =
   | 'meat'
   | 'water'
   | 'ash'
+  | 'nectar'
   | 'all'
   | 'other';

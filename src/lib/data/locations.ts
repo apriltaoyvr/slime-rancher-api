@@ -172,7 +172,7 @@ export const locations: Location[] = [
     games: [1],
   },
   {
-    id: 'valley',
+    id: 'nimblevalley',
     name: 'Nimble Valley',
     image:
       'https://static.wikia.nocookie.net/slimerancher/images/7/71/NimbleValleySP.png',

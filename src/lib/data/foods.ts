@@ -9,7 +9,7 @@ export interface Food {
   locations: string[];
   slimepedia?: {
     about: string;
-    ranch: string;
+    ranch?: string | null;
   };
 }
 
@@ -18,7 +18,7 @@ export const foods: Food[] = [
     id: 'ranchers',
     name: 'Ranchers',
     image:
-      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/beatrix.webp',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/beatrix.jpg',
     type: 'meat',
     slime: 'tarr',
     locations: [],
@@ -260,7 +260,7 @@ export const foods: Food[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/mango.webp',
     type: 'fruit',
     slime: 'honey',
-    locations: ['blanket'],
+    locations: ['blanket', 'strand'],
     slimepedia: {
       about:
         "The mint mango is perhaps the sweetest fruit ever discovered. Its appearance is that of a mango, with a thicker, syrup-like juice, and a bright, minty aftertaste. It's no wonder Honey Slimes seek them out or that they have such amazingly fresh breath.",
@@ -386,6 +386,65 @@ export const foods: Food[] = [
         "Like a desert bloom or a deep sea pearl, water lettuce is a small miracle. The dry season can be difficult for wildlife on the Far, Far Range. But through the humble water lettuce, nature has found a way to provide. The water stored inside the plant prevents its leaves from wilting under the sun's rays, and in turn the crisp leaves keep the water cool and protected, perfect for a thirsty critter in search of relief from the heat",
       ranch:
         "Deposit a water lettuce into a garden's depositor and you'll have a large water lettuce crop of your very own.",
+    },
+  },
+  {
+    id: 'moondewnectar',
+    name: 'Moondew Nectar',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/moondewnectar.webp',
+    type: 'nectar',
+    slime: 'flutter',
+    locations: ['strand'],
+    slimepedia: {
+      about:
+        "This sweet syrup comes from Rainbow Island's most unusual plant, the moondew flower, which only blooms at night. Initially scientists thought the buds of this flower never opened. But that was just because they tended to call it quits around 5, maybe 4:45 if they were trying to beat traffic.",
+      ranch: null,
+    },
+  },
+  {
+    id: 'pomegranite',
+    name: 'Pomegranite',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/pomegranite.webp',
+    type: 'fruit',
+    slime: 'batty',
+    locations: ['strand', 'valley'],
+    slimepedia: {
+      about:
+        "The pomegranite is as mysterious as it is ancient. A fruit that grows only in the dark caves beneath the earth, it grows without sunlight, without warmth. It should not be, and yet, it is. A living paradox? Or a symbol of nature's resilience, of the ability for life to thrive even in the unlikeliest of spaces? Pretty deep stuff.",
+      ranch:
+        "Deposit a pomegranite into a garden's depositor and you'll grow a large pomegranite tree of your own.",
+    },
+  },
+  {
+    id: 'seahen',
+    name: 'Sea Hen',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/seahen.webp',
+    type: 'fruit',
+    slime: 'angler',
+    locations: ['strand', 'valley'],
+    slimepedia: {
+      about:
+        'Old sailors say that sea hens are actually demons in disguise, and that their vacant expressions are actually a diabolically calculated misdirect to hide evil intent. Plotting, waiting for their moment... to strike.',
+      ranch:
+        'Sea hens in close proximity to roostros will periodically lay eggs that produce sea chickadoos. However, keeping too many chickens in close proximity makes them anxious and egg production will come to a halt. Savvy ranchers with an understanding of the complex nature of chicken romance will monitor growth rates in their coops and reduce density when growth beings to slow.',
+    },
+  },
+  {
+    id: 'seachickadoo',
+    name: 'Sea Chickadoo',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/seachickadoo.webp',
+    type: 'fruit',
+    slime: 'batty',
+    locations: ['strand', 'valley'],
+    slimepedia: {
+      about:
+        "Chickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones.\nSea chickadoos are baby chickens that will eventually grow into a sea hen or more rarely, a roostro",
+      ranch:
+        "Keep sea chickadoos in a safe place and they'll eventually grow into a sea hen or roostro",
     },
   },
 ];

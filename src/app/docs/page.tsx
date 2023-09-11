@@ -13,9 +13,6 @@ export default function Docs() {
         <Heading align='center' size='8' as='h1' mb='2'>
           API Documentation
         </Heading>
-        <CalloutComponent>
-          Slime Rancher 2 information is currently being added.
-        </CalloutComponent>
         <Text>
           This API offers both RESTful and GraphQL endpoints. Let's ranch! 🌟🐌
         </Text>

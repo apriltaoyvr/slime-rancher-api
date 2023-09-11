@@ -496,7 +496,7 @@ export const slimes: Slime[] = [
       'When time runs out, any remaining quicksilver slimes flee from the player in all directions and despawn.',
       'Cannot be stored in the vacpack.',
     ],
-    locations: ['valley'],
+    locations: ['nimble'],
     games: [1],
   },
   {
@@ -560,6 +560,129 @@ export const slimes: Slime[] = [
     },
     properties: null,
     locations: ['fields', 'strand', 'bluffs'],
+    games: [2],
+  },
+  {
+    id: 'flutter',
+    name: 'Flutter Slime',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/flutter.webp',
+    diet: 'nectar',
+    favouriteToy: null,
+    favouriteFood: 'moondewnectar',
+    type: 'docile',
+    slimepedia: {
+      slimeology:
+        'Flutter slimes feel truly at home on Rainbow Island, curiously flying about the prismatic flora, a shining example of natural beauty in an already beautiful world. Their beauty however requires a very specific regimen to maintain, as flutter slimes have a unique diet where they will only eat the sweet but fleeting moondew nectar that grows in the wilds of Rainbow Island. However, should you manage to go through the trouble of collecting moondew nectar and keep your flutter slimes well-fed, they will reward you with the soothing aura they produce after eating it that reduces all nearby slime agitation. It also has pretty sparkles',
+      risks:
+        "Flutter slimes have an innate curiosity that causes them to fly to nearby objects and creatures. And since they have some of the most powerful flight capabilities of all slimes, they'll soon make you appreciate the glass walls and roof of the Conservatory. Still, given their restrictive diets and soothing auras, a flutter slime might just be the kind of slime you want roaming free on your ranch",
+      plortonomics:
+        'Flutter plorts have a nearly imperceptible weightlessness to them, never truly touching the ground. If one were to hold enough of them, they could similarly float as well, if just enough to slide a single coin beneath their feet. It makes for a tiny but profound escape from the weight of the world that lingers just below',
+    },
+    properties: [
+      'Flutter Slimes only eat Nectar, which can only be harvested in the wild from specific spots at night.',
+      'They can fly, which makes them difficult to contain, though their limited diet makes free ranging them safer than most other species.',
+      'When they eat, they release a cloud of scales that soothes nearby slimes, reducing their agitation.',
+    ],
+    locations: ['strand'],
+    games: [2],
+  },
+  {
+    id: 'batty',
+    name: 'Batty Slime',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/batty.webp',
+    diet: 'fruit',
+    favouriteToy: null,
+    favouriteFood: 'moondewnectar',
+    type: 'docile',
+    slimepedia: {
+      slimeology:
+        "Batty slimes love to lurk cold, dark places, like caves, swooping down from ceilings to scare others with their glowing, red eyes and pointy fangs. Hm? No, they're not vampires. The glowing eyes let them see in the dark is all. They also greatly dislike garlic because they eat fruit. Seriously",
+      risks:
+        "While in darkness, like caves or at night, batty slimes grow hungrier and will eat more often than other slimes. And while they can survive in sunlight the sun's searing rays freak them out a bit, increasing their agitation over time. Again, no, they are not vampires",
+      plortonomics:
+        'Batty plorts have significant potential for navigation and sonar tech. Each plort can produce a perfect "ping" for echolocation. Having a supply of these and the right know how could allow you to navigate even the most devious of labyrinths with ease. But then again, how many of use find ourselves needing to do something like that?',
+    },
+    properties: [
+      'Batty slimes grow hungry in the dark, leading them to generate Hunger at twice the rate of other slimes unless exposed to sunlight.',
+      "While they can survive in sunlight, they'll get more agitated the longer they're exposed to it.",
+      'They are also able to fly around in an almost identical fashion to the Phosphor Slime',
+    ],
+    locations: ['valley'],
+    games: [2],
+  },
+  {
+    id: 'angler',
+    name: 'Angler Slime',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/angler.webp',
+    diet: 'meat',
+    favouriteToy: null,
+    favouriteFood: 'seahen',
+    type: 'docile',
+    slimepedia: {
+      slimeology:
+        "Angler slimes inhabit the deepest depths of the Slime Sea, but have now been discovered on Rainbow Island. It's not known what drew them from the darkest recesses of the Far, Far Range to what very well could be the most vibrant, but it may have something to do with the taste of a plump, sun kissed drumstick of a sea hen...",
+      risks:
+        "Beware: behind the angler slime's adorable fishy exterior beats the heart of a chicken-chomping monster. Using their hypnotic lantern-like lure, they create a powerful radiant flash that can stun chickens, and even other slimes.",
+      plortonomics:
+        'Angler plorts are able to maintain their form at incredible depths and make for excellent material for deep sea diving tech. Because of this they are a uniquely comforting object to hold. To know something can be so small but manage to withstand so much pressure is oddly encouraging, perhaps even inspiring the courage for someone to take on the impossible...',
+    },
+    properties: [
+      'Angler Slimes will occasionally release a blinding flash around them that stuns nearby slimes and chickens, rendering them unable to move for a few seconds.',
+      'Angler slimes are able to stun other Angler slimes.',
+      "Slimes and chickens affected by the Angler slime's stun will begin to roll and slimes will have a dizzy face signifying they are affected by the stun.",
+      'The player is not affected nor Tarr Slimes by the stun.',
+    ],
+    locations: ['strand', 'valley'],
+    games: [2],
+  },
+  {
+    id: 'ringtail',
+    name: 'Ringtail Slime',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/ringtail.webp',
+    diet: 'all',
+    favouriteToy: null,
+    favouriteFood: null,
+    type: 'docile',
+    slimepedia: {
+      slimeology:
+        "Ringtail slimes are nothing but trouble. Theft under cover of darkness is their favorite hobby and they delight in getting away with as much as possible before the sun rises. The reason for this exclusively moonlit crime spree is that ringtails have a peculiar condition that transforms them into stone when exposed to sunlight. And while we're not saying this is an ancient curse, they're definitely the type of slime who would have an ancient curse if that was a thing.",
+      risks:
+        'Once a Ringtail slime starts eating, it will never stop. Just one Ringtail slime is capable of wiping out an entire farm if given the time. And they offer nothing in return because a Ringtail slime stops producing plorts when it would otherwise be full. If you plan on ranching these ravenous rascals, keep an eye out for a mischievous expression to know when to avoid feeding them...',
+      plortonomics:
+        'Materials developed from Ringtail plorts are extremely resilient, actually hardening in the face of UV rays. And similar to pink plorts, Ringtail plorts are very malleable, allowing a clever person to craft a wide range of things that can stand the test of time. Such things could be something as essential as sturdy shelter on a faraway island, or as simple as a collection of family photos that could survive a trek across the scorching desert...',
+    },
+    properties: [
+      'In the light, this slime turns in to a Stone Statue that you can pick up similarly to a Crate or Toy, but while in the dark this slime will turn back to normal.',
+      'Similar to other slimes affected by sunlight, a Solar Shield upgrade on a corral will prevent this behavior.',
+      'This slime will also eat even when it is not hungry, consuming the food without creating a plort in return.',
+      'This slime can also pounce.',
+    ],
+    locations: ['strand', 'valley', 'bluffs'],
+    games: [2],
+  },
+  {
+    id: 'yolky',
+    name: 'Yolky Slime',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/yolky.webp',
+    diet: 'other',
+    favouriteToy: null,
+    favouriteFood: null,
+    type: 'docile',
+    slimepedia: {
+      slimeology:
+        'Yolky slimes are a strange and elusive type of slime sometimes found near wild chickens on Rainbow Island. But unlike tabby slimes, their intent is not to hunt, for within their warm, golden center lies an enduring love for chickens. Such is the power of this glowing affection that it sometimes inspires nearby hens to produce a rare delight: a giant egg full of chicks and yolky plorts.',
+      risks:
+        "Yolky slimes can only inspire the production of giant eggs when nearby chickens are able to reproduce -- they're not miracle workers -- so if hens and roostros are too crowded, giant eggs will be a rare occurrence indeed. Slime ranchers should also note that giant eggs will only produce yolky plorts when they are fresh and the yolk inside is still glowing.",
+      plortonomics:
+        'Yolky plorts are highly valued for their concentrated nutrients, containing an extremely potent variant of vitamin D that allows people to reduce their sunlight intake for long periods of time, making them popular with cosmic pioneers, deep sea explorers, and gamers.\nBut though yolky plorts can replace the physical need for sunlight, they can never replace the warmth you feel when it touches your face, and the comfort it offers to know that the sun rose once more in your world. To be a stranger to that and still have hope for tomorrow would require the strongest of convictions.',
+    },
+    properties: null,
+    locations: ['fields', 'strand', 'valley', 'bluffs'],
     games: [2],
   },
 ];
