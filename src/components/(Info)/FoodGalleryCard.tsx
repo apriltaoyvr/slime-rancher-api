@@ -5,8 +5,7 @@ import { Cross2Icon } from '@radix-ui/react-icons';
 import type { IFoodGallery } from '@/app/info/food/foodFetch';
 
 export default function FoodCard({ food }: { food: IFoodGallery }) {
-  const { id, name, image, type, favouredBy } =
-    food;
+  const { id, name, image, type, favouredBy } = food;
 
   return (
     <Card className='transition-colors hover:bg-gray-4'>

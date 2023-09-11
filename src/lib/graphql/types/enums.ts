@@ -2,7 +2,16 @@ import { enumType } from 'nexus';
 
 export const FoodType = enumType({
   name: 'FoodType',
-  members: ['veggie', 'fruit', 'meat', 'water', 'ash', 'nectar', 'all', 'other'],
+  members: [
+    'veggie',
+    'fruit',
+    'meat',
+    'water',
+    'ash',
+    'nectar',
+    'all',
+    'other',
+  ],
   description: 'The type of diet for a slime',
 });
 

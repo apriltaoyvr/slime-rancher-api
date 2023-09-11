@@ -20,15 +20,8 @@ export default async function SlimePage({
     foodId: slug,
   });
 
-  const {
-    id,
-    name,
-    image,
-    type,
-    favouredBy,
-    slimepedia,
-    locations,
-  } = res.data.foods[0];
+  const { id, name, image, type, favouredBy, slimepedia, locations } =
+    res.data.foods[0];
 
   return (
     <Container>

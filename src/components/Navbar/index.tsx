@@ -24,7 +24,9 @@ export default function Navbar() {
         asChild
       >
         <Link href={href}>
-          <Text size='2' weight='medium'>{children}</Text>
+          <Text size='2' weight='medium'>
+            {children}
+          </Text>
         </Link>
       </Button>
     );
@@ -56,7 +58,7 @@ export default function Navbar() {
       </header>
       {pathname !== '/' && (
         <Flex align='center' justify='center' gap='4' className='span-3'>
-          <InfoDropdown pathname={pathname}/>
+          <InfoDropdown pathname={pathname} />
           <Separator orientation='vertical' />
           <Navlink href='/docs'>Docs</Navlink>
           <Navlink href='/api'>API</Navlink>

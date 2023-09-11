@@ -1,8 +1,8 @@
-'use client'
-import { DropdownMenu, Button, Text } from "@radix-ui/themes";
-import { CaretDownIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
-export default function InfoDropdown({pathname}: {pathname: string}) {
+'use client';
+import { DropdownMenu, Button, Text } from '@radix-ui/themes';
+import { CaretDownIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
+export default function InfoDropdown({ pathname }: { pathname: string }) {
   const isInfoRoute = pathname === '/info';
 
   return (

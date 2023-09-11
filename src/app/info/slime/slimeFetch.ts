@@ -18,8 +18,8 @@ export interface ISlimeGallery {
 
 export interface ISlimeGalleryFetch {
   data: {
-    slimes: ISlimeGallery[]
-  }
+    slimes: ISlimeGallery[];
+  };
 }
 
 export const allSlimesQuery = gql`

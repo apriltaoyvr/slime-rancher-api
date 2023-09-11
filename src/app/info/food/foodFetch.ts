@@ -7,15 +7,15 @@ export interface IFoodGallery {
   image: string;
   type: Diet;
   favouredBy: {
-    id: string | null
+    id: string | null;
     name: string | null;
   };
 }
 
 export interface IFoodGalleryFetch {
   data: {
-    foods: IFoodGallery[]
-  }
+    foods: IFoodGallery[];
+  };
 }
 
 export const allFoodsQuery = gql`

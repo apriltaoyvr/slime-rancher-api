@@ -18,9 +18,9 @@ export default function FoodGallery({ foods }: { foods: IFoodGallery[] }) {
 
   return (
     <Section size='2'>
-        <Heading as='h2' align='center' mb='2'>
-          Foods
-        </Heading>
+      <Heading as='h2' align='center' mb='2'>
+        Foods
+      </Heading>
       <Flex
         id='filters'
         direction='row'
