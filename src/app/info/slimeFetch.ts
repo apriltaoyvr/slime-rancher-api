@@ -2,7 +2,7 @@ import { SlimeType } from '@/lib/data';
 import { Diet } from '@/lib/data/enums';
 import gql from 'gql-tag';
 
-export interface ISlimeDirectory {
+export interface ISlimeGallery {
   id: string;
   name: string;
   image: string;

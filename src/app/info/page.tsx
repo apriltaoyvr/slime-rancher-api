@@ -2,11 +2,11 @@ import { Container, Flex, Section, Heading, Text } from '@radix-ui/themes';
 import CalloutComponent from '@/components/CalloutComponent';
 import graphqlFetcher from '@/lib/gqlFetcher';
 import SlimeGallery from './(sections)/SlimeGallery';
-import { type ISlimeDirectory, allSlimesQuery } from './slimeFetch';
+import { type ISlimeGallery, allSlimesQuery } from './slimeFetch';
 
 export default async function Info() {
   const fetchAllSlimes = await graphqlFetcher(allSlimesQuery);
-  const slimes: ISlimeDirectory[] = fetchAllSlimes.data.slimes;
+  const slimes: ISlimeGallery[] = fetchAllSlimes.data.slimes;
 
   return (
     <Container width='auto'>

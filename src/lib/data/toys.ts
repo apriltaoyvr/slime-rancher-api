@@ -161,7 +161,8 @@ export const toys: Toy[] = [
   {
     id: 'disco',
     name: 'Disco Ball',
-    image: 'https://static.wikia.nocookie.net/slimerancher/images/4/40/Disco_Ball.png',
+    image:
+      'https://static.wikia.nocookie.net/slimerancher/images/4/40/Disco_Ball.png',
     slime: 'mosaic',
     description:
       'Reduces agitation of nearby slimes, especially Mosaic Slimes who dance the night away when no one is looking.',
@@ -170,7 +171,8 @@ export const toys: Toy[] = [
   {
     id: 'stegobuddy',
     name: 'Stego Buddy',
-    image: 'https://static.wikia.nocookie.net/slimerancher/images/f/f0/StegoBuddySP.png',
+    image:
+      'https://static.wikia.nocookie.net/slimerancher/images/f/f0/StegoBuddySP.png',
     slime: 'saber',
     description:
       'Reduces agitation of nearby slimes, especially Saber Slimes who are the only slimes to have known stegos in-person.',

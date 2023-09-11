@@ -1,43 +1,22 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import {
-  Flex,
-  Section,
-  Heading,
-  Text,
-  TextField,
-  Select,
-  Card,
-  Table,
-} from '@radix-ui/themes';
-import { MagnifyingGlassIcon, Cross2Icon } from '@radix-ui/react-icons';
-import type { ISlimeDirectory } from '../../slimeFetch';
+import { Flex, Section, Heading, TextField, Select } from '@radix-ui/themes';
+import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
+import SlimeCard from './SlimeCard';
+import type { ISlimeGallery } from '../../slimeFetch';
 
-export default function SlimeGallery({
-  slimes,
-}: {
-  slimes: ISlimeDirectory[];
-}) {
+export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
   const [query, setQuery] = useState('');
   const [dietFilter, setDietFilter] = useState('');
   const [typeFilter, setTypeFilter] = useState('');
-  let filteredResults = slimes;
 
-  // TODO: Cleaner way?
-  filteredResults =
-    query === ''
-      ? slimes
-      : slimes.filter((slime) => {
-          return slime.name.toLowerCase().includes(query.toLowerCase());
-        });
-  filteredResults = filteredResults.filter((slime) =>
-    slime.type.includes(typeFilter),
-  );
-  filteredResults = filteredResults.filter((slime) =>
-    slime.diet.includes(dietFilter),
-  );
+  const filteredResults = slimes.filter((slime) => {
+    const nameMatches = slime.name.toLowerCase().includes(query.toLowerCase());
+    const typeMatches = slime.type.includes(typeFilter);
+    const dietMatches = slime.diet.includes(dietFilter);
+    if (nameMatches && typeMatches && dietMatches) return slime;
+  });
 
   return (
     <Section size='2'>
@@ -50,7 +29,13 @@ export default function SlimeGallery({
           Slimes
         </Heading>
       </Link>
-      <Flex direction='row' align='center' justify='center' gap='2'>
+      <Flex
+        id='filters'
+        direction='row'
+        align='center'
+        justify='center'
+        gap='2'
+      >
         <TextField.Root>
           <TextField.Slot>
             <MagnifyingGlassIcon height='16' width='16' />
@@ -93,7 +78,7 @@ export default function SlimeGallery({
           </Select.Content>
         </Select.Root>
       </Flex>
-      <Section size='1'>
+      <Section id='gallery' size='1'>
         <Flex
           direction='row'
           align='center'
@@ -102,81 +87,7 @@ export default function SlimeGallery({
           gap='2'
         >
           {filteredResults.map((slime) => {
-            const {
-              id,
-              name,
-              image,
-              type,
-              diet,
-              favouriteToy,
-              favouriteFood,
-              games,
-            } = slime;
-
-            return (
-              <Card key={id} className='transition-colors hover:bg-gray-4'>
-                <Flex direction='column' align='center' justify='center'>
-                  <Heading as='h3' size='5' align='center'>
-                    <Link href={`/info/slime/${slime.id}`}>{name}</Link>
-                  </Heading>
-                  <Heading as='h4' size='3' color='gray' align='center'>
-                    {id}
-                  </Heading>
-                  <figure className='p-4'>
-                    <Image
-                      src={image}
-                      alt={`An image of ${name}`}
-                      width={250}
-                      height={250}
-                      className='aspect-square max-w-[150px] object-contain'
-                    />
-                  </figure>
-                  <Table.Root>
-                    <Table.Header>
-                      <Table.Row>
-                        <Table.ColumnHeaderCell>Type</Table.ColumnHeaderCell>
-                        <Table.ColumnHeaderCell>Diet</Table.ColumnHeaderCell>
-                        <Table.ColumnHeaderCell>
-                          Fave Food
-                        </Table.ColumnHeaderCell>
-                        <Table.ColumnHeaderCell>
-                          Fave Toy
-                        </Table.ColumnHeaderCell>
-                        <Table.ColumnHeaderCell>Games</Table.ColumnHeaderCell>
-                      </Table.Row>
-                    </Table.Header>
-
-                    <Table.Body>
-                      <Table.Row align='center'>
-                        <Table.Cell className='capitalize'>{type}</Table.Cell>
-                        <Table.Cell className='capitalize'>{diet}</Table.Cell>
-                        <Table.Cell>
-                          {favouriteFood !== null ? (
-                            <Link href={`/api/food/${favouriteFood?.id}`}>
-                              {favouriteFood?.name}
-                            </Link>
-                          ) : (
-                            <Cross2Icon />
-                          )}
-                        </Table.Cell>
-                        <Table.Cell>
-                          {favouriteToy !== null ? (
-                            <Link href={`/api/toy/${favouriteToy?.id}`}>
-                              {favouriteToy?.name}
-                            </Link>
-                          ) : (
-                            <Cross2Icon />
-                          )}
-                        </Table.Cell>
-                        <Table.Cell className='max-w-prose'>
-                          {games.join(', ')}
-                        </Table.Cell>
-                      </Table.Row>
-                    </Table.Body>
-                  </Table.Root>
-                </Flex>
-              </Card>
-            );
+            return <SlimeCard key={slime.id} slime={slime} />;
           })}
         </Flex>
       </Section>

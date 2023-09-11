@@ -1,7 +1,7 @@
 import gql from 'gql-tag';
-import { ISlimeDirectory } from '../../slimeFetch';
+import { ISlimeGallery } from '../../slimeFetch';
 
-export interface ISlime extends ISlimeDirectory {
+export interface ISlime extends ISlimeGallery {
   locations: { id: string; name: string }[];
   slimepedia: {
     slimeology: string;
