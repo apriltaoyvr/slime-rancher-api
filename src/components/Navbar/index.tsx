@@ -24,7 +24,7 @@ export default function Navbar() {
         asChild
       >
         <Link href={href}>
-          <Text size='2'>{children}</Text>
+          <Text size='2' weight='medium'>{children}</Text>
         </Link>
       </Button>
     );
