@@ -7,7 +7,7 @@ export interface Food {
   type: Diet;
   slime: string | null;
   locations: string[];
-  slimepedia?: {
+  slimepedia: {
     about: string;
     ranch?: string | null;
   };
