@@ -3,10 +3,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Flex, Text, Separator, Button } from '@radix-ui/themes';
 import { GitHubLogoIcon, HomeIcon } from '@radix-ui/react-icons';
-import ThemeChanger from './ThemeChanger'
+import ThemeChanger from './ThemeChanger';
 
 export default function Navbar() {
-  const pathname = usePathname();
+  // We split this to catch subroutes (e.g. the /info from /info/slimes)
+  const pathname = '/' + usePathname().split('/')[1];
+
   const Navlink = ({
     href,
     children,
@@ -15,7 +17,11 @@ export default function Navbar() {
     children: React.ReactNode;
   }) => {
     return (
-      <Button variant='ghost' color={pathname === href ? 'ruby' : 'gray'} asChild>
+      <Button
+        variant='ghost'
+        color={pathname === href ? 'ruby' : 'gray'}
+        asChild
+      >
         <Link href={href}>
           <Text size='2'>{children}</Text>
         </Link>
@@ -39,7 +45,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className='sticky top-0 z-40 mb-4 w-full flex flex-row place-content-between place-items-center border-b border-accent-6 p-2 bg-blend-overlay backdrop-blur-lg'
+      className='sticky top-0 z-40 mb-4 flex w-full flex-row place-content-between place-items-center border-b border-accent-6 p-2 bg-blend-overlay backdrop-blur-lg'
       data-accent-color='gray'
     >
       <header>
