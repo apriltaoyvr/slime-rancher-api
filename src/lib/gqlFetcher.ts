@@ -21,6 +21,9 @@ export default async function graphqlFetcher(
       query: query,
       variables: { ...args },
     }),
+    next: {
+      revalidate: 3600
+    }
   });
 
   return res.json();
