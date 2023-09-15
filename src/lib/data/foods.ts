@@ -422,7 +422,7 @@ export const foods: Food[] = [
     name: 'Sea Hen',
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/seahen.webp',
-    type: 'fruit',
+    type: 'meat',
     slime: 'angler',
     locations: ['strand', 'valley'],
     slimepedia: {

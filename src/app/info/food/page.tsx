@@ -6,5 +6,5 @@ export default async function FoodsPage() {
   const fetchAllFoods = await graphqlFetcher(allFoodsQuery);
   const foods: IFoodGallery[] = fetchAllFoods.data.foods;
 
-  return <FoodGallery foods={foods.slice(1, foods.length - 1)} />;
+  return <FoodGallery foods={foods.slice(1, foods.length)} />;
 }
