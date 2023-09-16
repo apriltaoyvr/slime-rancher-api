@@ -5,11 +5,11 @@ export interface Food {
   name: string;
   image: string;
   type: Diet;
-  slime: string | null;
-  locations: string[];
+  slimeId?: string;
+  locationIds: string[];
   slimepedia: {
     about: string;
-    ranch?: string | null;
+    ranch?: string;
   };
 }
 
@@ -20,8 +20,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/beatrix.jpg',
     type: 'meat',
-    slime: 'tarr',
-    locations: [],
+    slimeId: 'tarr',
+    locationIds: [],
     slimepedia: {
       about: '',
       ranch: '',
@@ -33,8 +33,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/roostro.webp',
     type: 'meat',
-    slime: 'hunter',
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    slimeId: 'hunter',
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         "Roostros are the alpha birds on the Far, Far Range and half of the equation required to breed chickens on the ranch. However, roostros are rarer than any hen making them a great find any time one is discovered.\nTo acquire a roostro, either find one out on the range or breed them on the ranch. Any type of chickadoo has a small chance of growing into a roostro. Some ranchers believe that these odds increase if you greet the Rooster King's crow at sunrise with an enthusiastic 'good morning!'",
@@ -48,8 +48,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/elderroostro.webp',
     type: 'meat',
-    slime: null,
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         "Elder roostros are the senior-aged roostros who have retired from the otherwise bustling life of their younger counterparts. 'Young roostros crow too much, they move too fast, and frankly have no respect for their elders,' an elder roostro might say of youths; as they make a gross, smacking sound with their lips. Though this is of course impossible, as roostros do not have lips.",
@@ -63,8 +63,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/hen.webp',
     type: 'meat',
-    slime: null,
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         'Hen Hens are a special breed of chicken bred to survive the climate of the Far, Far Range. While appearing more or less like a big chicken, these burly birds are much more adept at fending for themselves, making them ideal for ranchers who might otherwise be distracted by a few hundred hungry slimes.',
@@ -79,8 +79,8 @@ export const foods: Food[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/elderhen.webp',
 
     type: 'meat',
-    slime: null,
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         "Elder hens have lived a full-feathered life. They've met the roostro of their dreams, seen their little chickadoos grow up, and are ready to start the next chapter of their chicken lives. In all likelihood this will include getting the names of countless books, movies and actors wrong. But don't blame them for that. They're chickens for goodness sake.",
@@ -94,8 +94,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/stonyhen.webp',
     type: 'meat',
-    slime: 'tabby',
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    slimeId: 'tabby',
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         'Stony hens are thought to have evolved from hen hens who once trekked deep into the mountains of the Far, Far Range. Perhaps these birds were seeking a clarity of mind that one can truly obtain through meditation amongst these lofty, barren crags. But most likely, they were just stupid and got lost.',
@@ -109,8 +109,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/briarhen.webp',
     type: 'meat',
-    slime: 'boom',
-    locations: ['blanket'],
+    slimeId: 'boom',
+    locationIds: ['blanket'],
     slimepedia: {
       about:
         'Briar hens are a chicken variant born from the wild thickets of the Far, Far Range. They were first discovered long ago by an explorer who noted that they seemed to have a complex tribal structure, and a fascinating series of chicken customs. He even may have joined the briar tribe as an honorary chicken himself! His records end there however, and we know nothing else about him or his findings. Oh, but his name was Carl. We know that.',
@@ -124,8 +124,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/paintedhen.webp',
     type: 'meat',
-    slime: 'tangle',
-    locations: ['desert'],
+    slimeId: 'tangle',
+    locationIds: ['desert'],
     slimepedia: {
       about:
         "Painted Hens are the colorful chicken variants found in the Glass Desert. It is unknown what caused their rainbow-like plumage to occur. One theory suggests their colors are a biological mimicry of the prismatic glass found within the desert, while another theory states that their wild colors made them the dominant mates of Cluck Kingdoms and thus were banished to the desert by a coalition of jealous chickens who couldn't compete with these fashionable fouls.\nBut the latter theory is only believed by one strange person, so we're not sure why it would have been included here.",
@@ -139,8 +139,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/chickadoo.webp',
     type: 'meat',
-    slime: null,
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         "Chickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones.\nChickadoos are baby chickens that will eventually grow into a hen hen or more rarely, a roostro.",
@@ -154,8 +154,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/stonychickadoo.webp',
     type: 'meat',
-    slime: null,
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         "Stony chickadoos are baby chickens that will eventually grow into a stony hen or more rarely, a roostro.\nChickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones.",
@@ -169,8 +169,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/briarchickadoo.webp',
     type: 'meat',
-    slime: null,
-    locations: ['blanket'],
+    
+    locationIds: ['blanket'],
     slimepedia: {
       about:
         "Briar chickadoos are baby chickens that will eventually grow into a briar hen or more rarely, a roostro.\nChickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones.",
@@ -184,8 +184,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/paintedchickadoo.webp',
     type: 'meat',
-    slime: null,
-    locations: ['desert'],
+    
+    locationIds: ['desert'],
     slimepedia: {
       about:
         "Painted chickadoos are baby chickens that will eventually grow into a painted hen or more rarely, a roostro.\nChickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones.",
@@ -199,8 +199,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/pogo.webp',
     type: 'fruit',
-    slime: null,
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         "Pogofruit are a common sight almost anywhere on the Far, Far Range. Tasting a bit like a peach, they're most notable for having their trademark spots both on and under the skin.",
@@ -214,8 +214,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/carrot.webp',
     type: 'veggie',
-    slime: null,
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         "The humble carrot was brought to the Far, Far Range because they're easy to grow and nutritious. Most ranchers swear by them as they're a handy portable snack, promote good night vision, and when juiced are only second to coffee as the perfect morning beverage.",
@@ -229,8 +229,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/beet.webp',
     type: 'veggie',
-    slime: 'rock',
-    locations: ['reef', 'quarry', 'ruins', 'desert', 'wilds'],
+    slimeId: 'rock',
+    locationIds: ['reef', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         "Heart beets get their name from their deep, red color and heart-like shape. Heart beets are also unusually juicy for a beet, making it the only veggie that's not for the squeamish in the kitchen.",
@@ -244,8 +244,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/cuberry.webp',
     type: 'fruit',
-    slime: 'phosphor',
-    locations: ['reef', 'blanket', 'ruins', 'desert', 'wilds'],
+    slimeId: 'phosphor',
+    locationIds: ['reef', 'blanket', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
         'Due to their sweet taste and curious shape, cuberries were quick to become a favorite amongst the first ranchers on the range. They are often used in cakes and pies when celebrating special occasions, like birthdays or Plortapalooza.',
@@ -259,8 +259,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/mango.webp',
     type: 'fruit',
-    slime: 'honey',
-    locations: ['blanket', 'strand'],
+    slimeId: 'honey',
+    locationIds: ['blanket', 'strand'],
     slimepedia: {
       about:
         "The mint mango is perhaps the sweetest fruit ever discovered. Its appearance is that of a mango, with a thicker, syrup-like juice, and a bright, minty aftertaste. It's no wonder Honey Slimes seek them out or that they have such amazingly fresh breath.",
@@ -274,8 +274,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/oca.webp',
     type: 'veggie',
-    slime: 'rad',
-    locations: ['quarry'],
+    slimeId: 'rad',
+    locationIds: ['quarry'],
     slimepedia: {
       about:
         "A staple of cooking on the range, the hearty Oca Oca is a naturally salty, soft spud. As the key ingredient to the always tasty 'rancher's hashbrowns', they have likely been the fuel for a great deal of slime wrangling since their discovery on the range.",
@@ -289,8 +289,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/onion.webp',
     type: 'veggie',
-    slime: 'crystal',
-    locations: ['quarry'],
+    slimeId: 'crystal',
+    locationIds: ['quarry'],
     slimepedia: {
       about:
         'Odd Onions can only grow in the Indigo Quarry; however, you\'ll never encounter an Odd Onion patch. Instead, Odd Onions can be found randomly in other veggie patches. As the saying goes "Forage into the Indigo Quarry and you\'ll always find the Odd Onion in your haul."',
@@ -304,8 +304,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/lemon.webp',
     type: 'fruit',
-    slime: 'quantum',
-    locations: ['ruins'],
+    slimeId: 'quantum',
+    locationIds: ['ruins'],
     slimepedia: {
       about:
         'A phase lemon comes from a different place and time. They are like an echo, reverberating through the halls of the Ancient Ruins, never staying in the same place for long.',
@@ -319,8 +319,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/pear.webp',
     type: 'fruit',
-    slime: 'dervish',
-    locations: ['desert'],
+    slimeId: 'dervish',
+    locationIds: ['desert'],
     slimepedia: {
       about:
         "Prickle pears are as tough as the Glass Desert itself; having a thick, leathery, skin and covered in sharp barbs, they're an 'acquired taste' to be sure. But those who put forth the cautious effort will find one of the sweetest fruits in the known universe hiding within",
@@ -334,8 +334,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/parsnip.webp',
     type: 'veggie',
-    slime: 'mosaic',
-    locations: ['desert'],
+    slimeId: 'mosaic',
+    locationIds: ['desert'],
     slimepedia: {
       about:
         'Despite their slightly metallic aftertaste, these shimmering root veggies are considered a delicacy by gourmands across the galaxy. On the Far, Far Range, ranchers often eat them during the holidays, to bring good fortune in the coming year',
@@ -349,8 +349,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/ginger.webp',
     type: 'veggie',
-    slime: 'gold',
-    locations: ['desert'],
+    slimeId: 'gold',
+    locationIds: ['desert'],
     slimepedia: {
       about:
         'Curiously, gilded ginger cannot be replicated in a garden as its unusual biological properties prohibit it. However, there is perhaps another use for it...',
@@ -364,8 +364,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/kookadoba.webp',
     type: 'fruit',
-    slime: null,
-    locations: ['wilds'],
+    
+    locationIds: ['wilds'],
     slimepedia: {
       about:
         "Kookadoba are known as 'the king of fruit' by their enthusiasts, which include the jolly gourmand, Ogden Ortiz. However, harvesting them can be quite perilous as they only grow in the feral domain of The Wilds. Worse, the kookadoba smells and tastes horrible to most palates, with most who try it reporting it has the flavor of 'stinky cheese meets stinkier cheese'",
@@ -379,8 +379,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/lettuce.webp',
     type: 'veggie',
-    slime: 'cotton',
-    locations: ['fields', 'strand', 'valley'],
+    slimeId: 'cotton',
+    locationIds: ['fields', 'strand', 'valley'],
     slimepedia: {
       about:
         "Like a desert bloom or a deep sea pearl, water lettuce is a small miracle. The dry season can be difficult for wildlife on the Far, Far Range. But through the humble water lettuce, nature has found a way to provide. The water stored inside the plant prevents its leaves from wilting under the sun's rays, and in turn the crisp leaves keep the water cool and protected, perfect for a thirsty critter in search of relief from the heat",
@@ -394,12 +394,11 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/moondewnectar.webp',
     type: 'nectar',
-    slime: 'flutter',
-    locations: ['strand'],
+    slimeId: 'flutter',
+    locationIds: ['strand'],
     slimepedia: {
       about:
         "This sweet syrup comes from Rainbow Island's most unusual plant, the moondew flower, which only blooms at night. Initially scientists thought the buds of this flower never opened. But that was just because they tended to call it quits around 5, maybe 4:45 if they were trying to beat traffic.",
-      ranch: null,
     },
   },
   {
@@ -408,8 +407,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/pomegranite.webp',
     type: 'fruit',
-    slime: 'batty',
-    locations: ['strand', 'valley'],
+    slimeId: 'batty',
+    locationIds: ['strand', 'valley'],
     slimepedia: {
       about:
         "The pomegranite is as mysterious as it is ancient. A fruit that grows only in the dark caves beneath the earth, it grows without sunlight, without warmth. It should not be, and yet, it is. A living paradox? Or a symbol of nature's resilience, of the ability for life to thrive even in the unlikeliest of spaces? Pretty deep stuff.",
@@ -423,8 +422,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/seahen.webp',
     type: 'fruit',
-    slime: 'angler',
-    locations: ['strand', 'valley'],
+    slimeId: 'angler',
+    locationIds: ['strand', 'valley'],
     slimepedia: {
       about:
         'Old sailors say that sea hens are actually demons in disguise, and that their vacant expressions are actually a diabolically calculated misdirect to hide evil intent. Plotting, waiting for their moment... to strike.',
@@ -438,8 +437,8 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/seachickadoo.webp',
     type: 'meat',
-    slime: null,
-    locations: ['strand', 'valley'],
+    
+    locationIds: ['strand', 'valley'],
     slimepedia: {
       about:
         "Chickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones.\nSea chickadoos are baby chickens that will eventually grow into a sea hen or more rarely, a roostro",
