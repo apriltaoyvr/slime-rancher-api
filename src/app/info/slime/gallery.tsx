@@ -19,7 +19,7 @@ export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
 
   return (
     <Section size='2' p='2'>
-      <Heading as='h2' align='center' mb='2'>
+      <Heading as='h1' align='center'>
         Slimes
       </Heading>
       <Flex

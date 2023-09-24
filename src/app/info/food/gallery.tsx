@@ -17,7 +17,7 @@ export default function FoodGallery({ foods }: { foods: IFoodGallery[] }) {
 
   return (
     <Section size='2' p='2'>
-      <Heading as='h2' align='center' mb='2'>
+      <Heading as='h1' align='center' mb='2'>
         Foods
       </Heading>
       <Flex
