@@ -5,6 +5,7 @@ export interface Location {
   slimepedia: { about: string };
   games: number[];
 }
+
 export const locations: Location[] = [
   {
     id: 'ranch',
@@ -250,4 +251,3 @@ export const locations: Location[] = [
   },
 ];
 
-export type LocationType = typeof locations;

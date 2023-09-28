@@ -10,6 +10,7 @@ export const Location = objectType({
   definition(t) {
     t.nonNull.id('id');
     t.nonNull.string('name');
+    t.nonNull.string('image');
     t.nonNull.list.nonNull.int('games', {
       description: 'The games this location appears in',
     });
@@ -21,14 +22,14 @@ export const Location = objectType({
       type: Slime,
       description: 'Slimes that can be found at this location',
       resolve(parent) {
-        return slimes.filter((slime) => slime.locations.includes(parent.id));
+        return slimes.filter((slime) => slime.locationIds.includes(parent.id));
       },
     });
     t.list.field('foods', {
       type: Food,
       description: 'Foods that can be found at this location',
       resolve(parent) {
-        return foods.filter((food) => food.locations.includes(parent.id));
+        return foods.filter((food) => food.locationIds.includes(parent.id));
       },
     });
   },
