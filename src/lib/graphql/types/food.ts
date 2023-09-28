@@ -25,7 +25,7 @@ export const Food = objectType({
       description: 'Locations where this food can be found',
       resolve(food) {
         return locations.filter((location) =>
-          food.locations.includes(location.id),
+          food.locationIds.includes(location.id),
         );
       },
     });

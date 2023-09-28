@@ -5,16 +5,16 @@ export interface Slime {
   name: string;
   image: string;
   diet: Diet;
-  favouriteToy: string | null;
-  favouriteFood: string | null;
+  favouriteToyId?: string;
+  favouriteFoodId?: string;
   type: SlimeType;
   slimepedia: {
     slimeology: string;
     risks: string;
     plortonomics: string;
   };
-  locations: string[];
-  properties?: string[] | null;
+  locationIds: string[];
+  properties?: string[];
   games: number[];
 }
 
@@ -27,8 +27,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/tarr.webp',
     diet: 'other',
-    favouriteFood: 'ranchers',
-    favouriteToy: null,
+    favouriteFoodId: 'ranchers',
+
     type: 'hostile',
     slimepedia: {
       slimeology:
@@ -38,7 +38,7 @@ export const slimes: Slime[] = [
       plortonomics:
         'The Tarr produce no plorts, only more tarr. And then more tarr still',
     },
-    locations: [],
+    locationIds: [],
     properties: ['They attack the Rancher, and eat slimes'],
     games: [1, 2],
   },
@@ -48,8 +48,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/pink.webp',
     diet: 'all',
-    favouriteToy: 'beachball',
-    favouriteFood: null,
+    favouriteToyId: 'beachball',
+
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -59,7 +59,7 @@ export const slimes: Slime[] = [
       plortonomics:
         'Pink Plorts are an excellent "multipurpose generic substance" used to manufacture everything from food products to household cleaners. All over earth, people are eating burgers, sweetening their coffees or scrubbing their floors with pink plort products. That\'s some serious versatility!',
     },
-    locations: ['reef', 'blanket', 'ruins', 'quarry', 'desert', 'wilds'],
+    locationIds: ['reef', 'blanket', 'ruins', 'quarry', 'desert', 'wilds'],
     games: [1, 2],
   },
   {
@@ -68,8 +68,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/tabby.webp',
     diet: 'meat',
-    favouriteToy: 'yarn',
-    favouriteFood: 'stonyhen',
+    favouriteToyId: 'yarn',
+    favouriteFoodId: 'stonyhen',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -86,7 +86,7 @@ export const slimes: Slime[] = [
       'Will occasionally follow the player.',
       'Occasionally attempts to pounce at the player, indicated by wiggling before making a jump in her direction.',
     ],
-    locations: ['reef', 'blanket', 'ruins', 'desert'],
+    locationIds: ['reef', 'blanket', 'ruins', 'desert'],
     games: [1, 2],
   },
   {
@@ -95,8 +95,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/rock.webp',
     diet: 'veggie',
-    favouriteToy: 'bigrock',
-    favouriteFood: 'beet',
+    favouriteToyId: 'bigrock',
+    favouriteFoodId: 'beet',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -111,7 +111,7 @@ export const slimes: Slime[] = [
       'Can roll into a spiky ball and travel quickly in a straight line.',
       'Rolls more often when agitated',
     ],
-    locations: ['reef', 'quarry', 'ruins', 'desert', 'wilds'],
+    locationIds: ['reef', 'quarry', 'ruins', 'desert', 'wilds'],
     games: [1, 2],
   },
   {
@@ -120,8 +120,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/phosphor.webp',
     diet: 'fruit',
-    favouriteToy: 'nightlight',
-    favouriteFood: 'cuberry',
+    favouriteToyId: 'nightlight',
+    favouriteFoodId: 'cuberry',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -135,7 +135,7 @@ export const slimes: Slime[] = [
       'Its wings enable it to fly.',
       'Disappears in prolonged exposure to sunlight.',
     ],
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     games: [1, 2],
   },
   {
@@ -144,8 +144,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/honey.webp',
     diet: 'fruit',
-    favouriteToy: 'bee',
-    favouriteFood: 'mango',
+    favouriteToyId: 'bee',
+    favouriteFoodId: 'mango',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -158,7 +158,7 @@ export const slimes: Slime[] = [
     properties: [
       'Its plorts attract Slimes from further distances than other plorts',
     ],
-    locations: ['blanket'],
+    locationIds: ['blanket'],
     games: [1, 2],
   },
   {
@@ -167,8 +167,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/puddle.webp',
     diet: 'water',
-    favouriteToy: 'ducky',
-    favouriteFood: null,
+    favouriteToyId: 'ducky',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -178,7 +177,7 @@ export const slimes: Slime[] = [
       plortonomics:
         'Puddle plorts are made almost entirely from an incredible hydro compound known by chemists across the galaxy as H2Ohhhhh. This compound is used to create an absurdly expensive brand of bottled drinking water that is sought after by the elite back on Earth. While some people argue that there is little difference in taste between it and tap water, those people seriously are not getting it.',
     },
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
     games: [1, 2],
   },
   {
@@ -187,8 +186,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/boom.webp',
     diet: 'meat',
-    favouriteToy: 'bomb',
-    favouriteFood: 'briarhen',
+    favouriteToyId: 'bomb',
+    favouriteFoodId: 'briarhen',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -198,7 +197,7 @@ export const slimes: Slime[] = [
       plortonomics:
         "Highly volatile boom plorts have all sorts of applications, including powering rocket thrusters and demolitions. Military organizations value their highly destructive capabilities for 'medical technology and other research'. Imagine that!",
     },
-    locations: ['blanket', 'desert', 'wilds'],
+    locationIds: ['blanket', 'desert', 'wilds'],
     properties: [
       'Explodes occasionally, telegraphed by the intensity of its core and veins, sending everything in its blast radius flying and stunning itself in the process. Explosions can be temporarily nullified with Water or Ancient Water.',
       'Explodes more often when agitated.',
@@ -211,8 +210,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/hunter.webp',
     diet: 'meat',
-    favouriteToy: 'chicken',
-    favouriteFood: 'roostro',
+    favouriteToyId: 'chicken',
+    favouriteFoodId: 'roostro',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -222,7 +221,7 @@ export const slimes: Slime[] = [
       plortonomics:
         'Amazingly, a serum can be made from hunter slime plorts that can actually render a person invisible! The effect only lasts for about a day, but this serum is nonetheless incredibly popular back on Earth as many people find its effects very soothing.\nSometimes you feel like you just want to disappear for a while. But then about a day goes by and you realize that not only did you miss being seen, but others missed seeing you too.',
     },
-    locations: ['blanket', 'desert', 'wilds'],
+    locationIds: ['blanket', 'desert', 'wilds'],
     properties: [
       'Can detect Food from further distances than other Slimes',
       'Can occasionally attempt to pounce at the player, indicated by wiggling before making a jump in her direction. The Slime will turn invisible during its wiggle, leaving only its eyes and mouth visible',
@@ -238,8 +237,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/rad.webp',
     diet: 'veggie',
-    favouriteToy: 'cell',
-    favouriteFood: 'oca',
+    favouriteToyId: 'cell',
+    favouriteFoodId: 'oca',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -249,7 +248,7 @@ export const slimes: Slime[] = [
       plortonomics:
         "Given that raddies are basically mobile batteries, it's no surprise that corporations value rad plorts for their incredible energy-producing capabilities. Most rad plorts get turned into 'plortonium' and everything from the latest holophone to a radwave microcook system runs on the stuff.",
     },
-    locations: ['quarry', 'wilds'],
+    locationIds: ['quarry', 'wilds'],
     games: [1, 2],
   },
   {
@@ -258,8 +257,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/crystal.webp',
     diet: 'veggie',
-    favouriteToy: 'crystalball',
-    favouriteFood: 'onion',
+    favouriteToyId: 'crystalball',
+    favouriteFoodId: 'onion',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -269,7 +268,7 @@ export const slimes: Slime[] = [
       plortonomics:
         "Though the crystals produced by a crystal slime are highly unstable, a crystal plort, like all plorts, is far more pure and can be used by slime scientists to engineer a variety of metals that are entirely transparent. This innovation has lead to metropolitan areas on Earth completely transforming visually, allowing more light to reach the streets and the space as a whole a chance to 'breathe.' Architects often describe these transparent metals as 'so totally cooler than normal, boring metals.'",
     },
-    locations: ['quarry'],
+    locationIds: ['quarry'],
     properties: [
       'Damages Beatrix on contact',
       'Can produce crystals on the floor as a hazard. When it does so, it leaps into the air rolling into a spikey ball.',
@@ -284,8 +283,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/quantum.webp',
     diet: 'fruit',
-    favouriteToy: 'puzzlecube',
-    favouriteFood: 'lemon',
+    favouriteToyId: 'puzzlecube',
+    favouriteFoodId: 'lemon',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -295,7 +294,7 @@ export const slimes: Slime[] = [
       plortonomics:
         "Quantum plorts are believed by many to hold the secret to infinite resources. Given the quantum slime's ability to change reality, it's theorized that unlocking the potential of quantum plorts would allow for a technology that converges the realities of other entities into our reality and- well basically we're talking about cloning stuff. Infinite energy, chickens, whatever. Probably no harmful side effects to this at all",
     },
-    locations: ['ruins', 'desert'],
+    locationIds: ['ruins', 'desert'],
     games: [1, 2],
   },
   {
@@ -304,8 +303,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/dervish.webp',
     diet: 'fruit',
-    favouriteToy: 'gyro',
-    favouriteFood: 'pear',
+    favouriteToyId: 'gyro',
+    favouriteFoodId: 'pear',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -319,7 +318,7 @@ export const slimes: Slime[] = [
       'Can create small cyclones underneath themselves, giving them some lift',
       'When agitated they can create large cyclones independant of the Slime, which reduces visibility and can sweep up Food, Slimes, and Plorts. Other Dervish Slimes, including Largos, are immune to these tornadoes.',
     ],
-    locations: ['desert'],
+    locationIds: ['desert'],
     games: [1, 2],
   },
   {
@@ -328,8 +327,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/tangle.webp',
     diet: 'meat',
-    favouriteToy: 'solmate',
-    favouriteFood: 'paintedhen',
+    favouriteToyId: 'solmate',
+    favouriteFoodId: 'paintedhen',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -343,7 +342,7 @@ export const slimes: Slime[] = [
       'Can utilize vines to pick up Food and Plorts from a distance, including outside of their Corrals',
       'If agitated, they will release pollen that makes surrounding slimes sneeze, increasing their Agitation',
     ],
-    locations: ['desert'],
+    locationIds: ['desert'],
     games: [1],
   },
   {
@@ -352,8 +351,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/fire.webp',
     diet: 'ash',
-    favouriteToy: 'brick',
-    favouriteFood: null,
+    favouriteToyId: 'brick',
+
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -368,7 +367,7 @@ export const slimes: Slime[] = [
       'Its fire can be temporarily extinguished by splashing it with Water or Ancient Water.',
       'Food and Chickadoos that touch a burning fire slime are destroyed. Slimes that touch a burning fire slime get agitated and knocked back.',
     ],
-    locations: ['desert'],
+    locationIds: ['desert'],
     games: [1, 2],
   },
   {
@@ -377,8 +376,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/mosaic.webp',
     diet: 'veggie',
-    favouriteToy: 'disco',
-    favouriteFood: 'parsnip',
+    favouriteToyId: 'disco',
+    favouriteFoodId: 'parsnip',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -395,7 +394,7 @@ export const slimes: Slime[] = [
       'Glints are removed when the Mosaic Slime is no longer present in the world.',
       'Glints are produced more frequently the more agitated the mosaic is.',
     ],
-    locations: ['desert'],
+    locationIds: ['desert'],
     games: [1],
   },
   {
@@ -404,8 +403,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/saber.webp',
     diet: 'meat',
-    favouriteToy: 'stegobuddy',
-    favouriteFood: null,
+    favouriteToyId: 'stegobuddy',
+
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -421,7 +420,7 @@ export const slimes: Slime[] = [
       'Capable of bouncing off walls in order to change direction in midair towards its intended target.',
       'Are found feral in The Wilds.',
     ],
-    locations: ['wilds'],
+    locationIds: ['wilds'],
     games: [1, 2],
   },
   {
@@ -430,8 +429,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/gold.webp',
     diet: 'other',
-    favouriteToy: null,
-    favouriteFood: 'ginger',
+
+    favouriteFoodId: 'ginger',
     type: 'special',
     slimepedia: {
       slimeology:
@@ -446,7 +445,7 @@ export const slimes: Slime[] = [
       'Will produce one plort if hit with any resource',
       'Exclusively eats Gilded Ginger',
     ],
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
     games: [1, 2],
   },
   {
@@ -455,8 +454,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/lucky.webp',
     diet: 'meat',
-    favouriteToy: null,
-    favouriteFood: null,
+
     type: 'special',
     slimepedia: {
       slimeology:
@@ -466,8 +464,8 @@ export const slimes: Slime[] = [
       plortonomics:
         "A lucky slime isn't known to produce plorts of any kind. Leading slime scientists believe this to be the result of the lucky slime not being a true slime variant. Rather, lucky slimes are believed to be just an abnormal tabby slime: one whose color has faded as a result of ingesting so many coins. It is perhaps this very change that also led to ceasing plort production.",
     },
-    properties: null,
-    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+
+    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
     games: [1, 2],
   },
   {
@@ -476,8 +474,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/quicksilver.webp',
     diet: 'other',
-    favouriteToy: null,
-    favouriteFood: null,
+
     type: 'special',
     slimepedia: {
       slimeology:
@@ -496,7 +493,7 @@ export const slimes: Slime[] = [
       'When time runs out, any remaining quicksilver slimes flee from the player in all directions and despawn.',
       'Cannot be stored in the vacpack.',
     ],
-    locations: ['nimble'],
+    locationIds: ['nimble'],
     games: [1],
   },
   {
@@ -505,8 +502,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/glitch.webp',
     diet: 'other',
-    favouriteToy: null,
-    favouriteFood: null,
+
     type: 'special',
     slimepedia: {
       slimeology:
@@ -516,8 +512,8 @@ export const slimes: Slime[] = [
       plortonomics:
         "A glitch slime does not display any drive to eat the simulated food of the slimeulation and so no[sic] known plorts exist.\nHowever, if glitch slime plorts did exist, they would be virtual like everything in the slimeulation and have no actual value. Unless of course, a bunch of people decided virtual plorts have value, and then maybe everyone would start buying them. Heck, maybe eventually glitch slime plorts would worth a fortune because a bunch of us just agree on that too and then we all created our own Slimeulations to generate glitch slime plorts. But if that happened, then we would all be using an absurd amount of real energy, harming our real enviroment further, all to generate virtual plorts?\nSo obviously, that's just a very silly thing and we'd never do that.",
     },
-    properties: null,
-    locations: ['slimeulation'],
+
+    locationIds: ['slimeulation'],
     games: [1],
   },
   {
@@ -526,8 +522,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/twinkle.webp',
     diet: 'other',
-    favouriteToy: null,
-    favouriteFood: null,
+
     type: 'special',
     slimepedia: {
       slimeology:
@@ -537,8 +532,8 @@ export const slimes: Slime[] = [
       plortonomics:
         'Twinkle slimes do not seem to eat, and do not produce plorts.',
     },
-    properties: null,
-    locations: [],
+
+    locationIds: [],
     games: [1],
   },
   {
@@ -547,8 +542,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/cotton.webp',
     diet: 'veggie',
-    favouriteToy: null,
-    favouriteFood: 'lettuce',
+
+    favouriteFoodId: 'lettuce',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -558,8 +553,8 @@ export const slimes: Slime[] = [
       plortonomics:
         'Cotton plorts have an inexplicable "fluffy" quality to them, making them a great alternative to cotton, which is not native to the Far, Far Range. If one desired a quiet, isolated life on Rainbow Island, but still have soft pillows, warm sweaters, and lots of dry socks, they would do well to keep cotton slimes happily hopping about their ranch.',
     },
-    properties: null,
-    locations: ['fields', 'strand', 'bluffs'],
+
+    locationIds: ['fields', 'strand', 'bluffs'],
     games: [2],
   },
   {
@@ -568,8 +563,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/flutter.webp',
     diet: 'nectar',
-    favouriteToy: null,
-    favouriteFood: 'moondewnectar',
+
+    favouriteFoodId: 'moondewnectar',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -584,7 +579,7 @@ export const slimes: Slime[] = [
       'They can fly, which makes them difficult to contain, though their limited diet makes free ranging them safer than most other species.',
       'When they eat, they release a cloud of scales that soothes nearby slimes, reducing their agitation.',
     ],
-    locations: ['strand'],
+    locationIds: ['strand'],
     games: [2],
   },
   {
@@ -593,8 +588,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/batty.webp',
     diet: 'fruit',
-    favouriteToy: null,
-    favouriteFood: 'pomegranite',
+
+    favouriteFoodId: 'pomegranite',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -609,7 +604,7 @@ export const slimes: Slime[] = [
       "While they can survive in sunlight, they'll get more agitated the longer they're exposed to it.",
       'They are also able to fly around in an almost identical fashion to the Phosphor Slime',
     ],
-    locations: ['valley'],
+    locationIds: ['valley'],
     games: [2],
   },
   {
@@ -618,8 +613,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/angler.webp',
     diet: 'meat',
-    favouriteToy: null,
-    favouriteFood: 'seahen',
+
+    favouriteFoodId: 'seahen',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -635,7 +630,7 @@ export const slimes: Slime[] = [
       "Slimes and chickens affected by the Angler slime's stun will begin to roll and slimes will have a dizzy face signifying they are affected by the stun.",
       'The player is not affected nor Tarr Slimes by the stun.',
     ],
-    locations: ['strand', 'valley'],
+    locationIds: ['strand', 'valley'],
     games: [2],
   },
   {
@@ -644,8 +639,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/ringtail.webp',
     diet: 'all',
-    favouriteToy: null,
-    favouriteFood: null,
+
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -661,7 +655,7 @@ export const slimes: Slime[] = [
       'This slime will also eat even when it is not hungry, consuming the food without creating a plort in return.',
       'This slime can also pounce.',
     ],
-    locations: ['strand', 'valley', 'bluffs'],
+    locationIds: ['strand', 'valley', 'bluffs'],
     games: [2],
   },
   {
@@ -670,8 +664,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/yolky.webp',
     diet: 'other',
-    favouriteToy: null,
-    favouriteFood: null,
+
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -681,8 +674,8 @@ export const slimes: Slime[] = [
       plortonomics:
         'Yolky plorts are highly valued for their concentrated nutrients, containing an extremely potent variant of vitamin D that allows people to reduce their sunlight intake for long periods of time, making them popular with cosmic pioneers, deep sea explorers, and gamers.\nBut though yolky plorts can replace the physical need for sunlight, they can never replace the warmth you feel when it touches your face, and the comfort it offers to know that the sun rose once more in your world. To be a stranger to that and still have hope for tomorrow would require the strongest of convictions.',
     },
-    properties: null,
-    locations: ['fields', 'strand', 'valley', 'bluffs'],
+
+    locationIds: ['fields', 'strand', 'valley', 'bluffs'],
     games: [2],
   },
 ];
