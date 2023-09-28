@@ -7,6 +7,7 @@ import {
   Heading,
   Text,
 } from '@radix-ui/themes';
+import { Cross2Icon } from '@radix-ui/react-icons';
 import Image from 'next/image';
 import graphqlFetcher from '@/lib/gqlFetcher';
 import { type IFetchRes, singleSlimeQuery } from './query';
@@ -33,7 +34,6 @@ export default async function SlimePage({
     properties,
     games,
   } = res.data.slimes[0];
-
 
   return (
     <Container>
@@ -63,10 +63,10 @@ export default async function SlimePage({
                 </Table.RowHeaderCell>
                 <Table.Cell className='capitalize'>{diet}</Table.Cell>
                 <Table.Cell className='capitalize'>
-                  {favouriteFood?.name ?? 'Not Applicable'}
+                  {favouriteFood?.name ?? <Cross2Icon />}
                 </Table.Cell>
                 <Table.Cell className='capitalize'>
-                  {favouriteToy?.name ?? 'Not Applicable'}
+                  {favouriteToy?.name ?? <Cross2Icon />}
                 </Table.Cell>
                 <Table.Cell className='capitalize'>
                   {games.join(', ')}
