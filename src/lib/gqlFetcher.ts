@@ -20,7 +20,7 @@ export default async function graphqlFetcher(
     body: JSON.stringify({
       query: query,
       variables: { ...args },
-    }),
+    })
   });
 
   return res.json();

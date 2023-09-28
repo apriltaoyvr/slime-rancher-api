@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import Link from 'next/link';
 import { Flex, Section, Heading, TextField, Select } from '@radix-ui/themes';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import SlimeCard from '@/components/(Info)/SlimeGalleryCard';
@@ -19,8 +18,8 @@ export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
   });
 
   return (
-    <Section size='2'>
-      <Heading as='h2' align='center' mb='2'>
+    <Section size='2' p='2'>
+      <Heading as='h1' align='center'>
         Slimes
       </Heading>
       <Flex
