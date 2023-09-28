@@ -20,11 +20,11 @@ export const Slime = objectType({
         return toys.find((toy) => toy.id === slime.favouriteToy);
       },
     });
-    t.field('favouriteFood', {
+    t.field('favouriteFoodId', {
       type: Food,
       description: "The slime's favourite food",
       resolve(slime) {
-        return foods.find((food) => food.id === slime.favouriteFood);
+        return foods.find((food) => food.id === slime.favouriteFoodId);
       },
     });
     t.nonNull.field('type', {

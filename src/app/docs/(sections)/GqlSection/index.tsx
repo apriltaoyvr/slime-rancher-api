@@ -34,7 +34,7 @@ export default function GqlSection() {
               <ObjectFields name='image' type='String!' />
               <ObjectFields name='diet' type='FoodType!' />
               <ObjectFields name='favouriteToy' type='Toy' />
-              <ObjectFields name='favouriteFood' type='Food' />
+              <ObjectFields name='favouriteFoodId' type='Food' />
               <ObjectFields name='type' type='SlimeType!' />
               <ObjectFields name='slimepedia' type='Slimepedia!' />
               <ObjectFields name='locations' type='[Location]' />

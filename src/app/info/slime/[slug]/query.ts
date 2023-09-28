@@ -29,7 +29,7 @@ export const singleSlimeQuery = gql`
       favouriteToy {
         name
       }
-      favouriteFood {
+      favouriteFoodId {
         name
       }
       locations {

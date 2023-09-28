@@ -9,7 +9,7 @@ export interface ISlimeGallery {
   type: SlimeType;
   diet: Diet;
   favouriteToy?: { id: string; name: string };
-  favouriteFood?: {
+  favouriteFoodId?: {
     id: string;
     name: string;
   };
@@ -34,7 +34,7 @@ export const allSlimesQuery = gql`
         id
         name
       }
-      favouriteFood {
+      favouriteFoodId {
         id
         name
       }

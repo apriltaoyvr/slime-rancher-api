@@ -17,7 +17,7 @@ export const Food = objectType({
       type: Slime,
       description: 'The slime whose favourite food it is',
       resolve(food) {
-        return slimes.find((slime) => slime.favouriteFood === food.id);
+        return slimes.find((slime) => slime.favouriteFoodId === food.id);
       },
     });
     t.list.field('locations', {

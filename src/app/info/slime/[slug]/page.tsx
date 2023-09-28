@@ -25,7 +25,7 @@ export default async function SlimePage({
     name,
     image,
     diet,
-    favouriteFood,
+    favouriteFoodId,
     favouriteToy,
     type,
     slimepedia,
@@ -62,7 +62,7 @@ export default async function SlimePage({
                 </Table.RowHeaderCell>
                 <Table.Cell className='capitalize'>{diet}</Table.Cell>
                 <Table.Cell className='capitalize'>
-                  {favouriteFood?.name ?? 'Not Applicable'}
+                  {favouriteFoodId?.name ?? 'Not Applicable'}
                 </Table.Cell>
                 <Table.Cell className='capitalize'>
                   {favouriteToy?.name ?? 'Not Applicable'}

@@ -5,7 +5,7 @@ import { Cross2Icon } from '@radix-ui/react-icons';
 import type { ISlimeGallery } from '@/app/info/slime/slimeFetch';
 
 export default function SlimeCard({ slime }: { slime: ISlimeGallery }) {
-  const { id, name, image, type, diet, favouriteToy, favouriteFood, games } =
+  const { id, name, image, type, diet, favouriteToy, favouriteFoodId, games } =
     slime;
 
   return (
@@ -42,9 +42,9 @@ export default function SlimeCard({ slime }: { slime: ISlimeGallery }) {
               <Table.Cell className='capitalize'>{type}</Table.Cell>
               <Table.Cell className='capitalize'>{diet}</Table.Cell>
               <Table.Cell>
-                {favouriteFood !== null ? (
-                  <Link href={`/info/food/${favouriteFood?.id}`}>
-                    {favouriteFood?.name}
+                {favouriteFoodId !== null ? (
+                  <Link href={`/info/food/${favouriteFoodId?.id}`}>
+                    {favouriteFoodId?.name}
                   </Link>
                 ) : (
                   <Cross2Icon />
