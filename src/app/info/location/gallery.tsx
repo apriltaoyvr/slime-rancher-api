@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Flex, Section, Heading, TextField, Select } from '@radix-ui/themes';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import LocationCard from '@/components/(Info)/LocationGalleryCard';
+import LocationCard from '@/components/GalleryCards/LocationCard';
 import type { ILocationGallery } from './locationFetch';
 
 export default function LocationGallery({

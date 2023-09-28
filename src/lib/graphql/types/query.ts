@@ -16,7 +16,7 @@ export const Query = queryType({
         if (slimeId) results = results.filter((slime) => slime.id === slimeId);
         if (locationId)
           results = results.filter((slime) =>
-            slime.locations.includes(locationId),
+            slime.locationIds.includes(locationId),
           );
 
         return results;
@@ -36,7 +36,7 @@ export const Query = queryType({
           results = results.filter((location) => location.id === locationId);
         if (slimeId)
           results = results.filter((location) =>
-            slimes.filter((slime) => slime.locations.includes(location.id)),
+            slimes.filter((slime) => slime.locationIds.includes(location.id)),
           );
         return results;
       },
@@ -54,10 +54,10 @@ export const Query = queryType({
         let results = foods;
 
         if (foodId) results = results.filter((food) => food.id === foodId);
-        if (slimeId) results = results.filter((food) => food.slime === slimeId);
+        if (slimeId) results = results.filter((food) => food.slimeId === slimeId);
         if (locationId)
           results = results.filter((food) =>
-            food.locations.includes(locationId),
+            food.locationIds.includes(locationId),
           );
 
         return results;

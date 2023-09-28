@@ -1,21 +1,29 @@
 import { Container, Flex, Section, Heading, Text } from '@radix-ui/themes';
 import Link from 'next/link';
-import CalloutComponent from '@/components/CalloutComponent';
+// Cards
+import SlimeCard from '@/components/GalleryCards/SlimeCard';
+import FoodCard from '@/components/GalleryCards/FoodCard';
+import LocationCard from '@/components/GalleryCards/LocationCard';
+// Fetches
 import graphqlFetcher from '@/lib/gqlFetcher';
-import SlimeCard from '@/components/(Info)/SlimeGalleryCard';
-import FoodCard from '@/components/(Info)/FoodGalleryCard';
 import { type ISlimeGalleryFetch, allSlimesQuery } from './slime/slimeFetch';
 import { type IFoodGalleryFetch, allFoodsQuery } from './food/foodFetch';
+import { type ILocationGalleryFetch, allLocationsQuery } from './location/locationFetch';
 
 export default async function Info() {
   const fetchAllSlimes = graphqlFetcher(allSlimesQuery);
   const fetchAllFoods = graphqlFetcher(allFoodsQuery);
+  const fetchAllLocations = graphqlFetcher(allLocationsQuery);
 
-  const [slimesRes, foodsRes]: [ISlimeGalleryFetch, IFoodGalleryFetch] =
-    await Promise.all([fetchAllSlimes, fetchAllFoods]);
+  const [slimesRes, foodsRes, locationsRes]: [
+    ISlimeGalleryFetch,
+    IFoodGalleryFetch,
+    ILocationGalleryFetch,
+  ] = await Promise.all([fetchAllSlimes, fetchAllFoods, fetchAllLocations]);
 
   const slimes = slimesRes.data.slimes;
   const foods = foodsRes.data.foods;
+  const locations = locationsRes.data.locations;
 
   return (
     <Container>
@@ -24,9 +32,6 @@ export default async function Info() {
           <Heading as='h1' size='8' align='center' mb='2'>
             Info
           </Heading>
-          <CalloutComponent>
-            This page is currently a work in progress.
-          </CalloutComponent>
           <Flex direction='column' align='center' justify='center' m='2'>
             <Text align='center'>
               This is a page for visually displaying the Slime Rancher API's
@@ -80,14 +85,14 @@ export default async function Info() {
           ))}
         </Flex>
       </Section>
-      {/* <Section size='1'>
+      <Section size='1'>
         <Heading
           as='h2'
           align='center'
           mb='2'
           className='rt-Link rt-underline-auto'
         >
-          <Link href='/info/locations'>Locations</Link>
+          <Link href='/info/location'>Locations</Link>
         </Heading>
         <Flex
           direction='row'
@@ -96,11 +101,11 @@ export default async function Info() {
           justify='center'
           gap='2'
         >
-          {foods.slice(15, 17).map((food) => (
-            <FoodCard key={food.id} food={food} />
+          {locations.slice(0, 3).map((location) => (
+            <LocationCard key={location.id} location={location} />
           ))}
         </Flex>
-      </Section> */}
+      </Section>
     </Container>
   );
 }

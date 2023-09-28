@@ -23,7 +23,7 @@ export interface ISlimeGalleryFetch {
 }
 
 export const allSlimesQuery = gql`
-  query Query {
+  query Slimes {
     slimes {
       id
       name

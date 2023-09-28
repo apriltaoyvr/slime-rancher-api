@@ -5,8 +5,8 @@ export interface Slime {
   name: string;
   image: string;
   diet: Diet;
-  favouriteToyId?: string;
-  favouriteFoodId?: string;
+  favouriteToy?: string;
+  favouriteFood?: string;
   type: SlimeType;
   slimepedia: {
     slimeology: string;
@@ -27,7 +27,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/tarr.webp',
     diet: 'other',
-    favouriteFoodId: 'ranchers',
+    favouriteFood: 'ranchers',
 
     type: 'hostile',
     slimepedia: {
@@ -48,8 +48,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/pink.webp',
     diet: 'all',
-    favouriteToyId: 'beachball',
-
+    favouriteToy: 'beachball',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -68,8 +67,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/tabby.webp',
     diet: 'meat',
-    favouriteToyId: 'yarn',
-    favouriteFoodId: 'stonyhen',
+    favouriteToy: 'yarn',
+    favouriteFood: 'stonyhen',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -95,8 +94,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/rock.webp',
     diet: 'veggie',
-    favouriteToyId: 'bigrock',
-    favouriteFoodId: 'beet',
+    favouriteToy: 'bigrock',
+    favouriteFood: 'beet',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -120,8 +119,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/phosphor.webp',
     diet: 'fruit',
-    favouriteToyId: 'nightlight',
-    favouriteFoodId: 'cuberry',
+    favouriteToy: 'nightlight',
+    favouriteFood: 'cuberry',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -144,8 +143,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/honey.webp',
     diet: 'fruit',
-    favouriteToyId: 'bee',
-    favouriteFoodId: 'mango',
+    favouriteToy: 'bee',
+    favouriteFood: 'mango',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -167,7 +166,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/puddle.webp',
     diet: 'water',
-    favouriteToyId: 'ducky',
+    favouriteToy: 'ducky',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -186,8 +185,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/boom.webp',
     diet: 'meat',
-    favouriteToyId: 'bomb',
-    favouriteFoodId: 'briarhen',
+    favouriteToy: 'bomb',
+    favouriteFood: 'briarhen',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -210,8 +209,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/hunter.webp',
     diet: 'meat',
-    favouriteToyId: 'chicken',
-    favouriteFoodId: 'roostro',
+    favouriteToy: 'chicken',
+    favouriteFood: 'roostro',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -237,8 +236,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/rad.webp',
     diet: 'veggie',
-    favouriteToyId: 'cell',
-    favouriteFoodId: 'oca',
+    favouriteToy: 'cell',
+    favouriteFood: 'oca',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -257,8 +256,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/crystal.webp',
     diet: 'veggie',
-    favouriteToyId: 'crystalball',
-    favouriteFoodId: 'onion',
+    favouriteToy: 'crystalball',
+    favouriteFood: 'onion',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -283,8 +282,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/quantum.webp',
     diet: 'fruit',
-    favouriteToyId: 'puzzlecube',
-    favouriteFoodId: 'lemon',
+    favouriteToy: 'puzzlecube',
+    favouriteFood: 'lemon',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -303,8 +302,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/dervish.webp',
     diet: 'fruit',
-    favouriteToyId: 'gyro',
-    favouriteFoodId: 'pear',
+    favouriteToy: 'gyro',
+    favouriteFood: 'pear',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -327,8 +326,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/tangle.webp',
     diet: 'meat',
-    favouriteToyId: 'solmate',
-    favouriteFoodId: 'paintedhen',
+    favouriteToy: 'solmate',
+    favouriteFood: 'paintedhen',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -351,7 +350,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/fire.webp',
     diet: 'ash',
-    favouriteToyId: 'brick',
+    favouriteToy: 'brick',
 
     type: 'harmful',
     slimepedia: {
@@ -376,8 +375,8 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/mosaic.webp',
     diet: 'veggie',
-    favouriteToyId: 'disco',
-    favouriteFoodId: 'parsnip',
+    favouriteToy: 'disco',
+    favouriteFood: 'parsnip',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -403,7 +402,7 @@ export const slimes: Slime[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/saber.webp',
     diet: 'meat',
-    favouriteToyId: 'stegobuddy',
+    favouriteToy: 'stegobuddy',
 
     type: 'harmful',
     slimepedia: {
@@ -430,7 +429,7 @@ export const slimes: Slime[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/gold.webp',
     diet: 'other',
 
-    favouriteFoodId: 'ginger',
+    favouriteFood: 'ginger',
     type: 'special',
     slimepedia: {
       slimeology:
@@ -543,7 +542,7 @@ export const slimes: Slime[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/cotton.webp',
     diet: 'veggie',
 
-    favouriteFoodId: 'lettuce',
+    favouriteFood: 'lettuce',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -564,7 +563,7 @@ export const slimes: Slime[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/flutter.webp',
     diet: 'nectar',
 
-    favouriteFoodId: 'moondewnectar',
+    favouriteFood: 'moondewnectar',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -589,7 +588,7 @@ export const slimes: Slime[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/batty.webp',
     diet: 'fruit',
 
-    favouriteFoodId: 'pomegranite',
+    favouriteFood: 'pomegranite',
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -614,7 +613,7 @@ export const slimes: Slime[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/angler.webp',
     diet: 'meat',
 
-    favouriteFoodId: 'seahen',
+    favouriteFood: 'seahen',
     type: 'docile',
     slimepedia: {
       slimeology:

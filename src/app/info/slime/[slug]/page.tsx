@@ -34,6 +34,7 @@ export default async function SlimePage({
     games,
   } = res.data.slimes[0];
 
+
   return (
     <Container>
       <Card m='2'>

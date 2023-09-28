@@ -14,7 +14,6 @@ import slimes from '@/images/slimes.webp';
 export default async function Home() {
   return (
     <Container className='flex min-h-[80vh] flex-col place-content-center place-items-center'>
-      <Box mt='8'>
         <Flex direction='column' justify='center' align='center' gap='2'>
           <Heading as='h1' align='center' size='9' mb='1'>
             Slime Rancher
@@ -52,7 +51,6 @@ export default async function Home() {
             !
           </Text>
         </Flex>
-      </Box>
     </Container>
   );
 }
