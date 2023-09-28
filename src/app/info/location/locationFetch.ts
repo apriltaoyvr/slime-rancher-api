@@ -19,7 +19,7 @@ export interface ILocationGalleryFetch {
 }
 
 export const allLocationsQuery = gql`
-  query Query {
+  query Locations {
     locations {
       id
       name

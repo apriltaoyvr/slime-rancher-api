@@ -19,7 +19,7 @@ export interface IFoodGalleryFetch {
 }
 
 export const allFoodsQuery = gql`
-  query FoodQuery {
+  query Foods {
     foods {
       name
       id

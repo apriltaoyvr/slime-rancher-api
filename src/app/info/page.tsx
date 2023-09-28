@@ -80,7 +80,7 @@ export default async function Info() {
           justify='center'
           gap='2'
         >
-          {foods.slice(15, 17).map((food) => (
+          {foods.slice(14, 17).map((food) => (
             <FoodCard key={food.id} food={food} />
           ))}
         </Flex>
