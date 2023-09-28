@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Flex, Section, Heading, TextField, Select } from '@radix-ui/themes';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import SlimeCard from '@/components/GalleryCards/SlimeCard';
+import SlimeCard from '@/components/(Info)/SlimeGalleryCard';
 import type { ISlimeGallery } from './slimeFetch';
 
 export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {

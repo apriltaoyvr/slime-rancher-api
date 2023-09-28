@@ -13,7 +13,7 @@ export interface Slime {
     risks: string;
     plortonomics: string;
   };
-  locationIds: string[];
+  locations: string[];
   properties?: string[];
   games: number[];
 }
@@ -38,7 +38,7 @@ export const slimes: Slime[] = [
       plortonomics:
         'The Tarr produce no plorts, only more tarr. And then more tarr still',
     },
-    locationIds: [],
+    locations: [],
     properties: ['They attack the Rancher, and eat slimes'],
     games: [1, 2],
   },
@@ -49,6 +49,7 @@ export const slimes: Slime[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/pink.webp',
     diet: 'all',
     favouriteToy: 'beachball',
+
     type: 'docile',
     slimepedia: {
       slimeology:
@@ -58,7 +59,7 @@ export const slimes: Slime[] = [
       plortonomics:
         'Pink Plorts are an excellent "multipurpose generic substance" used to manufacture everything from food products to household cleaners. All over earth, people are eating burgers, sweetening their coffees or scrubbing their floors with pink plort products. That\'s some serious versatility!',
     },
-    locationIds: ['reef', 'blanket', 'ruins', 'quarry', 'desert', 'wilds'],
+    locations: ['reef', 'blanket', 'ruins', 'quarry', 'desert', 'wilds'],
     games: [1, 2],
   },
   {
@@ -85,7 +86,7 @@ export const slimes: Slime[] = [
       'Will occasionally follow the player.',
       'Occasionally attempts to pounce at the player, indicated by wiggling before making a jump in her direction.',
     ],
-    locationIds: ['reef', 'blanket', 'ruins', 'desert'],
+    locations: ['reef', 'blanket', 'ruins', 'desert'],
     games: [1, 2],
   },
   {
@@ -110,7 +111,7 @@ export const slimes: Slime[] = [
       'Can roll into a spiky ball and travel quickly in a straight line.',
       'Rolls more often when agitated',
     ],
-    locationIds: ['reef', 'quarry', 'ruins', 'desert', 'wilds'],
+    locations: ['reef', 'quarry', 'ruins', 'desert', 'wilds'],
     games: [1, 2],
   },
   {
@@ -134,7 +135,7 @@ export const slimes: Slime[] = [
       'Its wings enable it to fly.',
       'Disappears in prolonged exposure to sunlight.',
     ],
-    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     games: [1, 2],
   },
   {
@@ -157,7 +158,7 @@ export const slimes: Slime[] = [
     properties: [
       'Its plorts attract Slimes from further distances than other plorts',
     ],
-    locationIds: ['blanket'],
+    locations: ['blanket'],
     games: [1, 2],
   },
   {
@@ -176,7 +177,7 @@ export const slimes: Slime[] = [
       plortonomics:
         'Puddle plorts are made almost entirely from an incredible hydro compound known by chemists across the galaxy as H2Ohhhhh. This compound is used to create an absurdly expensive brand of bottled drinking water that is sought after by the elite back on Earth. While some people argue that there is little difference in taste between it and tap water, those people seriously are not getting it.',
     },
-    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
     games: [1, 2],
   },
   {
@@ -196,7 +197,7 @@ export const slimes: Slime[] = [
       plortonomics:
         "Highly volatile boom plorts have all sorts of applications, including powering rocket thrusters and demolitions. Military organizations value their highly destructive capabilities for 'medical technology and other research'. Imagine that!",
     },
-    locationIds: ['blanket', 'desert', 'wilds'],
+    locations: ['blanket', 'desert', 'wilds'],
     properties: [
       'Explodes occasionally, telegraphed by the intensity of its core and veins, sending everything in its blast radius flying and stunning itself in the process. Explosions can be temporarily nullified with Water or Ancient Water.',
       'Explodes more often when agitated.',
@@ -220,7 +221,7 @@ export const slimes: Slime[] = [
       plortonomics:
         'Amazingly, a serum can be made from hunter slime plorts that can actually render a person invisible! The effect only lasts for about a day, but this serum is nonetheless incredibly popular back on Earth as many people find its effects very soothing.\nSometimes you feel like you just want to disappear for a while. But then about a day goes by and you realize that not only did you miss being seen, but others missed seeing you too.',
     },
-    locationIds: ['blanket', 'desert', 'wilds'],
+    locations: ['blanket', 'desert', 'wilds'],
     properties: [
       'Can detect Food from further distances than other Slimes',
       'Can occasionally attempt to pounce at the player, indicated by wiggling before making a jump in her direction. The Slime will turn invisible during its wiggle, leaving only its eyes and mouth visible',
@@ -247,7 +248,7 @@ export const slimes: Slime[] = [
       plortonomics:
         "Given that raddies are basically mobile batteries, it's no surprise that corporations value rad plorts for their incredible energy-producing capabilities. Most rad plorts get turned into 'plortonium' and everything from the latest holophone to a radwave microcook system runs on the stuff.",
     },
-    locationIds: ['quarry', 'wilds'],
+    locations: ['quarry', 'wilds'],
     games: [1, 2],
   },
   {
@@ -267,7 +268,7 @@ export const slimes: Slime[] = [
       plortonomics:
         "Though the crystals produced by a crystal slime are highly unstable, a crystal plort, like all plorts, is far more pure and can be used by slime scientists to engineer a variety of metals that are entirely transparent. This innovation has lead to metropolitan areas on Earth completely transforming visually, allowing more light to reach the streets and the space as a whole a chance to 'breathe.' Architects often describe these transparent metals as 'so totally cooler than normal, boring metals.'",
     },
-    locationIds: ['quarry'],
+    locations: ['quarry'],
     properties: [
       'Damages Beatrix on contact',
       'Can produce crystals on the floor as a hazard. When it does so, it leaps into the air rolling into a spikey ball.',
@@ -293,7 +294,7 @@ export const slimes: Slime[] = [
       plortonomics:
         "Quantum plorts are believed by many to hold the secret to infinite resources. Given the quantum slime's ability to change reality, it's theorized that unlocking the potential of quantum plorts would allow for a technology that converges the realities of other entities into our reality and- well basically we're talking about cloning stuff. Infinite energy, chickens, whatever. Probably no harmful side effects to this at all",
     },
-    locationIds: ['ruins', 'desert'],
+    locations: ['ruins', 'desert'],
     games: [1, 2],
   },
   {
@@ -317,7 +318,7 @@ export const slimes: Slime[] = [
       'Can create small cyclones underneath themselves, giving them some lift',
       'When agitated they can create large cyclones independant of the Slime, which reduces visibility and can sweep up Food, Slimes, and Plorts. Other Dervish Slimes, including Largos, are immune to these tornadoes.',
     ],
-    locationIds: ['desert'],
+    locations: ['desert'],
     games: [1, 2],
   },
   {
@@ -341,7 +342,7 @@ export const slimes: Slime[] = [
       'Can utilize vines to pick up Food and Plorts from a distance, including outside of their Corrals',
       'If agitated, they will release pollen that makes surrounding slimes sneeze, increasing their Agitation',
     ],
-    locationIds: ['desert'],
+    locations: ['desert'],
     games: [1],
   },
   {
@@ -366,7 +367,7 @@ export const slimes: Slime[] = [
       'Its fire can be temporarily extinguished by splashing it with Water or Ancient Water.',
       'Food and Chickadoos that touch a burning fire slime are destroyed. Slimes that touch a burning fire slime get agitated and knocked back.',
     ],
-    locationIds: ['desert'],
+    locations: ['desert'],
     games: [1, 2],
   },
   {
@@ -393,7 +394,7 @@ export const slimes: Slime[] = [
       'Glints are removed when the Mosaic Slime is no longer present in the world.',
       'Glints are produced more frequently the more agitated the mosaic is.',
     ],
-    locationIds: ['desert'],
+    locations: ['desert'],
     games: [1],
   },
   {
@@ -419,7 +420,7 @@ export const slimes: Slime[] = [
       'Capable of bouncing off walls in order to change direction in midair towards its intended target.',
       'Are found feral in The Wilds.',
     ],
-    locationIds: ['wilds'],
+    locations: ['wilds'],
     games: [1, 2],
   },
   {
@@ -444,7 +445,7 @@ export const slimes: Slime[] = [
       'Will produce one plort if hit with any resource',
       'Exclusively eats Gilded Ginger',
     ],
-    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
     games: [1, 2],
   },
   {
@@ -464,7 +465,7 @@ export const slimes: Slime[] = [
         "A lucky slime isn't known to produce plorts of any kind. Leading slime scientists believe this to be the result of the lucky slime not being a true slime variant. Rather, lucky slimes are believed to be just an abnormal tabby slime: one whose color has faded as a result of ingesting so many coins. It is perhaps this very change that also led to ceasing plort production.",
     },
 
-    locationIds: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
+    locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert'],
     games: [1, 2],
   },
   {
@@ -492,7 +493,7 @@ export const slimes: Slime[] = [
       'When time runs out, any remaining quicksilver slimes flee from the player in all directions and despawn.',
       'Cannot be stored in the vacpack.',
     ],
-    locationIds: ['nimble'],
+    locations: ['nimble'],
     games: [1],
   },
   {
@@ -512,7 +513,7 @@ export const slimes: Slime[] = [
         "A glitch slime does not display any drive to eat the simulated food of the slimeulation and so no[sic] known plorts exist.\nHowever, if glitch slime plorts did exist, they would be virtual like everything in the slimeulation and have no actual value. Unless of course, a bunch of people decided virtual plorts have value, and then maybe everyone would start buying them. Heck, maybe eventually glitch slime plorts would worth a fortune because a bunch of us just agree on that too and then we all created our own Slimeulations to generate glitch slime plorts. But if that happened, then we would all be using an absurd amount of real energy, harming our real enviroment further, all to generate virtual plorts?\nSo obviously, that's just a very silly thing and we'd never do that.",
     },
 
-    locationIds: ['slimeulation'],
+    locations: ['slimeulation'],
     games: [1],
   },
   {
@@ -532,7 +533,7 @@ export const slimes: Slime[] = [
         'Twinkle slimes do not seem to eat, and do not produce plorts.',
     },
 
-    locationIds: [],
+    locations: [],
     games: [1],
   },
   {
@@ -553,7 +554,7 @@ export const slimes: Slime[] = [
         'Cotton plorts have an inexplicable "fluffy" quality to them, making them a great alternative to cotton, which is not native to the Far, Far Range. If one desired a quiet, isolated life on Rainbow Island, but still have soft pillows, warm sweaters, and lots of dry socks, they would do well to keep cotton slimes happily hopping about their ranch.',
     },
 
-    locationIds: ['fields', 'strand', 'bluffs'],
+    locations: ['fields', 'strand', 'bluffs'],
     games: [2],
   },
   {
@@ -578,7 +579,7 @@ export const slimes: Slime[] = [
       'They can fly, which makes them difficult to contain, though their limited diet makes free ranging them safer than most other species.',
       'When they eat, they release a cloud of scales that soothes nearby slimes, reducing their agitation.',
     ],
-    locationIds: ['strand'],
+    locations: ['strand'],
     games: [2],
   },
   {
@@ -603,7 +604,7 @@ export const slimes: Slime[] = [
       "While they can survive in sunlight, they'll get more agitated the longer they're exposed to it.",
       'They are also able to fly around in an almost identical fashion to the Phosphor Slime',
     ],
-    locationIds: ['valley'],
+    locations: ['valley'],
     games: [2],
   },
   {
@@ -629,7 +630,7 @@ export const slimes: Slime[] = [
       "Slimes and chickens affected by the Angler slime's stun will begin to roll and slimes will have a dizzy face signifying they are affected by the stun.",
       'The player is not affected nor Tarr Slimes by the stun.',
     ],
-    locationIds: ['strand', 'valley'],
+    locations: ['strand', 'valley'],
     games: [2],
   },
   {
@@ -654,7 +655,7 @@ export const slimes: Slime[] = [
       'This slime will also eat even when it is not hungry, consuming the food without creating a plort in return.',
       'This slime can also pounce.',
     ],
-    locationIds: ['strand', 'valley', 'bluffs'],
+    locations: ['strand', 'valley', 'bluffs'],
     games: [2],
   },
   {
@@ -674,7 +675,7 @@ export const slimes: Slime[] = [
         'Yolky plorts are highly valued for their concentrated nutrients, containing an extremely potent variant of vitamin D that allows people to reduce their sunlight intake for long periods of time, making them popular with cosmic pioneers, deep sea explorers, and gamers.\nBut though yolky plorts can replace the physical need for sunlight, they can never replace the warmth you feel when it touches your face, and the comfort it offers to know that the sun rose once more in your world. To be a stranger to that and still have hope for tomorrow would require the strongest of convictions.',
     },
 
-    locationIds: ['fields', 'strand', 'valley', 'bluffs'],
+    locations: ['fields', 'strand', 'valley', 'bluffs'],
     games: [2],
   },
 ];

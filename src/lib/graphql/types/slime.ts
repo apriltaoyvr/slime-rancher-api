@@ -40,7 +40,7 @@ export const Slime = objectType({
       description: 'Locations where this slime appears',
       resolve(slime) {
         return locations.filter((location) =>
-          slime.locationIds.includes(location.id),
+          slime.locations.includes(location.id),
         );
       },
     });

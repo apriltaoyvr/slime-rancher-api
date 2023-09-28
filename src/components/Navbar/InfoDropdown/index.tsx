@@ -26,9 +26,6 @@ export default function InfoDropdown({ pathname }: { pathname: string }) {
         <DropdownMenu.Item asChild>
           <Link href='/info/food'>Foods</Link>
         </DropdownMenu.Item>
-        <DropdownMenu.Item asChild>
-          <Link href='/info/location'>Locations</Link>
-        </DropdownMenu.Item>
       </DropdownMenu.Content>
     </DropdownMenu.Root>
   );

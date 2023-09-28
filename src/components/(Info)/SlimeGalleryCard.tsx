@@ -8,8 +8,6 @@ export default function SlimeCard({ slime }: { slime: ISlimeGallery }) {
   const { id, name, image, type, diet, favouriteToy, favouriteFood, games } =
     slime;
 
-  console.log(favouriteFood);
-
   return (
     <Card className='transition-colors hover:bg-gray-4'>
       <Flex direction='column' align='center' justify='center'>
@@ -44,7 +42,7 @@ export default function SlimeCard({ slime }: { slime: ISlimeGallery }) {
               <Table.Cell className='capitalize'>{type}</Table.Cell>
               <Table.Cell className='capitalize'>{diet}</Table.Cell>
               <Table.Cell>
-                {favouriteFood ? (
+                {favouriteFood !== null ? (
                   <Link href={`/info/food/${favouriteFood?.id}`}>
                     {favouriteFood?.name}
                   </Link>
@@ -53,7 +51,7 @@ export default function SlimeCard({ slime }: { slime: ISlimeGallery }) {
                 )}
               </Table.Cell>
               <Table.Cell>
-                {favouriteToy ? (
+                {favouriteToy !== null ? (
                   <Link href={`/api/toy/${favouriteToy?.id}`}>
                     {favouriteToy?.name}
                   </Link>

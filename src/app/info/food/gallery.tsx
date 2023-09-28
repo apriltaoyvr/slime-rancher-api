@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Flex, Section, Heading, TextField, Select } from '@radix-ui/themes';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import FoodCard from '@/components/GalleryCards/FoodCard';
+import FoodCard from '@/components/(Info)/FoodGalleryCard';
 import type { IFoodGallery } from './foodFetch';
 
 export default function FoodGallery({ foods }: { foods: IFoodGallery[] }) {
