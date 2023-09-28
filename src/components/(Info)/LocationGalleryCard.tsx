@@ -4,7 +4,7 @@ import { Flex, Heading, Card, Table } from '@radix-ui/themes';
 import type { ILocationGallery } from '@/app/info/location/locationFetch';
 
 export default function LocationCard({ location }: { location: ILocationGallery }) {
-  const { id, name, slimepedia, image, slimes, foods, games } = location;
+  const { id, name, image, games } = location;
 
   return (
     <Card className='transition-colors hover:bg-gray-4'>
@@ -27,16 +27,13 @@ export default function LocationCard({ location }: { location: ILocationGallery 
         <Table.Root>
           <Table.Header>
             <Table.Row>
-              <Table.ColumnHeaderCell>Slimes</Table.ColumnHeaderCell>
               <Table.ColumnHeaderCell>Games</Table.ColumnHeaderCell>
             </Table.Row>
           </Table.Header>
 
           <Table.Body>
             <Table.Row align='center'>
-              <Table.Cell className='capitalize'>Slimes</Table.Cell>
-              <Table.Cell className='capitalize'>{games}</Table.Cell>
-              <Table.Cell className='max-w-prose'>
+              <Table.Cell className='max-w-prose text-center'>
                 {games.join(', ')}
               </Table.Cell>
             </Table.Row>

@@ -21,7 +21,7 @@ export default function LocationGallery({
 
   return (
     <Section size='2' p='2'>
-      <Heading as='h1' align='center'>
+      <Heading as='h1' align='center' m='2'>
         Locations
       </Heading>
       <Flex
@@ -30,6 +30,7 @@ export default function LocationGallery({
         align='center'
         justify='center'
         gap='2'
+        mb='2'
       >
         <TextField.Root>
           <TextField.Slot>
