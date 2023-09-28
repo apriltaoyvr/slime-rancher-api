@@ -24,11 +24,11 @@ export default function InfoDropdown({ pathname }: { pathname: string }) {
           <Link href='/info/slime'>Slimes</Link>
         </DropdownMenu.Item>
         <DropdownMenu.Item asChild>
-          <Link href='/info/food'>Food</Link>
+          <Link href='/info/food'>Foods</Link>
         </DropdownMenu.Item>
-        {/* <DropdownMenu.Item asChild>
-          <Link href='/location'>Locations</Link>
-        </DropdownMenu.Item> */}
+        <DropdownMenu.Item asChild>
+          <Link href='/info/location'>Locations</Link>
+        </DropdownMenu.Item>
       </DropdownMenu.Content>
     </DropdownMenu.Root>
   );
