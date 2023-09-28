@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'static.wikia.nocookie.net',
+      },
     ],
   },
 };
