@@ -1,4 +1,4 @@
-![image](https://github.com/apriltaoyvr/slime-rancher-graphql/assets/95392008/7220862b-024e-438c-a48c-bd63f3ffc978)
+![image](https://github.com/apriltaoyvr/slime-rancher-api/assets/95392008/0b6ad594-4692-4011-8dc5-ac3617ba6741)
 # Slime Rancher API
 A GraphQL and RESTful API for Slime Rancher
 
