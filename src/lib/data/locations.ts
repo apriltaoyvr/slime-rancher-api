@@ -250,4 +250,3 @@ export const locations: Location[] = [
     games: [2],
   },
 ];
-

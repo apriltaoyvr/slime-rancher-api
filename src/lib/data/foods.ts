@@ -48,7 +48,7 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/elderroostro.webp',
     type: 'meat',
-    
+
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
@@ -63,7 +63,7 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/hen.webp',
     type: 'meat',
-    
+
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
@@ -79,7 +79,7 @@ export const foods: Food[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/elderhen.webp',
 
     type: 'meat',
-    
+
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
@@ -139,7 +139,7 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/chickadoo.webp',
     type: 'meat',
-    
+
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
@@ -154,7 +154,7 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/stonychickadoo.webp',
     type: 'meat',
-    
+
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
@@ -169,7 +169,7 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/briarchickadoo.webp',
     type: 'meat',
-    
+
     locations: ['blanket'],
     slimepedia: {
       about:
@@ -184,7 +184,7 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/paintedchickadoo.webp',
     type: 'meat',
-    
+
     locations: ['desert'],
     slimepedia: {
       about:
@@ -199,7 +199,7 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/pogo.webp',
     type: 'fruit',
-    
+
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
@@ -214,7 +214,7 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/carrot.webp',
     type: 'veggie',
-    
+
     locations: ['reef', 'blanket', 'quarry', 'ruins', 'desert', 'wilds'],
     slimepedia: {
       about:
@@ -364,7 +364,7 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/kookadoba.webp',
     type: 'fruit',
-    
+
     locations: ['wilds'],
     slimepedia: {
       about:
@@ -437,7 +437,7 @@ export const foods: Food[] = [
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/seachickadoo.webp',
     type: 'meat',
-    
+
     locations: ['strand', 'valley'],
     slimepedia: {
       about:

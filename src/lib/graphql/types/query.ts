@@ -54,7 +54,8 @@ export const Query = queryType({
         let results = foods;
 
         if (foodId) results = results.filter((food) => food.id === foodId);
-        if (slimeId) results = results.filter((food) => food.slimeId === slimeId);
+        if (slimeId)
+          results = results.filter((food) => food.slimeId === slimeId);
         if (locationId)
           results = results.filter((food) =>
             food.locations.includes(locationId),
