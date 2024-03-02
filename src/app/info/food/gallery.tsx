@@ -11,7 +11,7 @@ export default function FoodGallery({ foods }: { foods: IFoodGallery[] }) {
 
   const filteredResults = foods.filter((food) => {
     const nameMatches = food.name.toLowerCase().includes(query.toLowerCase());
-    const typeMatches = food.type.includes(typeFilter);
+    const typeMatches = typeFilter == 'all' ? true : food.type.includes(typeFilter);
     if (nameMatches && typeMatches) return food;
   });
 
@@ -39,7 +39,7 @@ export default function FoodGallery({ foods }: { foods: IFoodGallery[] }) {
         <Select.Root name='type' onValueChange={(e) => setTypeFilter(e)}>
           <Select.Trigger placeholder='Type' />
           <Select.Content>
-            <Select.Item value=''>All types</Select.Item>
+            <Select.Item value='all'>All types</Select.Item>
             <Select.Separator />
             <Select.Item value='fruit'>Fruit</Select.Item>
             <Select.Item value='veggie'>Veggie</Select.Item>
