@@ -1,6 +1,5 @@
 import { Container, Flex, Section, Heading, Text } from '@radix-ui/themes';
 import Link from 'next/link';
-import CalloutComponent from '@/components/CalloutComponent';
 import graphqlFetcher from '@/lib/gqlFetcher';
 import SlimeCard from '@/components/(Info)/SlimeGalleryCard';
 import FoodCard from '@/components/(Info)/FoodGalleryCard';
@@ -24,9 +23,6 @@ export default async function Info() {
           <Heading as='h1' size='8' align='center' mb='2'>
             Info
           </Heading>
-          <CalloutComponent>
-            This page is currently a work in progress.
-          </CalloutComponent>
           <Flex direction='column' align='center' justify='center' m='2'>
             <Text align='center'>
               This is a page for visually displaying the Slime Rancher API's
