@@ -249,4 +249,15 @@ export const locations: Location[] = [
     },
     games: [2],
   },
+  {
+    id: 'labyrinth',
+    name:'The Grey Labyrinth',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/locations/labyrinth.webp',
+    slimepedia: {
+      about:
+      "Towering over the horizon, the Grey Labyrinth stretches across the skyline of Rainbow Island like an imposing jigsaw puzzle missing a piece. On its surface, it appears to be keeping the curious out, yet the further in one ventures, the more one suspects the Grey Labyrinth is holding something in.\nAmid twisting corridors of carved stone and unnatural metals, and echoing from pipes channeling water and magma, an erratic pulse of power beats from somewhere deeper within the ancient structure. Strange phenomena mar otherwise ethereal, manicured gardens, and prismatic light washes over the landscape, bathing it in unpredictable, transformative energies.\nCountless ages of exposure to these energies seems to have impacted both slimes and inanimate objects alike, giving them odd properties that sometimes defy logic or natural forces entirely. Even shadows seem to cluster and capriciously bound through the ancient megastructure.\nWithin its deepest chambers, the Grey Labyrinth holds a secret that perhaps one can only answer with some unexpected guidance from beyond.",
+    },
+    games: [2],
+  }
 ];

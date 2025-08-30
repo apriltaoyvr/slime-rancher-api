@@ -404,7 +404,7 @@ export const slimes: Slime[] = [
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/saber.webp',
     diet: 'meat',
     favouriteToy: 'stegobuddy',
-
+    favouriteFood: 'thundercluck',
     type: 'harmful',
     slimepedia: {
       slimeology:
@@ -676,6 +676,65 @@ export const slimes: Slime[] = [
     },
 
     locations: ['fields', 'strand', 'valley', 'bluffs'],
+    games: [2],
+  },
+  {
+    id: 'twin',
+    name: 'Twin Slime',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/twin.webp',
+    diet: 'fruit',
+
+    favouriteFood: 'polaricherry',
+    type: 'docile',
+    slimepedia: {
+      slimeology:
+        "Twin slimes are believed to be a bizarre byproduct of the Prismacore's effects on the Labyrinth, seemingly being two slimes occupying the same space in reality at different intervals. It is unclear if these slimes are in fact two versions of the same slime, or different ones, and if so, if they're even aware of the phenomenon.",
+      risks:
+        'Twin slimes can create reality-defying portals that can snag things from the environment and drop them in other places. Generally this is done to acquire a tasty fruit that is out of reach, but it seems as though sometimes they exhibit this behavior just to cause some trouble. It is unclear which of the two halves of the twin slime is the most mischievous.',
+      plortonomics:
+        'Like the slime itself, a twin slime plort is actually two plorts occupying the same space in reality, and always in opposing polarities. This makes them inherently unstable and a challenge for practical applications like other plorts. For example. if applied to construction technology they would simultaneously generate the strongest substance to ever exist as well as the weakest. On the Plort Market, they are simultaneously the most valuable plort to ever exist, as well as one that is so undervalued it actually costs you a fortune in newbucks to sell it. So it shakes out to a pretty standard value in the end.',
+    },
+    locations: ['labyrinth'],
+    games: [2],
+  },
+  {
+    id: 'sloomber',
+    name: 'Sloomber Slime',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/sloomber.webp',
+    diet: 'meat',
+
+    favouriteFood: 'candiedhen',
+    type: 'docile',
+    slimepedia: {
+      slimeology:
+        "Sloomber slimes are found among the puffy, pink islands of the Labyrinth's Dream Land, drifting in and out of sleep from the strange auras that radiate from them. At first they may seem like somewhat lazy hunters, delighting in a chomp of chicken when they happen to be awake. However, given the function of Dream Land within the Labyrinth, it is possible that sloomber slimes are significantly more powerful creatures, perhaps even dreaming the world around them into existence as they sleep among the clouds.",
+      risks:
+        "The strange aura that emanates from sloomber slimes can put other slimes, including other sloomber slimes, to sleep for some time. While this can be a good thing if you're looking to take a break, it can disrupt feeding schedules and plort production on your ranch. So be sure to always know where they are on your ranch because it is said that their sleep aura can't be... felt... until...... it's........ too............",
+      plortonomics:
+        'If held without safety equipment like a pair of gloves, the concentrated sloomber essence within a sloomber plort can make you fall into a deep, cozy sleep full of wonderful dreams. Once you finally awake you will recall every bit of the dream to its fullest, and feel a deep calm and refreshment that lasts all day. Therefore, a sloomber plort should never under any circumstances be held while wearing gloves.',
+    },
+    locations: ['labyrinth'],
+    games: [2],
+  },
+  {
+    id: 'shadow',
+    name: 'Shadow Slime',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/slimes/shadow.webp',
+    diet: 'other',
+
+    type: 'special',
+    slimepedia: {
+      slimeology:
+        "Shadow slimes are found within the dark corners of the Grey Labyrinth and other places where they are safe from prismatic disruptions. They are an unusual and unique slime, clustering together in erratic groups and quickly fleeing from the slightest provocation, almost vanishing in thin air. It's unknown if they were created as a part of the Labyrinth or some kind of evolution against the prismatic effects within it.",
+      risks:
+        'Shadow slimes present no immediate threat to a rancher, however they will flee the moment they are spotted, perhaps accidentally falling headlong into the cloudy abyss of the Labyrinth as you desperately try to snag their plorts is a risk.',
+      plortonomics:
+        "The umbral aura of a shadow slime's plort, like the slime itself, has a natural dampening effect against the prismatic energies that radiate through the Labyrinth and all of Rainbow Island. Those that manage to find this rare creature would do well to master acquiring their plorts as they will likely prove essential for solving the Labyrinth's many puzzles and peril.",
+    },
+    locations: ['labyrinth'],
     games: [2],
   },
 ];
