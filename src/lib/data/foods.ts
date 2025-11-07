@@ -450,7 +450,7 @@ export const foods: Food[] = [
     id: 'thundercluck',
     name: ' Thundercluck Hen',
     image:
-      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/thundercluck.webp',
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/thundercluckhen.webp',
     type: 'meat',
     slimeId: 'saber',
     locations: ['bluffs'],
