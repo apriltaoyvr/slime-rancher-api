@@ -421,7 +421,7 @@ export const foods: Food[] = [
     name: 'Sea Hen',
     image:
       'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/seahen.webp',
-    type: 'fruit',
+    type: 'meat',
     slimeId: 'angler',
     locations: ['strand', 'valley'],
     slimepedia: {
@@ -444,6 +444,95 @@ export const foods: Food[] = [
         "Chickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones.\nSea chickadoos are baby chickens that will eventually grow into a sea hen or more rarely, a roostro",
       ranch:
         "Keep sea chickadoos in a safe place and they'll eventually grow into a sea hen or roostro",
+    },
+  },
+  {
+    id: 'thundercluck',
+    name: ' Thundercluck Hen',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/thundercluck.webp',
+    type: 'meat',
+    slimeId: 'saber',
+    locations: ['bluffs'],
+    slimepedia: {
+      about:
+        "Thought to be extinct for over a billion years, thunderclucks are a variety of prehistoric hen that ruled the roost during the Jellasic Period and absolute proof that dinosaurs were basically just giant chickens. Historians had long believed they were wiped out from a giant meteor, but seeing them now it's clear that the roostros were probably just super terrified of them and it just sort of took care of itself.",
+      ranch:
+        'Thunderclucks in close proximity to roostros will periodically lay eggs that produce Thunder Chickadoos. However, keeping too many chickens in close proximity makes them anxious and egg production will come to a halt. Savvy ranchers with an understanding of the complex nature of chicken romance will monitor growth rates in their coops and reduce density when growth begins to slow.',
+    },
+  },
+  {
+    id: 'thunderchickadoo',
+    name: 'Thunder Chickadoo',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/thunderchickadoo.webp',
+    type: 'meat',
+
+    locations: ['bluffs'],
+    slimepedia: {
+      about:
+        "Thunder chickadoos are baby chickens that will eventually grow into a thundercluck or more rarely, a roostro.\nChickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones.",
+      ranch:
+        "Keep thunder chickadoos in a safe place and they'll eventually grow into a thundercluck or Roostro.",
+    },
+  },
+  {
+    id: 'candiedhen',
+    name: 'Candied Hen',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/candiedhen.webp',
+    type: 'meat',
+    slimeId: 'sloomber',
+    locations: ['labyrinth'],
+    slimepedia: {
+      about:
+        'Candied hens are a mysterious breed of chicken found in the Grey Labyrinth. Their unusual sweetness is almost too perfect, as if pulled from the dreams of a hungry slime. How did such a hen come to be in the labyrinth?',
+      ranch:
+        'Candied hens in close proximity to roostros will periodically lay eggs that produce candied chickadoos. However, keeping too many chickens in close proximity makes them anxious and egg production will come to a halt. Savvy ranchers with an understanding of the complex nature of chicken romance will monitor growth rates in their coops and reduce density when growth begins to slow.',
+    },
+  },
+  {
+    id: 'candiedchickadoo',
+    name: 'Candied Chickadoo',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/candiedchickadoo.webp',
+    type: 'meat',
+    locations: ['labyrinth'],
+    slimepedia: {
+      about:
+        "Candied chickadoos are baby chickens that will eventually grow into a candied hen or more rarely, a roostro.\nChickadoos of all varieties will never be eaten by slimes. Some believe this is because slimes are too kind-hearted to do such a thing. Others believe it's because chickadoos don't yet have enough meat on their bones.",
+      ranch:
+        "Keep candied chickadoos in a safe place and they'll eventually grow into a candied hen or roostro.",
+    },
+  },
+  {
+    id: 'polaricherry',
+    name: 'Polaricherry',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/polaricherry.webp',
+    type: 'fruit',
+    slimeId: 'twin',
+    locations: ['labyrinth'],
+    slimepedia: {
+      about:
+        "The polaricherry is somehow both the most sweet and the most sour fruit on Rainbow Island, depending on which side you're looking at when you take a bite. Is their flavor profile another strange effect of the labyrinth, or a natural variation?",
+      ranch:
+        "Deposit a polaricherry into a garden's depositor and you'll grow a large polaricherry tree of your own",
+    },
+  },
+  {
+    id: 'tater',
+    name: 'Turbo Tater',
+    image:
+      'https://raw.githubusercontent.com/apriltaoyvr/slime-rancher-api/main/src/images/foods/tater.webp',
+    type: 'veggie',
+    slimeId: 'hyper',
+    locations: ['labyrinth'],
+    slimepedia: {
+      about:
+        'Turbo taters might seem unassuming at first, just another root veggie on the range. However, careful study reveals that, in fact, these spuds are constantly moving so fast that they only appear stationary. What effect might this have when consumed?',
+      ranch:
+        "Deposit a turbo tater into a garden's depositor and you'll have a large turbo tater crop of your very own.",
     },
   },
 ];
