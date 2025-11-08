@@ -1,16 +1,35 @@
-import { objectType } from 'nexus';
+import { SlimepediaRef } from './refs';
 
-export const Slimepedia = objectType({
-  name: 'Slimepedia',
+export const Slimepedia = SlimepediaRef.implement({
   description: 'A Slimepedia entry',
-  definition(t) {
+  fields: (t) => ({
     // General
-    t.string('about', { description: 'A general slimepedia entry' });
+    about: t.string({
+      nullable: true,
+      description: 'A general slimepedia entry',
+      resolve: (parent) => parent.about ?? null,
+    }),
     // Slime
-    t.string('slimeology', { description: "A slime's slimeology" });
-    t.string('risks', { description: "A slime's risks" });
-    t.string('plortonomics', { description: "A slime's plortonomics" });
+    slimeology: t.string({
+      nullable: true,
+      description: "A slime's slimeology",
+      resolve: (parent) => parent.slimeology ?? null,
+    }),
+    risks: t.string({
+      nullable: true,
+      description: "A slime's risks",
+      resolve: (parent) => parent.risks ?? null,
+    }),
+    plortonomics: t.string({
+      nullable: true,
+      description: "A slime's plortonomics",
+      resolve: (parent) => parent.plortonomics ?? null,
+    }),
     // Food
-    t.string('ranch', { description: "A food's ranch entry" });
-  },
+    ranch: t.string({
+      nullable: true,
+      description: "A food's ranch entry",
+      resolve: (parent) => parent.ranch ?? null,
+    }),
+  }),
 });

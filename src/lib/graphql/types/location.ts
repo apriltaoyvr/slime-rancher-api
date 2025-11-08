@@ -1,36 +1,32 @@
-import { objectType } from 'nexus';
 import { foods, slimes } from '@/lib/data';
-import { Slime } from './slime';
-import { Food } from './food';
-import { Slimepedia } from './slimepedia';
+import { LocationRef, SlimepediaRef, SlimeRef, FoodRef } from './refs';
 
-export const Location = objectType({
-  name: 'Location',
+export const Location = LocationRef.implement({
   description: 'A location in Slime Rancher',
-  definition(t) {
-    t.nonNull.id('id');
-    t.nonNull.string('name');
-    t.nonNull.string('image');
-    t.nonNull.list.nonNull.int('games', {
+  fields: (t) => ({
+    id: t.exposeID('id'),
+    name: t.exposeString('name'),
+    image: t.exposeString('image'),
+    games: t.exposeIntList('games', {
       description: 'The games this location appears in',
-    });
-    t.nonNull.field('slimepedia', {
-      type: Slimepedia,
+    }),
+    slimepedia: t.expose('slimepedia', {
+      type: SlimepediaRef,
       description: "A location's slimepedia entry",
-    });
-    t.list.field('slimes', {
-      type: Slime,
+    }),
+    slimes: t.field({
+      type: [SlimeRef],
+      nullable: true,
       description: 'Slimes that can be found at this location',
-      resolve(parent) {
-        return slimes.filter((slime) => slime.locations.includes(parent.id));
-      },
-    });
-    t.list.field('foods', {
-      type: Food,
+      resolve: (parent) =>
+        slimes.filter((slime) => slime.locations.includes(parent.id)),
+    }),
+    foods: t.field({
+      type: [FoodRef],
+      nullable: true,
       description: 'Foods that can be found at this location',
-      resolve(parent) {
-        return foods.filter((food) => food.locations.includes(parent.id));
-      },
-    });
-  },
+      resolve: (parent) =>
+        foods.filter((food) => food.locations.includes(parent.id)),
+    }),
+  }),
 });

@@ -1,22 +1,21 @@
-import { objectType } from 'nexus';
-import { Slime } from '.';
 import { slimes } from '@/lib/data';
+import { ToyRef, SlimeRef } from './refs';
 
-export const Toy = objectType({
-  name: 'Toy',
+export const Toy = ToyRef.implement({
   description: 'Slime toy',
-  definition(t) {
-    t.nonNull.id('id');
-    t.nonNull.string('name');
-    t.nonNull.string('image');
-    t.field('favouredBy', {
-      type: Slime,
+  fields: (t) => ({
+    id: t.exposeID('id'),
+    name: t.exposeString('name'),
+    image: t.exposeString('image'),
+    favouredBy: t.field({
+      type: SlimeRef,
+      nullable: true,
       description: 'The slime whose favourite toy it is',
-      resolve(toy) {
-        return slimes.find((slime) => slime.favouriteToy === toy.id);
-      },
-    });
-    t.nonNull.string('description', { description: 'A description of a toy' });
-    t.nonNull.int('price', { description: 'The cost of a toy' });
-  },
+      resolve: (toy) => slimes.find((slime) => slime.favouriteToy === toy.id),
+    }),
+    description: t.exposeString('description', {
+      description: 'A description of a toy',
+    }),
+    price: t.exposeInt('price', { description: 'The cost of a toy' }),
+  }),
 });

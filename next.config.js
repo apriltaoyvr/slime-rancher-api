@@ -15,6 +15,7 @@ const nextConfig = {
       },
     ],
   },
+  serverExternalPackages: ['@yaacovcr/transform']
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;
