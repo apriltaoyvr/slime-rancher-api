@@ -15,7 +15,7 @@ export default function GqlSection() {
     <Section id='graphql' size='2'>
       <Heading as='h2' size='7' align='center'>
         <Link href='/graphql' className='rt-Link rt-underline-auto'>
-          GraphQL
+          GraphQL Schema
         </Link>
       </Heading>
       <Flex direction='column' justify='center' align='center' gap='2'>
