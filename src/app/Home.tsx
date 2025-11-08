@@ -9,8 +9,8 @@ import {
   Separator,
 } from '@radix-ui/themes';
 import Link from 'next/link';
-import ObjectCard from '@/components/(Docs)/ObjectCard';
-import ObjectFields from '@/components/(Docs)/ObjectFields';
+import ObjectCard from '@/components/docs/ObjectCard';
+import ObjectFields from '@/components/docs/ObjectFields';
 import slimes from '@/images/slimes.webp';
 import food from '@/images/food.webp';
 import location from '@/images/location.webp';

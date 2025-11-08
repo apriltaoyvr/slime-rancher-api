@@ -9,7 +9,7 @@ import {
 } from '@radix-ui/themes';
 import Link from 'next/link';
 import Image from 'next/image';
-import slimes from '@/images/slimes.webp';
+import slimesImage from '@/images/slimes.webp';
 
 export default async function Home() {
   return (
@@ -31,11 +31,11 @@ export default async function Home() {
               <Link href='/graphql'>GraphQL</Link>
             </Button>
             <Button size='3' color='purple' variant='soft' asChild>
-              <Link href='/docs'>API Docs</Link>
+              <Link href='/docs'>Documentation</Link>
             </Button>
           </Flex>
           <Image
-            src={slimes}
+            src={slimesImage}
             alt='A cute photo of a pink slime and tabby slime'
             className='m-4 max-w-sm'
             priority

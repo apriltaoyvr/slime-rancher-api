@@ -1,8 +1,8 @@
-import { Container, Flex, Section, Heading, Text } from '@radix-ui/themes';
+import { Container, Flex, Grid, Section, Heading, Text } from '@radix-ui/themes';
 import Link from 'next/link';
 import graphqlFetcher from '@/lib/gqlFetcher';
-import SlimeCard from '@/components/(Info)/SlimeGalleryCard';
-import FoodCard from '@/components/(Info)/FoodGalleryCard';
+import SlimeCard from '@/components/info/SlimeCard';
+import FoodCard from '@/components/info/FoodCard';
 import { type ISlimeGalleryFetch, allSlimesQuery } from './slime/slimeFetch';
 import { type IFoodGalleryFetch, allFoodsQuery } from './food/foodFetch';
 
@@ -43,17 +43,15 @@ export default async function Info() {
         >
           <Link href='/info/slime'>Slimes</Link>
         </Heading>
-        <Flex
-          direction='row'
-          wrap='wrap'
-          align='center'
-          justify='center'
-          gap='2'
+        <Grid
+          columns={{ initial: '1', md: '2'}}
+          justify={'center'}
+          gap={'4'}
         >
           {slimes.slice(0, 2).map((slime) => (
             <SlimeCard key={slime.id} slime={slime} />
           ))}
-        </Flex>
+        </Grid>
       </Section>
       <Section size='1'>
         <Heading
@@ -64,17 +62,15 @@ export default async function Info() {
         >
           <Link href='/info/food'>Foods</Link>
         </Heading>
-        <Flex
-          direction='row'
-          wrap='wrap'
-          align='center'
-          justify='center'
-          gap='2'
+        <Grid
+          columns={{ initial: '1', md: '2', lg: '3' }}
+          justify={'center'}
+          gap={'4'}
         >
           {foods.slice(14, 17).map((food) => (
             <FoodCard key={food.id} food={food} />
           ))}
-        </Flex>
+        </Grid>
       </Section>
     </Container>
   );

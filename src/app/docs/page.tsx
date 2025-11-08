@@ -1,6 +1,5 @@
 import { Container, Section, Flex, Heading, Text } from '@radix-ui/themes';
 import Link from 'next/link';
-import CalloutComponent from '@/components/CalloutComponent';
 
 // Sections
 import GqlSection from './(sections)/GqlSection';

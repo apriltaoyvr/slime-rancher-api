@@ -65,7 +65,7 @@ export default function Navbar() {
           <Navlink href='/graphql'>GraphQL</Navlink>
         </Flex>
       )}
-      <Flex align='center' justify='center' gap='2'>
+      <Flex align='center' justify='center' gap='1'>
         <ThemeChanger />
         <Iconlink href='https://github.com/apriltaoyvr/slime-rancher-api'>
           <GitHubLogoIcon width='16' height='16' />

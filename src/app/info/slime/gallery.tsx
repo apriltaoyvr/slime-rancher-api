@@ -1,8 +1,17 @@
 'use client';
+
 import { useState } from 'react';
-import { Flex, Section, Heading, TextField, Select } from '@radix-ui/themes';
+import {
+  Flex,
+  Grid,
+  Section,
+  Heading,
+  TextField,
+  Select,
+} from '@radix-ui/themes';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import SlimeCard from '@/components/(Info)/SlimeGalleryCard';
+import SlimeCard from '@/components/info/SlimeCard';
+
 import type { ISlimeGallery } from './slimeFetch';
 
 export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
@@ -14,10 +23,16 @@ export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
   const filteredResults = slimes.filter((slime) => {
     let nameMatches = slime.name.toLowerCase().includes(query.toLowerCase());
     // With the Radix Select API changes, we must explicitly check for 'all' values
-    let typeMatches = dietFilter === 'all' ? true : slime.type.includes(typeFilter);
-    let dietMatches = dietFilter === 'all' ? true : slime.diet.includes(dietFilter);
+    let typeMatches =
+      dietFilter === 'all' ? true : slime.type.includes(typeFilter);
+    let dietMatches =
+      dietFilter === 'all' ? true : slime.diet.includes(dietFilter);
     if (dietFilter === 'common') {
-      dietMatches = slime.diet.includes('meat') || slime.diet.includes('fruit') || slime.diet.includes('veggie') || slime.diet.includes('nectar');
+      dietMatches =
+        slime.diet.includes('meat') ||
+        slime.diet.includes('fruit') ||
+        slime.diet.includes('veggie') ||
+        slime.diet.includes('nectar');
     }
 
     if (nameMatches && typeMatches && dietMatches) return slime;
@@ -25,7 +40,7 @@ export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
 
   return (
     <Section size='2' p='2'>
-      <Heading as='h1'align='center' mb='2'>
+      <Heading as='h1' align='center' mb='2'>
         Slimes
       </Heading>
       <Flex
@@ -35,14 +50,16 @@ export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
         justify='center'
         gap='2'
       >
-        <TextField.Root id='search'>
+        <TextField.Root
+          id='search'
+          placeholder='Search for a slime…'
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setQuery(e.target.value)
+          }
+        >
           <TextField.Slot>
             <MagnifyingGlassIcon height='16' width='16' />
           </TextField.Slot>
-          <TextField.Input
-            placeholder='Search for a slime…'
-            onChange={(e) => setQuery(e.target.value)}
-          />
         </TextField.Root>
         <Select.Root name='type' onValueChange={(e) => setTypeFilter(e)}>
           <Select.Trigger placeholder='All types' />
@@ -79,17 +96,15 @@ export default function SlimeGallery({ slimes }: { slimes: ISlimeGallery[] }) {
         </Select.Root>
       </Flex>
       <Section id='gallery' size='1'>
-        <Flex
-          direction='row'
-          align='center'
-          justify='center'
-          wrap='wrap'
-          gap='2'
+        <Grid
+          columns={{ initial: '1', md: '2', lg: '3' }}
+          justify={'center'}
+          gap={'4'}
         >
           {filteredResults.map((slime) => {
             return <SlimeCard key={slime.id} slime={slime} />;
           })}
-        </Flex>
+        </Grid>
       </Section>
     </Section>
   );
