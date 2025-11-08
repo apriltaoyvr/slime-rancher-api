@@ -3,9 +3,9 @@ import { foods } from '@/lib/data';
 export const runtime = 'edge';
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } },
+  context: { params: Promise<{ id: string }> },
 ) {
-  const id = params.id;
+  const { id } = await context.params;
   const food = foods.find((e) => e.id === id);
 
   if (!food) {

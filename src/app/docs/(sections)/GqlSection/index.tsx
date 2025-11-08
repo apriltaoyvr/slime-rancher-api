@@ -1,7 +1,7 @@
 import { Section, Flex, Heading } from '@radix-ui/themes';
 import Link from 'next/link';
-import ObjectCard from '@/components/(Docs)/ObjectCard';
-import ObjectFields from '@/components/(Docs)/ObjectFields';
+import ObjectCard from '@/components/docs/ObjectCard';
+import ObjectFields from '@/components/docs/ObjectFields';
 
 // Static Image Imports
 import slimes from '@/images/slimes.webp';
@@ -15,7 +15,7 @@ export default function GqlSection() {
     <Section id='graphql' size='2'>
       <Heading as='h2' size='7' align='center'>
         <Link href='/graphql' className='rt-Link rt-underline-auto'>
-          GraphQL
+          GraphQL Schema
         </Link>
       </Heading>
       <Flex direction='column' justify='center' align='center' gap='2'>

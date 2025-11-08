@@ -1,16 +1,18 @@
-import { queryType, stringArg } from 'nexus';
+import { builder } from '../builder';
 import { foods, locations, slimes, toys } from '@/lib/data';
+import { SlimeRef, LocationRef, FoodRef, ToyRef } from './refs';
 
-export const Query = queryType({
-  definition(t) {
-    t.list.field('slimes', {
-      type: 'Slime',
+builder.queryType({
+  fields: (t) => ({
+    slimes: t.field({
+      type: [SlimeRef],
+      nullable: true,
       description: 'A list of all slimes',
       args: {
-        slimeId: stringArg(),
-        locationId: stringArg(),
+        slimeId: t.arg.string({ required: false }),
+        locationId: t.arg.string({ required: false }),
       },
-      resolve(_, { slimeId, locationId }) {
+      resolve: (_, { slimeId, locationId }) => {
         let results = slimes;
 
         if (slimeId) results = results.filter((slime) => slime.id === slimeId);
@@ -21,16 +23,17 @@ export const Query = queryType({
 
         return results;
       },
-    });
+    }),
 
-    t.list.field('locations', {
-      type: 'Location',
+    locations: t.field({
+      type: [LocationRef],
+      nullable: true,
       description: 'A list of all locations in the Far, Far Range',
       args: {
-        locationId: stringArg(),
-        slimeId: stringArg(),
+        locationId: t.arg.string({ required: false }),
+        slimeId: t.arg.string({ required: false }),
       },
-      resolve(_, { locationId, slimeId }) {
+      resolve: (_, { locationId, slimeId }) => {
         let results = locations;
         if (locationId)
           results = results.filter((location) => location.id === locationId);
@@ -40,17 +43,18 @@ export const Query = queryType({
           );
         return results;
       },
-    });
+    }),
 
-    t.list.field('foods', {
-      type: 'Food',
+    foods: t.field({
+      type: [FoodRef],
+      nullable: true,
       description: 'A list of all foods',
       args: {
-        foodId: stringArg(),
-        slimeId: stringArg(),
-        locationId: stringArg(),
+        foodId: t.arg.string({ required: false }),
+        slimeId: t.arg.string({ required: false }),
+        locationId: t.arg.string({ required: false }),
       },
-      resolve(_, { foodId, slimeId, locationId }) {
+      resolve: (_, { foodId, slimeId, locationId }) => {
         let results = foods;
 
         if (foodId) results = results.filter((food) => food.id === foodId);
@@ -63,16 +67,17 @@ export const Query = queryType({
 
         return results;
       },
-    });
+    }),
 
-    t.list.field('toys', {
-      type: 'Toy',
+    toys: t.field({
+      type: [ToyRef],
+      nullable: true,
       description: 'A list of all slime toys',
       args: {
-        toyId: stringArg(),
-        slimeId: stringArg(),
+        toyId: t.arg.string({ required: false }),
+        slimeId: t.arg.string({ required: false }),
       },
-      resolve(_, { toyId, slimeId }) {
+      resolve: (_, { toyId, slimeId }) => {
         let results = toys;
 
         if (toyId) results = results.filter((toy) => toy.id === toyId);
@@ -80,6 +85,6 @@ export const Query = queryType({
 
         return results;
       },
-    });
-  },
+    }),
+  }),
 });

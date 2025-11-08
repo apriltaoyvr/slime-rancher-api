@@ -3,9 +3,9 @@ import { toys } from '@/lib/data';
 export const runtime = 'edge';
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } },
+  context: { params: Promise<{ id: string }> },
 ) {
-  const id = params.id;
+  const { id } = await context.params;
   const toy = toys.find((e) => e.id === id);
 
   if (!toy) {

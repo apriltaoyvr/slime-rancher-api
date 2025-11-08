@@ -7,8 +7,8 @@ export default function InfoDropdown({ pathname }: { pathname: string }) {
 
   return (
     <DropdownMenu.Root>
-      <DropdownMenu.Trigger color={isInfoRoute ? 'crimson' : 'gray'}>
-        <Button variant='ghost'>
+      <DropdownMenu.Trigger>
+        <Button variant='ghost' color={isInfoRoute ? 'crimson' : 'gray'}>
           <Text size='2' weight='medium'>
             Info
           </Text>

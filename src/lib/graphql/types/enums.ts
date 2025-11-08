@@ -1,8 +1,7 @@
-import { enumType } from 'nexus';
+import { builder } from '../builder';
 
-export const FoodType = enumType({
-  name: 'FoodType',
-  members: [
+export const FoodType = builder.enumType('FoodType', {
+  values: [
     'veggie',
     'fruit',
     'meat',
@@ -11,12 +10,11 @@ export const FoodType = enumType({
     'nectar',
     'all',
     'other',
-  ],
+  ] as const,
   description: 'The type of diet for a slime',
 });
 
-export const SlimeType = enumType({
-  name: 'SlimeType',
+export const SlimeType = builder.enumType('SlimeType', {
+  values: ['docile', 'harmful', 'hostile', 'special'] as const,
   description: "A slime's disposition type",
-  members: ['docile', 'harmful', 'hostile', 'special'],
 });

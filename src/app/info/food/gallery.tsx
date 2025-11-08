@@ -1,8 +1,17 @@
 'use client';
+
 import { useState } from 'react';
-import { Flex, Section, Heading, TextField, Select } from '@radix-ui/themes';
+import {
+  Flex,
+  Grid,
+  Section,
+  Heading,
+  TextField,
+  Select,
+} from '@radix-ui/themes';
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import FoodCard from '@/components/(Info)/FoodGalleryCard';
+import FoodCard from '@/components/info/FoodCard';
+
 import type { IFoodGallery } from './foodFetch';
 
 export default function FoodGallery({ foods }: { foods: IFoodGallery[] }) {
@@ -11,7 +20,8 @@ export default function FoodGallery({ foods }: { foods: IFoodGallery[] }) {
 
   const filteredResults = foods.filter((food) => {
     const nameMatches = food.name.toLowerCase().includes(query.toLowerCase());
-    const typeMatches = typeFilter == 'all' ? true : food.type.includes(typeFilter);
+    const typeMatches =
+      typeFilter == 'all' ? true : food.type.includes(typeFilter);
     if (nameMatches && typeMatches) return food;
   });
 
@@ -27,14 +37,15 @@ export default function FoodGallery({ foods }: { foods: IFoodGallery[] }) {
         justify='center'
         gap='2'
       >
-        <TextField.Root>
+        <TextField.Root
+          placeholder='Search for a food…'
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setQuery(e.target.value)
+          }
+        >
           <TextField.Slot>
             <MagnifyingGlassIcon height='16' width='16' />
           </TextField.Slot>
-          <TextField.Input
-            placeholder='Search for a food…'
-            onChange={(e) => setQuery(e.target.value)}
-          />
         </TextField.Root>
         <Select.Root name='type' onValueChange={(e) => setTypeFilter(e)}>
           <Select.Trigger placeholder='Type' />
@@ -49,18 +60,18 @@ export default function FoodGallery({ foods }: { foods: IFoodGallery[] }) {
         </Select.Root>
       </Flex>
       <Section id='gallery' size='1'>
-        <Flex
-          direction='row'
-          align='center'
-          justify='center'
-          wrap='wrap'
-          gap='2'
+        <Grid
+          columns={{ initial: '1', md: '2', lg: '3' }}
+          justify={'center'}
+          align={'center'}
+          gap={'4'}
         >
           {filteredResults.map((food) => {
             return <FoodCard key={food.id} food={food} />;
           })}
-        </Flex>
+        </Grid>
       </Section>
     </Section>
   );
 }
+
