@@ -30,6 +30,7 @@ export default function GalleryCard(props: Props) {
             width={250}
             height={250}
             className='aspect-square max-w-[150px] object-contain'
+            unoptimized={true}
           />
         </figure>
         {children}

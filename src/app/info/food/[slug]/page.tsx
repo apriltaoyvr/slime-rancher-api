@@ -39,6 +39,7 @@ export default async function SlimePage({
             width={250}
             height={250}
             className='rounded'
+            unoptimized={true}
           />
           <Table.Root mb='4'>
             <Table.Header>

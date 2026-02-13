@@ -45,7 +45,7 @@ export default async function SlimePage({
           <Heading as='h2' align='center' size='7' color='gray'>
             {id}
           </Heading>
-          <Image src={image} alt={name} width={250} height={250} />
+          <Image src={image} alt={name} width={250} height={250} unoptimized={true} />
           <Table.Root mb='4'>
             <Table.Header>
               <Table.Row>

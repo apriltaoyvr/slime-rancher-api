@@ -40,6 +40,7 @@ export default async function Home() {
             alt='A cute photo of a pink slime and tabby slime'
             className='m-4 max-w-sm'
             priority
+            unoptimized={true}
           />
           <Text as='p' align='center'>
             If you notice any errors or wish the contribute, please submit a

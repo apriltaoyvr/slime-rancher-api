@@ -29,6 +29,7 @@ export default function ObjectCard({
               className='aspect-video object-contain'
               sizes='sizes="(max-width: 768px) 25vw"'
               alt={`An icon of ${name}`}
+              unoptimized={true}
             />
           </Flex>
         )}
